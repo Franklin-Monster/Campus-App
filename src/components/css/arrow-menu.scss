@@ -1,0 +1,28 @@
+.menu-item{
+    width: 90%;
+    padding: .625rem;
+    background-color: #fff;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin: .0625rem auto;
+    border: 0;
+    border-radius: .25rem;
+    span{
+        display: inline-block;
+    }
+    img{
+        width: 1rem;
+        height: 1rem;
+    }
+    .item-img{
+        flex:0.1
+    }
+    .item-text{
+        flex: 0.8;
+    }
+    .item-arrow{
+        flex: 0.1;
+    }
+}

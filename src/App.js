@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import cookie from 'react-cookies'
+import { withRouter, Redirect } from 'react-router-dom';
+import "./static/css/app.scss"
+import Tab from './pages/tab/tab'
+import MyRoute from './logic/router/index'
+const App = (props) => {
+  let isLogin = cookie.load('isLogin')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="App">
+      {
+        isLogin ? <Tab/> :
+          <>
+            <Redirect push to="/login" />
+            <MyRoute/>
+          </>
+      }
     </div>
   );
 }
 
-export default App;
+export default withRouter(App)

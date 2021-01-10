@@ -1,0 +1,54 @@
+#App{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    .app-header{
+        width: 100%;
+        height: 1.25rem;
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+        color: #fff;
+        background-color:#3775F6;
+        font-weight: 500;
+        padding: .625rem 0;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+    }
+    .app-header-block{
+        width: 100%;
+        height: 2.5rem;
+    }
+    .app-footer-block{
+        width: 100%;
+        height: 3rem;
+    }
+    .app-footer-tab{
+        width: 100%;
+        height: 3rem;
+        background-color: greenyellow;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+    }
+}
+.app-footer-tab-item{
+    text-align: center;
+    flex:1;
+    padding: .5rem;
+    height: 2rem;
+    font-size: .5rem;
+    a{
+        text-decoration: none;
+        color:#000;
+    }
+    img{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    .app-footer-tab-item-text{
+        margin:0;
+        padding: 0;
+    }
+}

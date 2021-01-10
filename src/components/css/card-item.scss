@@ -1,0 +1,14 @@
+#card-item{
+    width: 5.125rem;
+    height: 5.125rem;
+    padding: auto 0.25rem;
+    margin: 0.25rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 100%;
+    .card-img{
+        width: 50%;
+        height: 50%;
+    }
+}

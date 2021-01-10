@@ -1,0 +1,17 @@
+#search-bar{
+    width: 100%;
+    height:2rem;
+    margin: 0 auto;
+    .search-input{
+        width: 84%;
+        background: #fff url('../img/search.png') no-repeat;
+        background-size: 1rem;
+        background-origin: padding-box;
+        background-clip:padding-box;
+        border: .0625rem #fff solid;
+        border-radius: 0.25rem;
+        padding: 0 1.25rem;
+        line-height: 1.5rem;
+        margin:.5rem;
+    }
+} 

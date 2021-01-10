@@ -1,0 +1,48 @@
+#Message-component{
+    width: 80%;
+    height: 3.6rem;
+    position: fixed;
+    top: -3.6rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #FEF0F0;
+    color: #E10602;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    animation: message-in 3s ease;  
+    z-index: 999;
+    span{               
+        font-size: 1.2rem;
+        margin-right: .5rem;
+    }
+    img{
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 .5rem;
+    }
+    @keyframes message-in {
+        0%{
+            top: -3.6rem;
+        }
+        50%{
+            top: 3.6rem;
+        }
+        100%{
+            top: 3.6rem;
+        }       
+    }
+    @keyframes message-out {
+        0%{
+            top: 3.6rem;
+        }
+        100%{
+            top: -3.6rem;
+        }
+    }
+}
+
+
+    
