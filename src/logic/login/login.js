@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom';
-import '../../static/css/login.scss'
-import Logo from '../../assets/images/logo.jpg'
-import Button from '../../components/button'
-import Warn from '../../assets/images/warn.png'
+import '../../static/css/login'
+
+// component
 import Message from '../../components/message'
+import Button from '../../components/button'
+
+// image
+import Warn from '../../assets/images/warn'
+import Logo from '../../assets/images/logo'
+
 const Login = (props) => {
     const [isAgree, setIsAgree] = useState(false)
     const phoneLogin = () => {
@@ -16,7 +21,6 @@ const Login = (props) => {
                 text: '请同意隐私条款'
             })
         }
-
     }
     const wxLogin = () => {
         if (isAgree) {

@@ -6,15 +6,9 @@ const List = Loadable(() => import('../../pages/list/List'))
 const MyCenter = Loadable(() => import('../../pages/mycenter/MyCenter'))
 const PhoneLogin = Loadable(() => import('../login/phoneLogin'))
 const WxLogin = Loadable(() => import('../login/wxLogin'))
-const Login = Loadable(() => import('../login/login'))
+const Login = Loadable(() => import('../login/index'))
+const Register = Loadable(() => import('../register/index'))
 const routes = [
-    // {
-    //     path: "/",
-    //     exact: true,
-    //     render: () => (
-    //         <Redirect to={"/login"} />
-    //     )
-    // },
     {
         path: '/message',
         component: Message
@@ -43,6 +37,10 @@ const routes = [
         path: '/wxlogin',
         component: WxLogin
     },
+    {
+        path: '/register',
+        component: Register
+    }
 
 ]
 export default routes

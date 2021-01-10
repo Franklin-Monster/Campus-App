@@ -11,7 +11,7 @@ const App = (props) => {
       {
         isLogin ? <Tab/> :
           <>
-            <Redirect push to="/login" />
+            {/* <Redirect push to="/login" /> */}
             <MyRoute/>
           </>
       }

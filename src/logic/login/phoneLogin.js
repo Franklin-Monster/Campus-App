@@ -2,10 +2,14 @@ import React, { useState, useRef } from 'react'
 import { withRouter } from 'react-router-dom';
 import cookie from 'react-cookies'
 import '../../static/css/phoneLogin.scss'
-import ReturnArrow from '../../assets/images/return.png'
-import Close from '../../assets/images/close.png'
+
+// component 
 import Message from '../../components/message'
-import Success from '../../assets/images/success.png'
+
+// image
+import ReturnArrow from '../../assets/images/return'
+import Close from '../../assets/images/close'
+import Success from '../../assets/images/success'
 
 const PhoneLogin = (props) => {
     const [userPhone, setUserPhone] = useState(null)
@@ -65,8 +69,9 @@ const PhoneLogin = (props) => {
     const nextStep = () => {
         if (userPhone && code) {
             clearInterval(sendCodeTimer)
-            cookie.save('isLogin', true)
-            props.history.push('/')
+            // cookie.save('isLogin', true)
+            // props.history.push('/')
+            props.history.push('/register')
         }
     }
     return (
