@@ -1,4 +1,3 @@
-import { Redirect } from 'react-router-dom'
 import Loadable from './loadble';
 const Message = Loadable(() => import('../../pages/message/Message'))
 const Card = Loadable(() => import('../../pages/card/Card'))
@@ -7,7 +6,7 @@ const MyCenter = Loadable(() => import('../../pages/mycenter/MyCenter'))
 const PhoneLogin = Loadable(() => import('../login/phoneLogin'))
 const WxLogin = Loadable(() => import('../login/wxLogin'))
 const Login = Loadable(() => import('../login/index'))
-const Register = Loadable(() => import('../register/index'))
+const PayCenter = Loadable(() => import('../../pages/card/pages/paycenter/PayCenter'))
 const routes = [
     {
         path: '/message',
@@ -38,8 +37,8 @@ const routes = [
         component: WxLogin
     },
     {
-        path: '/register',
-        component: Register
+        path: '/paycenter',
+        component: PayCenter
     }
 
 ]

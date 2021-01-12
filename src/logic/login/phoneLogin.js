@@ -69,9 +69,8 @@ const PhoneLogin = (props) => {
     const nextStep = () => {
         if (userPhone && code) {
             clearInterval(sendCodeTimer)
-            // cookie.save('isLogin', true)
-            // props.history.push('/')
-            props.history.push('/register')
+            cookie.save('isLogin', true)
+            props.history.push('/')
         }
     }
     return (

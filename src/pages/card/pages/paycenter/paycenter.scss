@@ -1,0 +1,28 @@
+#PayCenter{
+    width: 100%;
+    background-color: #FAFAFA;
+    .paycenter-header{
+        font-size: 1.4rem;
+        font-weight: 600;
+        height: 1.8rem;
+        padding: 0.6rem;
+    }
+    .header-return{
+        img{
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+    }
+    .paycenter-body{
+        width: 100%;
+        
+    }
+    .body-content{
+
+    }
+    .body-item{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}

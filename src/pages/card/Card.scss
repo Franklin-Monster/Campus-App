@@ -21,13 +21,12 @@
         background-color: #fff;
         border-radius: .5rem;
         margin: .5rem 0;
-        // background-color: #fff;
     }
     .item-title{
         width: 100%;
         color: #aaa;
-        margin-left: 2rem;
-        padding: .5rem 0;
+        margin-left: 1.4rem;
+        padding: .4rem 0;
     }
     .item-card{
         width: 100%;
@@ -35,7 +34,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
+        font-size: .9rem;
     }
    
 }

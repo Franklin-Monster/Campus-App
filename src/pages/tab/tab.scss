@@ -27,10 +27,11 @@
     .app-footer-tab{
         width: 100%;
         height: 3rem;
-        background-color: greenyellow;
+        background-color: #fff;
         display: flex;
         position: fixed;
         bottom: 0;
+        border-top: .1rem #eee solid;
     }
 }
 .app-footer-tab-item{
