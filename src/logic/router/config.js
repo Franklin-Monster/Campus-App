@@ -7,6 +7,7 @@ const PhoneLogin = Loadable(() => import('../login/phoneLogin'))
 const WxLogin = Loadable(() => import('../login/wxLogin'))
 const Login = Loadable(() => import('../login/index'))
 const PayCenter = Loadable(() => import('../../pages/card/pages/paycenter/PayCenter'))
+const PayNet = Loadable(() => import('../../pages/card/pages/paycenter/PayNet'))
 const routes = [
     {
         path: '/message',
@@ -39,6 +40,10 @@ const routes = [
     {
         path: '/paycenter',
         component: PayCenter
+    },
+    {
+        path: '/paynet',
+        component: PayNet
     }
 
 ]

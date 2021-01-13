@@ -1,0 +1,45 @@
+#PayCenter{
+    width: 100%;
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    .paycenter-header{
+        font-size: 1.3rem;
+        height:1.8rem;
+        font-weight: 600;
+        padding: 0.6rem;
+        background-color: #3775F6;
+        color: #fff;
+        text-align: center;
+        img{
+            position: absolute;
+            top: .9rem;
+            left: .5rem;
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+        
+    }
+    .body-swiper{
+        background-color: #3775F6;
+        padding: 1rem 0 2rem 0;
+        border-radius: 0 0 2rem 2rem;
+        margin-bottom: 2rem;
+    }
+    .paycenter-body{
+        width: 100%;
+        
+    }
+    .body-content{
+
+    }
+    .body-item{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: #fff;
+        border-radius: .5rem;
+        padding: 1.5rem 0;
+    }
+}

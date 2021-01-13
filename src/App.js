@@ -1,7 +1,7 @@
 import React from 'react'
 import cookie from 'react-cookies'
 import { withRouter, Redirect } from 'react-router-dom';
-import "./static/css/app.scss"
+import "./static/css/app"
 import Tab from './pages/tab/tab'
 import MyRoute from './logic/router/index'
 const App = (props) => {
@@ -11,7 +11,7 @@ const App = (props) => {
       {
         isLogin ? <Tab/> :
           <>
-            {/* <Redirect push to="/login" /> */}
+            <Redirect push to="/login" />
             <MyRoute/>
           </>
       }

@@ -7,27 +7,31 @@ import messageImg from '../../assets/images/message'
 import cardImg from '../../assets/images/card'
 import listImg from '../../assets/images/list'
 import myCenterImg from '../../assets/images/mycenter'
-import { pathnameToTitle } from '../../static/js/changeTabTitle'
+import { pathnameToTitle } from '../../static/js/fun'
 import './tab.scss'
 const Tab = (props) => {
     const [title, setTitle] = useState('消息')
-    let pathname = window.location.pathname
-    // 监听路由更改title
+    const [showTab, setShowTab] = useState(true)
+    const pathname = window.location.pathname
+    // 监听路由
     useEffect(() => {
-        setTitle(pathnameToTitle(window.location.pathname))
+        setTitle(pathnameToTitle(pathname))
+        if(!pathnameToTitle(pathname)) {
+            setShowTab(false)
+        } else setShowTab(true)
     }, [pathname])
 
     return <div id="Tab">
-        <div className="app-header">{title}</div>
-        <div className="app-header-block"></div>
+        <div className="app-header" style={{display:showTab ? 'block' : 'none'}}>{title}</div>
+        <div className="app-header-block" style={{display:showTab ? 'block' : 'none'}}></div>
         <div className="route">
             {
                 props.location.pathname === '/' && <Redirect push to="/message" />
             }
             <TabRoute></TabRoute>
         </div>
-        <div className="app-footer-block"></div>
-        <div className="app-footer-tab" >
+        <div className="app-footer-block" style={{display:showTab ? 'block' : 'none'}}></div>
+        <div className="app-footer-tab" style={{display:showTab ? 'flex' : 'none'}}>
             <div className="app-footer-tab-item">
                 <NavLink to="/message" >
                     <img src={messageImg} alt="message" />

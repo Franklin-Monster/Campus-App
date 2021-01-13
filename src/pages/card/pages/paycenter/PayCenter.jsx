@@ -1,6 +1,7 @@
 import React from 'react'
 import { paycenterImgArr, paycenterTextArr, paycenterClickArr } from './help'
-import './paycenter.scss'
+import { returnBack } from '../../../../static/js/fun'
+import './css/paycenter'
 
 // component
 import AutoSwiper from '../../../../components/auto-swiper'
@@ -12,19 +13,10 @@ import img2 from './img/img2.jpeg'
 import img3 from './img/img3.jpeg'
 import ReturnArrow from './img/return'
 const PayCenter = () => {
-    const history = require("history").createBrowserHistory()
-    const returnClick = () => {
-        history.goBack();
-    }
     return (
         <div id="PayCenter">
             <div className="paycenter-header">
-                <div className="header-return" onClick={returnClick}>
-                    <img src={ReturnArrow} alt='return' />
-                </div>
-                <div className="header-title">
-                    充值缴费
-                </div>
+                <img src={ReturnArrow} alt='return' onClick={returnBack} />充值缴费
             </div>
             <div className="paycenter-body">
                 <div className="body-swiper">
