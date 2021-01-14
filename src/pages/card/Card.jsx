@@ -21,7 +21,8 @@ const Card = (props) => {
                                     text={headTextArr[index]}
                                     img={item}
                                     key={index}
-                                    color="#fff" />
+                                    color="#fff"
+                                    margin=".25rem 3%" />
                             )
                         })
                     }
@@ -39,8 +40,8 @@ const Card = (props) => {
                                             text={cardTextArr[index]}
                                             img={item}
                                             key={index}
-                                            width="4rem"
-                                            height="4rem"
+                                            width="20%"
+                                            height="20%"
                                             onClick={cardClickArr[index]} />
                                     )
                                 }
@@ -60,8 +61,8 @@ const Card = (props) => {
                                             text={cardTextArr[index]}
                                             img={item}
                                             key={index}
-                                            width="4rem"
-                                            height="4rem" />
+                                            width="20%"
+                                            height="20%" />
                                     )
                                 }
                                 return null
@@ -81,8 +82,8 @@ const Card = (props) => {
                                             text={cardTextArr[index]}
                                             img={item}
                                             key={index}
-                                            width="4rem"
-                                            height="4rem" />
+                                            width="20%"
+                                            height="20%" />
                                     )
                                 }
                                 return null

@@ -8,6 +8,8 @@ const WxLogin = Loadable(() => import('../login/wxLogin'))
 const Login = Loadable(() => import('../login/index'))
 const PayCenter = Loadable(() => import('../../pages/card/pages/paycenter/PayCenter'))
 const PayNet = Loadable(() => import('../../pages/card/pages/paycenter/PayNet'))
+const PayPhone = Loadable(() => import('../../pages/card/pages/paycenter/PayPhone'))
+const PayCard = Loadable(() => import('../../pages/card/pages/paycenter/PayCard'))
 const routes = [
     {
         path: '/message',
@@ -44,7 +46,17 @@ const routes = [
     {
         path: '/paynet',
         component: PayNet
+    },
+    {
+        path: '/payphone',
+        component: PayPhone
+    },
+    {
+        path: '/paycard',
+        component: PayCard
     }
 
 ]
 export default routes
+
+

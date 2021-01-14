@@ -56,10 +56,8 @@ const PhoneLogin = (props) => {
                     }
                 }, 1000);
                 Message({
-                    img: Success,
                     text: '发送验证码成功',
-                    color: '#67C23A',
-                    background: '#F0F9EB'
+                    type: 'success'
                 })
             }
 

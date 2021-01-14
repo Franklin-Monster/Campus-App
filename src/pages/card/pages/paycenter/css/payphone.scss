@@ -1,0 +1,71 @@
+#PayPhone{
+    width: 100%;
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    .input-number{
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        padding: .2rem .4rem;
+        background-color: #fff;
+        border-bottom: .05rem #eee solid;
+        input{
+            width: 84%;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            height: 2rem;
+        }
+        img{
+            width:2rem;
+            height: 2rem;
+        }
+    }
+    .select-title{
+        font-size: .8rem;
+        height: 1.4rem;
+        padding: .6rem .4rem 0 .4rem;
+        color: #aaa;
+        background-color: #fff;
+    }
+    .select-amount{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        padding-bottom: .2rem;
+    }
+    .amount-item{
+        width: 30%;
+        text-align: center;
+        color: #2BD54D;
+        border: .05rem #2BD54D solid;
+        border-radius: .5rem;
+        padding: .4rem .6rem;
+        margin: .4rem;
+    }
+    .sell-money{
+        font-size: .6rem;
+        transform: scale(0.8);
+    }
+    .none{
+        visibility: hidden;
+    }
+    .payphone-footer{
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        color:#5555AA;
+        div{
+            font-size: .8rem;
+            margin: .2rem;
+        }
+    }
+}

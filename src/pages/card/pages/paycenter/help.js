@@ -12,11 +12,18 @@ const PayNetClick = () => {
     history.push('/paynet');
     return history.go()
 }
+const PayPhoneClick = () => {
+    history.push('/payphone');
+    return history.go()
+}
+const PayCardClick = () => {
+    history.push('/paycard');
+    return history.go()
+}
+
 const PayAirClick = () => console.log(33)
-const PayTeleClick = () => console.log(123333)
-const PayCardClick = () => console.log(123)
 const PayStudyClick = () => console.log(22)
 const PayPowerClick = () => console.log(33)
 export const paycenterImgArr = [PayNet, PayAir, PayTele, PayCard, PayStudy, PayPower, List]
 export const paycenterTextArr = ['充网费', '充空调费', '充话费', '充一卡通', '交学费', '交电费', '账单查询']
-export const paycenterClickArr = [PayNetClick, PayAirClick, PayTeleClick, PayCardClick, PayStudyClick, PayPowerClick, ListClick]
+export const paycenterClickArr = [PayNetClick, PayAirClick, PayPhoneClick, PayCardClick, PayStudyClick, PayPowerClick, ListClick]

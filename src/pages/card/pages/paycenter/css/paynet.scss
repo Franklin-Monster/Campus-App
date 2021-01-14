@@ -4,22 +4,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    .paynet-header{
-        font-size: 1.3rem;
-        height:1.8rem;
-        font-weight: 600;
-        padding: 0.6rem;
-        background-color: #3775F6;
-        color: #fff;
-        text-align: center;
-        img{
-            position: absolute;
-            top: .9rem;
-            left: .5rem;
-            width: 1.3rem;
-            height: 1.3rem;
-        }
-    }
+    overflow-x: hidden;
     .paynet-body{
         width: 100%;
         margin-top: 2rem;
@@ -34,7 +19,7 @@
         padding: .5rem 0;
         input{
             border: none;
-            outline:none;
+            outline: none;
             text-align: end;
         }
     }
@@ -42,4 +27,17 @@
         width: 10.05rem;
         height: 2rem;
     }  
+    .select-amount{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .amount-item{
+        width: 30%;
+        background-color: #fff;
+        text-align: center;
+        border: .1rem #eee solid; 
+        padding: .2rem 0;
+        margin: .2rem 0;
+    }
 }

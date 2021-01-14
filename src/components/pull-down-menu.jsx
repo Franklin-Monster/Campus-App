@@ -6,6 +6,12 @@ const PullDownMenu = (props) => {
     const selectImgRef = useRef()
     const [selectText, setSelectText] = useState('请选择')
     const pullHeight = (props.selectArr.length * 2.35 + 4) + 'em'
+    const itemStyle = {
+        color: props.itemColor
+    }
+    const pullStyle = {
+        color: props.pullColor
+    }
     const selectPayWayClick = () => {
         const imgRef = selectImgRef.current.style
         const textRef = selectWayRef.current.style
@@ -23,14 +29,14 @@ const PullDownMenu = (props) => {
     return (
         <div id="PullDownMenu">
             <div className="menu-box" ref={selectWayRef}>
-                <div className="normal-item">
+                <div className="normal-item" style={itemStyle}>
                     <span>{props.title}</span>
                     <span className="select-way-img" onClick={selectPayWayClick}>
                         <img src={RightArrow} alt="right-arrow" ref={selectImgRef} />
                         <span> {selectText}</span>
                     </span>
                 </div>
-                <div className="select-way-content" >
+                <div className="select-way-content" style={pullStyle}>
                     {
                         props.selectArr.map((item, index) => {
                             return (

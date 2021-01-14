@@ -45,20 +45,20 @@
         justify-content: center;
         position: absolute;
         bottom: .2rem;
-        .nav-item{
-            width: 16%;
-            height: .2rem;
-            margin: 0 .3rem;
-        }
-        .n1{
-            animation: nav-n1 10s ease 1s infinite alternate;
-        }
-        .n2{
-            animation: nav-n2 10s ease 1s infinite alternate;
-        }
-        .n3{
-            animation: nav-n3 10s ease 1s infinite alternate;
-        }
+    }
+    .nav-item{
+        width: 16%;
+        height: .2rem;
+        margin: 0 .3rem;
+    }
+    .n1{
+        animation: nav-n1 10s ease 1s infinite alternate;
+    }
+    .n2{
+        animation: nav-n2 10s ease 1s infinite alternate;
+    }
+    .n3{
+        animation: nav-n3 10s ease 1s infinite alternate;
     }
     @keyframes nav-n1{ 
         0%,20%{

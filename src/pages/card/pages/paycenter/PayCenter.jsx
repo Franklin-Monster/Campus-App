@@ -31,8 +31,8 @@ const PayCenter = () => {
                                         text={paycenterTextArr[index]}
                                         img={item}
                                         key={item}
-                                        width="4rem"
-                                        height="4rem"
+                                        width="20%"
+                                        height="20%"
                                         onClick={paycenterClickArr[index]} />
                                 )
                             })

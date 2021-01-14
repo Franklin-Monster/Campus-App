@@ -6,7 +6,8 @@ const CardItem = (props) => {
         background: props.background,
         width: props.width,
         height: props.height,
-        visibility: props.visibility
+        visibility: props.visibility,
+        margin: props.margin
     }
     const onClick = () => {
         props.onClick && props.onClick()

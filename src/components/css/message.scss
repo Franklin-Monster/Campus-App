@@ -7,7 +7,7 @@
     right: 0;
     text-align: center;
     background-color: #FEF0F0;
-    color: #E10602;
+    color: #E6A23C;
     border-radius: .5rem;
     display: flex;
     align-items: center;
@@ -21,7 +21,8 @@
     img{
         width: 1.6rem;
         height: 1.6rem;
-        margin: 0 .5rem;
+        margin: auto .5rem;
+        margin-right: .8rem;
     }
     @keyframes message-in {
         0%{
