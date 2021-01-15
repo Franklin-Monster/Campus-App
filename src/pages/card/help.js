@@ -20,11 +20,10 @@ import Scan from './img/scan'
 import Money from './img/money'
 import Wallet from './img/wallet'
 
-const history = require("history").createBrowserHistory()
+import { goRoute } from '../../static/js/fun'
+
 const PayClick = () => {
-    history.push('/paycenter');
-    return history.go()
-    // return window.location.href = "/paycenter"
+    goRoute('/paycenter')
 }
 const PassClick = () => {
 
@@ -41,8 +40,8 @@ const ForLeaveClick = () => {
 const AirClick = () => {
 
 }
-const InternetClick = () => {
-
+const NetClick = () => {
+    goRoute('/connectnet')
 }
 const WaterClick = () => {
 
@@ -76,10 +75,10 @@ export const cardImgArr = [Pay, Pass, Eat, Order, ForLeave,
     Air, Internet, Water, Class, PublicClass,
     StrongStudy, Edu, Love, Friend, Active, LikeWall]
 export const cardTextArr = ["充值缴费", "出校通行", "食堂外送", "服务预约", "课程请假",
-    "宿舍空调", "上网冲浪", "送水服务", "我的课程", "校公开课",
+    "宿舍空调", "校园WiFi", "送水服务", "我的课程", "校公开课",
     "学习强国", "教务功能", "我要交友", "大学生圈", "休闲活动", "表白墙"]
 export const cardClickArr = [PayClick, PassClick, EatClick, OrderClick, ForLeaveClick,
-    AirClick, InternetClick, WaterClick, ClassClick, PublicClassClick,
+    AirClick, NetClick, WaterClick, ClassClick, PublicClassClick,
     StrongStudyClick, EduClick, LoveClick, FriendClick, ActiveClick, LikeWallClick]
 export const headImgArr = [Scan, Money, Wallet]
 export const headTextArr = ["扫一扫", "付钱", "卡包"]

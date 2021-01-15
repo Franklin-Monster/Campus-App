@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { withRouter } from 'react-router-dom';
 import cookie from 'react-cookies'
-import '../../static/css/phoneLogin.scss'
+import '../../static/css/phoneLogin'
+import { returnBack } from '../../static/js/fun'
 
 // component 
 import Message from '../../components/message'
@@ -9,20 +10,16 @@ import Message from '../../components/message'
 // image
 import ReturnArrow from '../../assets/images/return'
 import Close from '../../assets/images/close'
-import Success from '../../assets/images/success'
+
 
 const PhoneLogin = (props) => {
     const [userPhone, setUserPhone] = useState(null)
     const [code, setCode] = useState(null)
     let [codeSecond, setCodeSecond] = useState(60)
-    const history = require("history").createHashHistory() // 获取历史记录
     const phoneRef = useRef()
     const codeRef = useRef()
     const getCodeRef = useRef()
-    // 返回按钮
-    const returnClick = () => {
-        history.goBack();
-    }
+
     // 监听手机号   
     const onPhoneChange = (e) => {
         let v = e.target.value
@@ -60,7 +57,6 @@ const PhoneLogin = (props) => {
                     type: 'success'
                 })
             }
-
         }
     }
     // 下一步
@@ -74,7 +70,7 @@ const PhoneLogin = (props) => {
     return (
         <div id="PhoneLogin">
             <div className="phone-header">
-                <div className="header-return" onClick={returnClick}>
+                <div className="header-return" onClick={returnBack}>
                     <img src={ReturnArrow} alt="return"></img>
                 </div>
                 <div className="header-password">密码登录</div>
@@ -105,7 +101,11 @@ const PhoneLogin = (props) => {
                             maxLength="6"
                             onChange={onCodeChange} />
                         <span className="code-img"
-                            style={{ color: userPhone && (getCodeRef.current.innerText === '获取验证码') ? '#FE3313' : '#aaa' }}
+                            style={{
+                                color: userPhone && (getCodeRef.current.innerText === '获取验证码')
+                                    ? '#FE3313'
+                                    : '#aaa'
+                            }}
                             onClick={getCode}
                             ref={getCodeRef}>
                             获取验证码

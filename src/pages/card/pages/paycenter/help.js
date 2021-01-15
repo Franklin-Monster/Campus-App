@@ -6,19 +6,17 @@ import PayTele from './img/pay-tele'
 import PayCard from './img/pay-card'
 import PayStudy from './img/pay-study'
 import PayPower from './img/pay-power'
-const history = require("history").createBrowserHistory()
+import { goRoute } from '../../../../static/js/fun'
+
 const ListClick = () => console.log(123)
 const PayNetClick = () => {
-    history.push('/paynet');
-    return history.go()
+    goRoute('/paynet')
 }
 const PayPhoneClick = () => {
-    history.push('/payphone');
-    return history.go()
+    goRoute('/payphone')
 }
 const PayCardClick = () => {
-    history.push('/paycard');
-    return history.go()
+    goRoute('/paycard')
 }
 
 const PayAirClick = () => console.log(33)

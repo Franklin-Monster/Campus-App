@@ -1,3 +1,12 @@
+const history = require("history").createBrowserHistory()
+export const returnBack = () => {
+    return history.goBack();
+}
+
+export const goRoute = (route) => {
+    history.push(route);
+    return history.go()
+}
 export const pathnameToTitle = (key) => {
     const pathnameTable = {
         '/card': '应用',
@@ -8,7 +17,3 @@ export const pathnameToTitle = (key) => {
     return pathnameTable[key] || null;
 };
 
-export const returnBack = () => {
-    const history = require("history").createBrowserHistory()
-    return history.goBack();
-}

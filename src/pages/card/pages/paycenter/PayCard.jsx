@@ -1,12 +1,11 @@
 import React from 'react'
-import './css/paycard.scss'
+import './css/paycard'
 
 // component
 import Button from '../../../../components/button'
 import Message from '../../../../components/message'
 import ReturnTitle from '../../../../components/return-title'
 import PullDownMenu from '../../../../components/pull-down-menu'
-
 
 const PayCard = (props) => {
     const submit = () => {
@@ -15,6 +14,7 @@ const PayCard = (props) => {
             type: 'success'
         })
     }
+    
     return (
         <div id="PayCard">
             <div className="paycard-header">

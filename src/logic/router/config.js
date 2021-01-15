@@ -10,6 +10,7 @@ const PayCenter = Loadable(() => import('../../pages/card/pages/paycenter/PayCen
 const PayNet = Loadable(() => import('../../pages/card/pages/paycenter/PayNet'))
 const PayPhone = Loadable(() => import('../../pages/card/pages/paycenter/PayPhone'))
 const PayCard = Loadable(() => import('../../pages/card/pages/paycenter/PayCard'))
+const ConnectNet = Loadable(() => import('../../pages/card/pages/connect-net/ConnectNet'))
 const routes = [
     {
         path: '/message',
@@ -54,6 +55,10 @@ const routes = [
     {
         path: '/paycard',
         component: PayCard
+    },
+    {
+        path: '/connectnet',
+        component: ConnectNet
     }
 
 ]
