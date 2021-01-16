@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import Avator from './img/user.png'
 import './MyCenter.scss'
-import ArrowMenu from '../../components/arrow-menu'
-import Arrow from './img/eee-arrow.png'
+
+// components
+import ArrowMenu from '@c/arrow-menu'
+
+// image
+import Arrow from './img/eee-arrow'
+import Avator from './img/user'
 const MyCenter = (props) => {
     const [userName, setUserName] = useState('Franklin')
     const [userClass, setUserClass] = useState('17信息1班')

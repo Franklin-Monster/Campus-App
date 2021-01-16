@@ -5,7 +5,7 @@ import '../../static/css/phoneLogin'
 import { returnBack } from '../../static/js/fun'
 
 // component 
-import Message from '../../components/message'
+import Message from '@c/message'
 
 // image
 import ReturnArrow from '../../assets/images/return'

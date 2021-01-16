@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import './css/auto-swiper'
 const AutoSwiper = (props) => {
-    const [imgArr, setImgArr] = useState(props.imgArr)
+    const style = {
+        width: props.width,
+        height: props.height
+    }
     return (
-        <div id="AutoSwiper">
-            <div className="swiper-content">
+        <div id="AutoSwiper" style={style}>
+            <div className="swiper-content" style={style}>
                 {
-                    imgArr.map((item, index) => {
+                    props.imgArr.map((item, index) => {
                         return (
                             <div className="swiper-item" key={index}>
-                                <img src={item} alt="img" />
+                                <img src={item} alt="img" style={style} />
                             </div>
                         )
                     })

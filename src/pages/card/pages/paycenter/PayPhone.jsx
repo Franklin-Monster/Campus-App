@@ -1,5 +1,5 @@
 import React from 'react'
-import ReturnTitle from '../../../../components/return-title'
+import ReturnTitle from '@c/return-title'
 import Mine from './img/mine'
 import './css/payphone'
 const PayPhone = (props) => {

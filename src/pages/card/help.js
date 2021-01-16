@@ -26,7 +26,7 @@ const PayClick = () => {
     goRoute('/paycenter')
 }
 const PassClick = () => {
-
+    goRoute('leaveschool')
 }
 const EatClick = () => {
 

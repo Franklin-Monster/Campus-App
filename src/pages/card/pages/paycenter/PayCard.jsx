@@ -2,10 +2,10 @@ import React from 'react'
 import './css/paycard'
 
 // component
-import Button from '../../../../components/button'
-import Message from '../../../../components/message'
-import ReturnTitle from '../../../../components/return-title'
-import PullDownMenu from '../../../../components/pull-down-menu'
+import Button from '@c/button'
+import Message from '@c/message'
+import ReturnTitle from '@c/return-title'
+import PullDownMenu from '@c/pull-down-menu'
 
 const PayCard = (props) => {
     const submit = () => {

@@ -5,7 +5,7 @@ const Button = (props) => {
         width: props.width,
         height: props.height,
         lineHeight: props.height,
-        color: props.color,
+        color: props.color || '#000',
         background: props.background,
         margin: props.margin + ' auto' || '0 auto'
     }

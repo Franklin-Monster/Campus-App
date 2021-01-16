@@ -1,5 +1,5 @@
 import Loadable from 'react-loadable'
-import Loading from '../../components/router-loading'
+import Loading from '@c/router-loading'
 const Load = (comp) => {
     return Loadable({
         loader: comp,

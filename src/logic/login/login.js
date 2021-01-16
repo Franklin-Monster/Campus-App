@@ -3,8 +3,8 @@ import { withRouter } from 'react-router-dom';
 import '../../static/css/login'
 
 // component
-import Message from '../../components/message'
-import Button from '../../components/button'
+import Message from '@c/message'
+import Button from '@c/button'
 
 // image
 import Warn from '../../assets/images/warn'

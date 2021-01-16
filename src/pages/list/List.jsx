@@ -1,9 +1,13 @@
 import React from 'react'
-import SearchBar from '../../components/search-bar'
-import ArrowMenu from '../../components/arrow-menu'
 import './List.scss'
-import Avator from './img/user.png'
-import Arrow from './img/eee-arrow.png'
+
+// component
+import SearchBar from '@c/search-bar'
+import ArrowMenu from '@c/arrow-menu'
+
+// image
+import Avator from './img/user'
+import Arrow from './img/eee-arrow'
 const List = (props) => {
     return (
         <div id="List">
@@ -20,8 +24,6 @@ const List = (props) => {
                     <ArrowMenu frontImg={Avator} endImg={Arrow} text="新朋友"></ArrowMenu>
                     <ArrowMenu frontImg={Avator} endImg={Arrow} text="新朋友"></ArrowMenu>
                 </div>
-
-
             </div>
             <div className="list-body">
 

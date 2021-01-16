@@ -4,8 +4,8 @@ import { cardImgArr, cardTextArr, cardClickArr, headImgArr, headTextArr } from '
 import './Card.scss'
 
 // component
-import CardItem from '../../components/card-item'
-import SearchBar from '../../components/search-bar'
+import CardItem from '@c/card-item'
+import SearchBar from '@c/search-bar'
 
 const Card = (props) => {
 

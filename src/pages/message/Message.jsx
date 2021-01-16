@@ -1,6 +1,6 @@
 import React from 'react'
 import './Message.scss'
-import SearchBar from '../../components/search-bar'
+import SearchBar from '@c/search-bar'
 const Message = (props) => {
     return (
         <div id="Message">

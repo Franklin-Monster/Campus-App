@@ -4,13 +4,13 @@ import { returnBack } from '../../../../static/js/fun'
 import './css/paycenter'
 
 // component
-import AutoSwiper from '../../../../components/auto-swiper'
-import CardItem from '../../../../components/card-item'
+import AutoSwiper from '@c/auto-swiper'
+import CardItem from '@c/card-item'
 
 // image
-import img1 from './img/img1.jpeg'
-import img2 from './img/img2.jpeg'
-import img3 from './img/img3.jpeg'
+import Swiper1 from './img/swiper1.jpeg'
+import Swiper2 from './img/swiper2.jpeg'
+import Swiper3 from './img/swiper3.jpeg'
 import ReturnArrow from './img/return'
 const PayCenter = () => {
     return (
@@ -20,7 +20,7 @@ const PayCenter = () => {
             </div>
             <div className="paycenter-body">
                 <div className="body-swiper">
-                    <AutoSwiper imgArr={[img1, img2, img3]} />
+                    <AutoSwiper imgArr={[Swiper1, Swiper2, Swiper3]} />
                 </div>
                 <div className="body-content">
                     <div className="body-item">
@@ -37,7 +37,7 @@ const PayCenter = () => {
                                 )
                             })
                         }
-                        <CardItem text="账单查询" img={null} width="4rem" height="4rem" visibility="hidden" />
+                        <CardItem text="账单查询" img={null} width="20%" height="20%" visibility="hidden" />
                     </div>
                 </div>
             </div>
