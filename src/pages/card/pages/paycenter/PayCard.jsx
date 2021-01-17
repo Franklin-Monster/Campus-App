@@ -4,6 +4,7 @@ import './css/paycard'
 // component
 import Button from '@c/button'
 import Message from '@c/message'
+import TextRow from '@c/text-row'
 import ReturnTitle from '@c/return-title'
 import PullDownMenu from '@c/pull-down-menu'
 
@@ -22,26 +23,14 @@ const PayCard = (props) => {
             </div>
             <div className="paycard-body">
                 <div className="input-content">
-                    <div className="input-item">
-                        <span>支付密码</span>
-                        <input type="text" placeholder="请输入账号" />
-                    </div>
-                    <div className="input-item">
-                        <span>账号余额</span>
-                        <span className="account-detailed"></span>
-                    </div>
+                    <TextRow frontText="支付密码" needInput={true} type="text" placeholder="请输入账号" />
+                    <TextRow frontText="账号余额" lastText="" />
                     <PullDownMenu
                         title="支付方式"
                         selectArr={["一卡通", "校园卡绑定的银行卡"]}
                         pullColor="#FF4842" />
-                    <div className="input-item">
-                        <span>充值金额</span>
-                        <input type="text" placeholder="请输入充值金额" />
-                    </div>
-                    <div className="input-item">
-                        <span>支付密码</span>
-                        <input type="text" placeholder="请输入校园卡密码" />
-                    </div>
+                    <TextRow frontText="充值金额" needInput={true} type="text" placeholder="请输入充值金额" />
+                    <TextRow frontText="支付密码" needInput={true} type="password" placeholder="请输入校园卡密码" />
 
                 </div>
 

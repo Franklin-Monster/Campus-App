@@ -7,7 +7,7 @@ import Success from './img/success'
 import Attention from './img/warn'
 import Fail from './img/fail'
 const Message = (props) => {
-    const [animate, setAnimate] = useState('message-in 1.5s')
+    const [animate, setAnimate] = useState('message-in 1s')
     const style = {
         color: props.color,
         background: props.background,
@@ -16,7 +16,7 @@ const Message = (props) => {
     let MessageImg = props.img
     setTimeout(() => {
         setAnimate('message-out 0.8s')
-    }, 1300);
+    }, 900);
 
     const selectType = (type) => {
         switch (type) {

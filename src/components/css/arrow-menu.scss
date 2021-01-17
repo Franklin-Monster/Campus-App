@@ -1,14 +1,13 @@
 .menu-item{
     width: 90%;
-    padding: .625rem;
     background-color: #fff;
     height: 1rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
     margin: .0625rem auto;
-    border: 0;
     border-radius: .25rem;
+    padding: .625rem 1.5rem;
     span{
         display: inline-block;
     }
@@ -17,12 +16,10 @@
         height: 1rem;
     }
     .item-img{
-        flex:0.1
-    }
-    .item-text{
-        flex: 0.8;
+        margin-right: .5rem;
     }
     .item-arrow{
-        flex: 0.1;
+        flex: 1;
+        text-align: end;
     }
 }

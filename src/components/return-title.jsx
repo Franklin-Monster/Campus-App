@@ -9,8 +9,9 @@ const ReturnTitle = (props) => {
     }
     return (
         <div id="ReturnTitle" style={style}>
-            <img src={ReturnArrow} alt='return' onClick={returnBack} />
+            <img className="left-img" src={ReturnArrow} alt='return' onClick={returnBack} />
             {props.text}
+            {props.rightImg && <img className="right-img" src={props.rightImg} alt="img" />}
         </div>
     )
 }

@@ -4,6 +4,7 @@ import './css/paynet'
 // component
 import Button from '@c/button'
 import Message from '@c/message'
+import TextRow from '@c/text-row'
 import ReturnTitle from '@c/return-title'
 import PullDownMenu from '@c/pull-down-menu'
 
@@ -21,26 +22,14 @@ const PayNet = (props) => {
                 <ReturnTitle text="网费缴纳" />
             </div>
             <div className="paynet-body">
-                <div className="input-item">
-                    <span>上网账号</span>
-                    <input type="number" placeholder="请输入上网账号" />
-                </div>
-                <div className="input-item">
-                    <span>账号明细</span>
-                    <span className="pay-detailed"></span>
-                </div>
+                <TextRow frontText="上网账号" needInput={true} type="number" placeholder="请输入上网账号" />
+                <TextRow frontText="账号明细" lastText="" />
                 <PullDownMenu
                     title="支付方式"
                     selectArr={["一卡通", "校园卡绑定的银行卡"]}
-                    pullColor="#FF4842" />
-                <div className="input-item">
-                    <span>缴费金额</span>
-                    <input type="number" placeholder="缴费金额" />
-                </div>
-                <div className="input-item">
-                    <span>支付密码</span>
-                    <input type="text" placeholder="请输入支付密码" />
-                </div>
+                    pullColor="#FF4842"/>
+                <TextRow frontText="缴费金额" needInput={true} type="number" placeholder="缴费金额" />
+                <TextRow frontText="支付密码" needInput={true} type="password" placeholder="请输入支付密码" />
                 <div className="select-amount">
                     <div className="amount-item">30</div>
                     <div className="amount-item">50</div>

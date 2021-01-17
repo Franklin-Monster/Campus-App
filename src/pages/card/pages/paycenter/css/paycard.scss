@@ -5,24 +5,4 @@
     bottom: 0;
     overflow-x: hidden;
     background-color: #FAFAFA;
-    .input-item{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        height: 2rem;
-        align-items: center;
-        margin: .3rem 0;
-        background-color: #fff;
-        padding: .5rem;
-        input{
-            border: none;
-            outline: none;
-            text-align: end;
-            font-size: 1rem;
-        }
-    }
-    .account-detailed{
-        width: 11.8rem;
-        height: 2rem;
-    } 
 }
