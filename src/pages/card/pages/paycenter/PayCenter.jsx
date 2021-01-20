@@ -1,7 +1,7 @@
 import React from 'react'
 import { paycenterImgArr, paycenterTextArr, paycenterClickArr } from './help'
 import { returnBack } from '../../../../static/js/fun'
-import './css/paycenter'
+import './css/pay-center'
 
 // component
 import AutoSwiper from '@c/auto-swiper'

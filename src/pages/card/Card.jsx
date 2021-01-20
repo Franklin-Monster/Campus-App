@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import { cardImgArr, cardTextArr, cardClickArr, headImgArr, headTextArr } from './help'
-import './Card.scss'
+import './card.scss'
 
 // component
 import CardItem from '@c/card-item'

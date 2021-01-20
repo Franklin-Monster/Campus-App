@@ -1,4 +1,4 @@
-.menu-item{
+.menu-item {
     width: 90%;
     background-color: #fff;
     height: 1rem;
@@ -8,18 +8,27 @@
     margin: .0625rem auto;
     border-radius: .25rem;
     padding: .625rem 1.5rem;
-    span{
+
+    span {
         display: inline-block;
     }
-    img{
+
+    img {
         width: 1rem;
         height: 1rem;
     }
-    .item-img{
+
+    .item-img {
         margin-right: .5rem;
     }
-    .item-arrow{
+
+    .item-arrow {
         flex: 1;
         text-align: end;
+        transition: all 1s ease;
     }
+}
+
+.menu-item:hover .item-arrow img {
+    transform: rotate(90deg);
 }

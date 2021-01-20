@@ -1,7 +1,7 @@
 import React from 'react'
 import ReturnTitle from '@c/return-title'
 import Mine from './img/mine'
-import './css/payphone'
+import './css/pay-phone'
 const PayPhone = (props) => {
     return (
         <div id="PayPhone">

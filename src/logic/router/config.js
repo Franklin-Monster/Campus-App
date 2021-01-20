@@ -1,17 +1,18 @@
 import Loadable from './loadble';
-const Message = Loadable(() => import('../../pages/message/Message'))
-const Card = Loadable(() => import('../../pages/card/Card'))
-const List = Loadable(() => import('../../pages/list/List'))
-const MyCenter = Loadable(() => import('../../pages/mycenter/MyCenter'))
+const Message = Loadable(() => import('@p/message/Message'))
+const Card = Loadable(() => import('@p/card/Card'))
+const List = Loadable(() => import('@p/list/List'))
+const MyCenter = Loadable(() => import('@p/mycenter/MyCenter'))
 const PhoneLogin = Loadable(() => import('../login/phoneLogin'))
 const WxLogin = Loadable(() => import('../login/wxLogin'))
 const Login = Loadable(() => import('../login/index'))
-const PayCenter = Loadable(() => import('../../pages/card/pages/paycenter/PayCenter'))
-const PayNet = Loadable(() => import('../../pages/card/pages/paycenter/PayNet'))
-const PayPhone = Loadable(() => import('../../pages/card/pages/paycenter/PayPhone'))
-const PayCard = Loadable(() => import('../../pages/card/pages/paycenter/PayCard'))
-const ConnectNet = Loadable(() => import('../../pages/card/pages/connect-net/ConnectNet'))
-const LeaveSchool = Loadable(() => import('../../pages/card/pages/leave-school/LeaveSchool'))
+const PayCenter = Loadable(() => import('@p/card/pages/paycenter/PayCenter'))
+const PayNet = Loadable(() => import('@p/card/pages/paycenter/PayNet'))
+const PayPhone = Loadable(() => import('@p/card/pages/paycenter/PayPhone'))
+const PayCard = Loadable(() => import('@p/card/pages/paycenter/PayCard'))
+const ConnectNet = Loadable(() => import('@p/card/pages/connect-net/ConnectNet'))
+const LeaveSchool = Loadable(() => import('@p/card/pages/leave-school/LeaveSchool'))
+const ApplyProcess = Loadable(() => import('@p/card/pages/leave-school/ApplyProcess'))
 const routes = [
     {
         path: '/message',
@@ -64,6 +65,10 @@ const routes = [
     {
         path: '/leaveschool',
         component: LeaveSchool
+    },
+    {
+        path: '/applyprocess',
+        component: ApplyProcess
     }
 
 ]

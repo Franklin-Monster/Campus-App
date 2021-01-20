@@ -332,6 +332,7 @@ module.exports = function (webpackEnv) {
         }),
         ...(modules.webpackAliases || {}),
         '@c': paths.appSrc + '/components',
+        '@p': paths.appSrc + '/pages',
         '@': paths.appSrc,
        
       },

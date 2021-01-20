@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/paycard'
+import './css/pay-card'
 
 // component
 import Button from '@c/button'

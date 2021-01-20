@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './MyCenter.scss'
+import './my-center.scss'
 
 // components
 import ArrowMenu from '@c/arrow-menu'

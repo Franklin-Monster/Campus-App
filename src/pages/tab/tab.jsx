@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect, NavLink, withRouter } from 'react-router-dom'
 import TabRoute from '../../logic/router/index'
+import { pathnameToTitle } from '../../static/js/fun'
+import './tab.scss'
 
 // image
 import messageImg from '../../assets/images/message'
 import cardImg from '../../assets/images/card'
 import listImg from '../../assets/images/list'
 import myCenterImg from '../../assets/images/mycenter'
-import { pathnameToTitle } from '../../static/js/fun'
-import './tab.scss'
+
 const Tab = (props) => {
     const [title, setTitle] = useState('消息')
     const [showTab, setShowTab] = useState(true)
@@ -57,7 +58,6 @@ const Tab = (props) => {
                 </NavLink>
             </div>
         </div>
-
     </div>
 }
 export default withRouter(Tab)

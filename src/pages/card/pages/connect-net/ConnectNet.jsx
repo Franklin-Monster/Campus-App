@@ -6,7 +6,7 @@ import {
     netFootText,
     netSwiperImg
 } from './help'
-import './css/connectnet'
+import './css/connect-net'
 
 // component
 import ReturnTitle from '@c/return-title'

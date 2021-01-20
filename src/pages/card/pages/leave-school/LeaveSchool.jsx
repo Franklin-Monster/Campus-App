@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './css/leaveschool'
+import './css/leave-school'
 
 // component
 import Button from '@c/button'
@@ -19,6 +19,7 @@ const LeaveSchool = (props) => {
     const now = new Date();
     const originbodyScrollY = document.getElementsByTagName('body')[0].style.overflowY;
     let bodyStyle = document.getElementsByTagName('body')[0].style
+
     const selectDate = () => {
         bodyStyle.overflowY = 'hidden';
         setIsCalendarShow(true)
@@ -36,6 +37,9 @@ const LeaveSchool = (props) => {
         setLeaveEndTime(null)
     }
 
+    const goApplyProcess = () => {
+        props.history.push('/applyprocess')
+    }
     return (
         <div id="LeaveSchool">
             <div className="leave-header">
@@ -47,7 +51,7 @@ const LeaveSchool = (props) => {
                 </div>
                 <div className="notice-bar">
                     <img src={Notice} alt="notice" />您当前有出入证在申请流程中
-                    <span>去看看</span>
+                    <span onClick={goApplyProcess}>去看看</span>
                 </div>
             </div>
             <div className="leave-body">

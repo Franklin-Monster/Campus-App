@@ -1,5 +1,5 @@
 import React from 'react'
-import './Message.scss'
+import './message.scss'
 import SearchBar from '@c/search-bar'
 const Message = (props) => {
     return (

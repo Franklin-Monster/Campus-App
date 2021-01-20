@@ -12,5 +12,33 @@
     .header-item {
         width: 100%;
     }
+    .list-body{
+        position: relative;
+    }
+    .body-tab{
+        height: 1.5rem;
+        line-height: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        padding: .8rem 0;
+        background-color: #fff;
+    }
+    .body-tab-item {
+        width: 50%;
+        text-align: center;
+    }
+    .body-content{
+        display: flex;
+    }
+    .address-body{
+        width: 100%;
+        transition: all 1s ease;
+        overflow: hidden;
+    }
+    .group-body{
+        width: 0;
+        overflow: hidden;
+        transition: all 1s ease;
+    }
 
 }
