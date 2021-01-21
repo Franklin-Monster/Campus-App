@@ -4,7 +4,7 @@ import { withRouter, Redirect } from 'react-router-dom';
 import "./static/css/app"
 import Tab from './pages/tab/tab'
 import MyRoute from './logic/router/index'
-const App = (props) => {
+const App = () => {
   let isLogin = cookie.load('isLogin')
   return (
     <div id="App">

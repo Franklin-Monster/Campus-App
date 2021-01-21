@@ -15,14 +15,14 @@ const PullDownMenu = (props) => {
         color: props.pullColor
     }
     const selectPayWayClick = () => {
-        const imgRef = selectImgRef.current.style
-        const textRef = selectWayRef.current.style
-        imgRef.transform === "rotate(90deg)"
-            ? imgRef.transform = "rotate(0deg)"
-            : imgRef.transform = "rotate(90deg)"
-        textRef.height === pullHeight
-            ? textRef.height = '4rem'
-            : textRef.height = pullHeight
+        const imgStyle = selectImgRef.current.style
+        const textStyle = selectWayRef.current.style
+        imgStyle.transform === "rotate(90deg)"
+            ? imgStyle.transform = "rotate(0deg)"
+            : imgStyle.transform = "rotate(90deg)"
+        textStyle.height === pullHeight
+            ? textStyle.height = '4rem'
+            : textStyle.height = pullHeight
     }
     const selectItemClick = (e) => {
         setSelectText(e.target.innerText)

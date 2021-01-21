@@ -12,6 +12,7 @@ import { Calendar } from 'antd-mobile';
 import Avator from './img/avator'
 import Record from './img/record'
 import Notice from './img/notice'
+
 const LeaveSchool = (props) => {
     const [isCalendarShow, setIsCalendarShow] = useState()
     const [leaveStartTime, setLeaveStartTime] = useState()

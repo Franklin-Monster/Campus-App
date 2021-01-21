@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './css/auto-swiper'
+
 const AutoSwiper = (props) => {
     const style = {
         width: props.width,
         height: props.height
     }
+    
     return (
         <div id="AutoSwiper" style={style}>
             <div className="swiper-content" style={style}>

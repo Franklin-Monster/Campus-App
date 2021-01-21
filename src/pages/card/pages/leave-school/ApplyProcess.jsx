@@ -19,7 +19,7 @@ const ApplyProcess = (props) => {
             </div>
             <div className="apply-body">
                 <div
-                    className="process-round"
+                    className="process-rect round"
                     style={{ background: '#2BB0EA', color: '#fff' }}
                     onClick={getApplyDetail}>
                     学生申请
@@ -62,7 +62,7 @@ const ApplyProcess = (props) => {
                     <div className="down-arrow-rect"></div>
                     <div className="down-arrow-tria"></div>
                 </div>
-                <div className="process-round">
+                <div className="process-rect round">
                     申请成功
                 </div>
 

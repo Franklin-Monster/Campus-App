@@ -3,9 +3,9 @@ const Message = Loadable(() => import('@p/message/Message'))
 const Card = Loadable(() => import('@p/card/Card'))
 const List = Loadable(() => import('@p/list/List'))
 const MyCenter = Loadable(() => import('@p/mycenter/MyCenter'))
-const PhoneLogin = Loadable(() => import('../login/phoneLogin'))
-const WxLogin = Loadable(() => import('../login/wxLogin'))
-const Login = Loadable(() => import('../login/index'))
+const PhoneLogin = Loadable(() => import('@/logic/login/phoneLogin'))
+const WxLogin = Loadable(() => import('@/logic/login/wxLogin'))
+const Login = Loadable(() => import('@/logic/login/index'))
 const PayCenter = Loadable(() => import('@p/card/pages/paycenter/PayCenter'))
 const PayNet = Loadable(() => import('@p/card/pages/paycenter/PayNet'))
 const PayPhone = Loadable(() => import('@p/card/pages/paycenter/PayPhone'))
@@ -13,6 +13,7 @@ const PayCard = Loadable(() => import('@p/card/pages/paycenter/PayCard'))
 const ConnectNet = Loadable(() => import('@p/card/pages/connect-net/ConnectNet'))
 const LeaveSchool = Loadable(() => import('@p/card/pages/leave-school/LeaveSchool'))
 const ApplyProcess = Loadable(() => import('@p/card/pages/leave-school/ApplyProcess'))
+const FriendInfo = Loadable(() => import('@p/list/FriendInfo'))
 const routes = [
     {
         path: '/message',
@@ -69,9 +70,12 @@ const routes = [
     {
         path: '/applyprocess',
         component: ApplyProcess
+    },
+    {
+        path: '/friendinfo',
+        component: FriendInfo
     }
 
 ]
+
 export default routes
-
-

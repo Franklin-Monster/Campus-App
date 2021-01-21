@@ -1,0 +1,49 @@
+#DivideGroupItem{
+    width: 100%;
+    overflow: hidden;
+    height: 3rem;
+    transition: all 0.4s ease;
+    background-color: #fff;
+    .divide-group{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+    }
+    .item-tria{
+        border-style: solid ;
+        border-width: .4rem 0 .4rem .6rem;
+        border-color: transparent transparent transparent #aaa;
+        width: 0;
+        height: 0;
+        margin-left: .6rem;
+        transition: all 0.4s ease;
+    }
+    .item-text{
+        flex: 1;
+        margin-left: .6rem;
+    }
+    .item-scale{
+        margin-right: .8rem;
+        font-size: .6rem;
+        color: #aaa;
+    }
+    .member-item{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        padding: .2rem .6rem;
+        .member-avator{
+            img{
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+        .member-info{
+            margin-left: .6rem;
+        }
+        .member-sign{
+            font-size: .6rem;
+        }
+    }
+}
