@@ -5,4 +5,25 @@
     bottom: 0;
     overflow-x: hidden;
     background-color: #FAFAFA;
+    .friend-base{
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        padding: .5rem 2rem;
+    }
+    .friend-avator{
+        img{
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    .friend-intro{
+        margin-left: 1rem;
+    }
+    .friend-name{
+        font-size: 1.4rem;
+    }
+    .friend-number{
+        color: #aaa;
+    }
 }

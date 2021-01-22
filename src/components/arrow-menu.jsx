@@ -1,17 +1,22 @@
 import React from 'react'
 import Arrow from './img/eee-arrow'
 import './css/arrow-menu'
+
 const ArrowMenu = (props) => {
+
     const style = {
         width: props.width,
         height: props.height,
         margin: props.margin,
-        padding: props.padding
+        padding: props.padding,
+        fontSize: props.fontSize,
+        border: props.border
     }
     const onClick = () => {
         props.onClick && props.onClick()
         return null
     }
+    
     return (
         <div className="menu-item" onClick={onClick} style={style}>
             {
@@ -29,5 +34,8 @@ const ArrowMenu = (props) => {
             </span>
         </div>
     )
+}
+ArrowMenu.defaultProps = {
+    needArrow: true
 }
 export default ArrowMenu

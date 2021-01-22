@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { withRouter } from 'react-router-dom';
 import { testFriendData } from '@/static/js/testData'
-import './list.scss'
+import './css/list'
 // component
 import SearchBar from '@c/search-bar'
 import ArrowMenu from '@c/arrow-menu'
