@@ -14,7 +14,9 @@ const ConnectNet = Loadable(() => import('@p/card/pages/connect-net/ConnectNet')
 const LeaveSchool = Loadable(() => import('@p/card/pages/leave-school/LeaveSchool'))
 const ApplyProcess = Loadable(() => import('@p/card/pages/leave-school/ApplyProcess'))
 const FriendInfo = Loadable(() => import('@p/list/FriendInfo'))
+const FriendAction = Loadable(() => import('@p/list/FriendAction'))
 const SendMessage = Loadable(() => import('@p/message/SendMessage'))
+const MessageAction = Loadable(() => import('@p/message/MessageAction'))
 const routes = [
     {
         path: '/message',
@@ -77,8 +79,16 @@ const routes = [
         component: FriendInfo
     },
     {
+        path: '/friendaction',
+        component: FriendAction
+    },
+    {
         path: '/sendmessage',
         component: SendMessage
+    },
+    {
+        path: '/messageaction',
+        component: MessageAction
     }
 
 ]

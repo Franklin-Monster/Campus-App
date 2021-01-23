@@ -83,7 +83,7 @@ const LeaveSchool = (props) => {
                     background="#D22E2E"
                     color="#fff"
                     confirmText="您确认申请该通行证吗?"
-                    okText="申请成功"></Button>
+                    successText="申请成功"></Button>
             </div>
             <div className="leave-footer">
 

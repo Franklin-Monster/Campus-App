@@ -10,15 +10,12 @@ const ArrowMenu = (props) => {
         margin: props.margin,
         padding: props.padding,
         fontSize: props.fontSize,
-        border: props.border
-    }
-    const onClick = () => {
-        props.onClick && props.onClick()
-        return null
+        border: props.border,
+        color: props.color
     }
     
     return (
-        <div className="menu-item" onClick={onClick} style={style}>
+        <div className="menu-item" onClick={props.onClick || null} style={style}>
             {
                 props.frontImg && <span className="item-img">
                     <img src={props.frontImg} alt="avator"></img>

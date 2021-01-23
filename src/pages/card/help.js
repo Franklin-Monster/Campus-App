@@ -13,14 +13,20 @@ import Active from './img/active'
 import Internet from './img/internet'
 import LikeWall from './img/like-wall'
 import ForLeave from './img/for-leave'
+import NationExam from './img/nation-exam'
+import SelectClass from './img/select-class'
 import PublicClass from './img/public-class'
 import StrongStudy from './img/strong-study'
+import SearchGrade from './img/search-grade'
+import SearchClassTable from './img/search-classtable'
 
 import Scan from './img/scan'
 import Money from './img/money'
 import Wallet from './img/wallet'
 
-import { goRoute } from '../../static/js/fun'
+import {
+    goRoute
+} from '../../static/js/fun'
 
 const PayClick = () => {
     goRoute('/paycenter')
@@ -71,14 +77,35 @@ const ActiveClick = () => {
 const LikeWallClick = () => {
 
 }
-export const cardImgArr = [Pay, Pass, Eat, Order, ForLeave,
+const NationExamClick = () => {
+
+}
+const SearchGradeClick = () => {
+
+}
+const SelectClassClick = () => {
+
+}
+const SearchClassTableClick = () => {
+
+}
+export const cardImgArr = [
+    Pay, Pass, Eat, Order, ForLeave,
     Air, Internet, Water, Class, PublicClass,
-    StrongStudy, Edu, Love, Friend, Active, LikeWall]
-export const cardTextArr = ["充值缴费", "出校通行", "食堂外送", "服务预约", "课程请假",
+    StrongStudy, NationExam, SearchGrade, SelectClass, SearchClassTable,
+    Edu, Love, Friend, Active, LikeWall,
+]
+export const cardTextArr = [
+    "充值缴费", "出校通行", "食堂外送", "服务预约", "课程请假",
     "宿舍空调", "校园WiFi", "送水服务", "我的课程", "校公开课",
-    "学习强国", "教务功能", "我要交友", "大学生圈", "休闲活动", "表白墙"]
-export const cardClickArr = [PayClick, PassClick, EatClick, OrderClick, ForLeaveClick,
+    "学习强国", "国家考试", "成绩查询", "选课管理", "课表查询",
+    "教务功能", "我要交友", "大学生圈", "休闲活动", "表白墙"
+]
+export const cardClickArr = [
+    PayClick, PassClick, EatClick, OrderClick, ForLeaveClick,
     AirClick, NetClick, WaterClick, ClassClick, PublicClassClick,
-    StrongStudyClick, EduClick, LoveClick, FriendClick, ActiveClick, LikeWallClick]
+    StrongStudyClick, NationExamClick, SearchGradeClick, SelectClassClick, SearchClassTableClick,
+    EduClick, LoveClick, FriendClick, ActiveClick, LikeWallClick,
+]
 export const headImgArr = [Scan, Money, Wallet]
 export const headTextArr = ["扫一扫", "付钱", "卡包"]

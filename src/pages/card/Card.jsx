@@ -7,7 +7,7 @@ import './card.scss'
 import CardItem from '@c/card-item'
 import SearchBar from '@c/search-bar'
 
-const Card = (props) => {
+const Card = () => {
 
     return (
         <div id="Card">
@@ -72,11 +72,32 @@ const Card = (props) => {
                     </div>
                 </div>
                 <div className="card-body-item-content">
+                    <div className="item-title">教务</div>
+                    <div className="item-card">
+                        {
+                            cardImgArr.map((item, index) => {
+                                if (index >= 12 && index < 16) {
+                                    return (
+                                        <CardItem
+                                            text={cardTextArr[index]}
+                                            img={item}
+                                            key={index}
+                                            width="20%"
+                                            height="20%" />
+                                    )
+                                }
+                                return null
+                            })
+                        }
+
+                    </div>
+                </div>
+                <div className="card-body-item-content">
                     <div className="item-title">娱乐</div>
                     <div className="item-card">
                         {
                             cardImgArr.map((item, index) => {
-                                if (index >= 12) {
+                                if (index >= 16) {
                                     return (
                                         <CardItem
                                             text={cardTextArr[index]}

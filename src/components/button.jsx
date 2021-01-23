@@ -10,7 +10,8 @@ const Button = (props) => {
         lineHeight: props.height,
         color: props.color || '#000',
         background: props.background,
-        margin: props.margin + ' auto' || '0 auto'
+        margin: props.margin + ' auto' || '0 auto',
+        padding: props.padding
     }
     const onClick = () => {
         if (props.needConfirm) {
@@ -25,7 +26,7 @@ const Button = (props) => {
                     text: '确定', onPress: () => {
                         props.onClick && props.onClick()
                         Message({
-                            text: props.okText || '成功',
+                            text: props.successText || '成功',
                             type: 'success'
                         })
                         return null

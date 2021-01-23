@@ -17,10 +17,16 @@ const SendMessage = (props) => {
     const bodyClick = () => {
         footerRef.current.style.height = '2.4rem'
     }
+
     return (
         <div id="SendMessage">
             <div className="send-header">
-                <ReturnTitle arrowColor='black' background="#FAFAFA" text={props.name} rightImg={More} />
+                <ReturnTitle 
+                arrowColor='black' 
+                background="#FAFAFA" 
+                text={props.name} 
+                rightImg={More} 
+                rightImgClick={() => props.history.push('/messageaction')}/>
             </div>
             <div className="send-body" onClick={bodyClick}>
 
