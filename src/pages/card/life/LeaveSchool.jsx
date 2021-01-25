@@ -38,9 +38,6 @@ const LeaveSchool = (props) => {
         setLeaveEndTime(null)
     }
 
-    const goApplyProcess = () => {
-        props.history.push('/applyprocess')
-    }
     return (
         <div id="LeaveSchool">
             <div className="leave-header">
@@ -52,7 +49,7 @@ const LeaveSchool = (props) => {
                 </div>
                 <div className="notice-bar">
                     <img src={Notice} alt="notice" />您当前有出入证在申请流程中
-                    <span onClick={goApplyProcess}>去看看</span>
+                    <span onClick={() => props.history.push('/applyprocess')}>去看看</span>
                 </div>
             </div>
             <div className="leave-body">

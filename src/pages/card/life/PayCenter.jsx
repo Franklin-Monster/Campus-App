@@ -1,39 +1,39 @@
 import React from 'react'
-import { paycenterImgArr, paycenterTextArr, paycenterClickArr } from './help'
-import { returnBack } from '../../../../static/js/fun'
+import { payCenterCardItemArr } from './help'
 import './css/pay-center'
 
 // component
-import AutoSwiper from '@c/auto-swiper'
 import CardItem from '@c/card-item'
+import AutoSwiper from '@c/auto-swiper'
+import ReturnTitle from '@c/return-title'
 
 // image
 import Swiper1 from './img/swiper1.jpeg'
 import Swiper2 from './img/swiper2.jpeg'
 import Swiper3 from './img/swiper3.jpeg'
-import ReturnArrow from './img/return'
-const PayCenter = () => {
+
+const PayCenter = (props) => {
     return (
         <div id="PayCenter">
             <div className="paycenter-header">
-                <img src={ReturnArrow} alt='return' onClick={returnBack} />充值缴费
-            </div>
-            <div className="paycenter-body">
-                <div className="body-swiper">
+                 <ReturnTitle text="充值缴费" />
+                 <div className="header-swiper">
                     <AutoSwiper imgArr={[Swiper1, Swiper2, Swiper3]} />
                 </div>
+            </div>
+            <div className="paycenter-body">
                 <div className="body-content">
                     <div className="body-item">
                         {
-                            paycenterImgArr.map((item, index) => {
+                            payCenterCardItemArr.map((item, index) => {
                                 return (
                                     <CardItem
-                                        text={paycenterTextArr[index]}
-                                        img={item}
-                                        key={item}
+                                        text={item.text}
+                                        img={item.img}
+                                        key={index}
                                         width="20%"
                                         height="20%"
-                                        onClick={paycenterClickArr[index]} />
+                                        onClick={() => props.history.push(item.route)} />
                                 )
                             })
                         }
@@ -41,10 +41,10 @@ const PayCenter = () => {
                     </div>
                 </div>
             </div>
-            <div className="paycenter-footer">
-
-            </div>
+            <div className="paycenter-footer"> </div>
         </div>
     )
 }
+
+
 export default PayCenter

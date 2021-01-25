@@ -40,7 +40,7 @@ const Login = (props) => {
         <div id="Login">
             <div className="login-header">
                 <div className="header-logo">
-                    <img src={Logo} alt="logo"></img>
+                    <img src={Logo} alt="logo" />
                 </div>
             </div>
             <div className="login-body">

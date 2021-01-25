@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './css/message.scss'
 import ReactDOM from "react-dom";
 
@@ -35,10 +35,14 @@ const Message = (props) => {
                 style.color = '#E6A23C'
                 MessageImg = Attention
                 break;
+            default:
+                style.background = '#F0F9EB'
+                style.color = '#67C23A'
+                MessageImg = Success
         }
         return (
             <div>
-                <img src={MessageImg} alt="attention"></img>
+                <img src={MessageImg} alt="attention" />
                 <span>{props.text}</span>
             </div>
         )

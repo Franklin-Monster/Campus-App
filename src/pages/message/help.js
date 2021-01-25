@@ -5,5 +5,30 @@ import Place from './img/place'
 import Pay from './img/pay'
 import File from './img/file'
 
-export const sendPlusImgArr = [Photo, Camera, Video, Place, Pay, File]
-export const sendPlusTextArr = ['照片', '拍摄', '语音通话', '位置', '转账', '文件', 'xxx', 'xxx']
+export const sendPlusItemArr = [
+    {
+        img: Photo,
+        text: '照片'
+    },
+    {
+        img: Camera,
+        text: '拍摄'
+    },
+    {
+        img: Video,
+        text: '语音通话'
+    },
+    {
+        img: Place,
+        text: '位置'
+    },
+    {
+        img: Pay,
+        text: '转账'
+    },
+    {
+        img: File,
+        text: '文件'
+    },
+
+]

@@ -1,3 +1,4 @@
+
 // image
 import Edu from './img/edu'
 import Pay from './img/pay'
@@ -8,7 +9,7 @@ import Pass from './img/pass'
 import Order from './img/order'
 import Water from './img/water'
 import Class from './img/class'
-import Friend from './img/friend'
+import Organ from './img/organ'
 import Active from './img/active'
 import Internet from './img/internet'
 import LikeWall from './img/like-wall'
@@ -20,92 +21,105 @@ import StrongStudy from './img/strong-study'
 import SearchGrade from './img/search-grade'
 import SearchClassTable from './img/search-classtable'
 
-import Scan from './img/scan'
-import Money from './img/money'
-import Wallet from './img/wallet'
-
-import {
-    goRoute
-} from '../../static/js/fun'
-
-const PayClick = () => {
-    goRoute('/paycenter')
-}
-const PassClick = () => {
-    goRoute('leaveschool')
-}
-const EatClick = () => {
-
-}
-const OrderClick = () => {
-
-}
-const ForLeaveClick = () => {
-
-}
-const AirClick = () => {
-
-}
-const NetClick = () => {
-    goRoute('/connectnet')
-}
-const WaterClick = () => {
-
-}
-const ClassClick = () => {
-
-}
-const PublicClassClick = () => {
-
-}
-const StrongStudyClick = () => {
-
-}
-
-const EduClick = () => {
-
-}
-const LoveClick = () => {
-
-}
-const FriendClick = () => {
-
-}
-const ActiveClick = () => {
-
-}
-const LikeWallClick = () => {
-
-}
-const NationExamClick = () => {
-
-}
-const SearchGradeClick = () => {
-
-}
-const SelectClassClick = () => {
-
-}
-const SearchClassTableClick = () => {
-
-}
-export const cardImgArr = [
-    Pay, Pass, Eat, Order, ForLeave,
-    Air, Internet, Water, Class, PublicClass,
-    StrongStudy, NationExam, SearchGrade, SelectClass, SearchClassTable,
-    Edu, Love, Friend, Active, LikeWall,
+export const cardItemArr = [
+    {
+        img: Pay,
+        text: "充值缴费",
+        route: '/paycenter'
+    },
+    {
+        img: Pass,
+        text: "出校通行",
+        route: '/leaveschool'
+    },
+    {
+        img: Eat,
+        text: "食堂外送",
+        route: '/notfound'
+    },
+    {
+        img: Order,
+        text: "服务预约",
+        route: '/notfound'
+    },
+    {
+        img: ForLeave,
+        text: "课程请假",
+        route: '/notfound'
+    },
+    {
+        img: Air,
+        text: "宿舍空调",
+        route: '/notfound'
+    },
+    {
+        img: Internet,
+        text: "校园WiFi",
+        route: '/connectwifi'
+    },
+    {
+        img: Water,
+        text: "送水服务",
+        route: '/notfound'
+    },
+    {
+        img: Class,
+        text: "我的课程",
+        route: '/notfound'
+    },
+    {
+        img: PublicClass,
+        text: "校公开课",
+        route: '/notfound'
+    },
+    {
+        img: StrongStudy,
+        text: "学习强国",
+        route: '/notfound'
+    },
+    {
+        img: NationExam,
+        text: "国家考试",
+        route: '/notfound'
+    },
+    {
+        img: SearchGrade,
+        text: "成绩查询",
+        route: '/notfound'
+    },
+    {
+        img: SelectClass,
+        text: "选课管理",
+        route: '/notfound'
+    },
+    {
+        img: SearchClassTable,
+        text: "课表查询",
+        route: '/notfound'
+    },
+    {
+        img: Edu,
+        text: "教务功能",
+        route: '/notfound'
+    },
+    {
+        img: Love,
+        text: "我要交友",
+        route: '/notfound'
+    },
+    {
+        img: Organ,
+        text: "社团活动",
+        route: '/notfound'
+    },
+    {
+        img: Active,
+        text: "休闲娱乐",
+        route: '/notfound'
+    },
+    {
+        img: LikeWall,
+        text: "表白墙",
+        route: '/notfound'
+    },
 ]
-export const cardTextArr = [
-    "充值缴费", "出校通行", "食堂外送", "服务预约", "课程请假",
-    "宿舍空调", "校园WiFi", "送水服务", "我的课程", "校公开课",
-    "学习强国", "国家考试", "成绩查询", "选课管理", "课表查询",
-    "教务功能", "我要交友", "大学生圈", "休闲活动", "表白墙"
-]
-export const cardClickArr = [
-    PayClick, PassClick, EatClick, OrderClick, ForLeaveClick,
-    AirClick, NetClick, WaterClick, ClassClick, PublicClassClick,
-    StrongStudyClick, NationExamClick, SearchGradeClick, SelectClassClick, SearchClassTableClick,
-    EduClick, LoveClick, FriendClick, ActiveClick, LikeWallClick,
-]
-export const headImgArr = [Scan, Money, Wallet]
-export const headTextArr = ["扫一扫", "付钱", "卡包"]

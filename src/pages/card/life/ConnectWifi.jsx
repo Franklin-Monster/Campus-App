@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import {
-    netHeadImg,
-    netHeadText,
-    netFootImg,
-    netFootText,
-    netSwiperImg
+    connectWifiHeadItemArr,
+    connectWifiFootItemArr,
+    connectWifiSwiperImgArr
 } from './help'
-import './css/connect-net'
+import './css/connect-wifi'
 
 // component
 import ReturnTitle from '@c/return-title'
@@ -17,13 +15,13 @@ import Button from '@c/button'
 // image
 import WiFi from './img/wifi'
 
-const ConnectNet = (props) => {
+const ConnectWifi = (props) => {
     const [isConnect, setIsConnect] = useState(false)
     const loginClick = () =>  {
         setIsConnect(true)
     }
     return (
-        <div id="ConnectNet">
+        <div id="ConnectWifi">
             <div className="net-header">
                 <ReturnTitle text="校园WiFi" background="#FF9900" />
             </div>
@@ -40,10 +38,10 @@ const ConnectNet = (props) => {
                             </div>
                             <div className="wifi-set">
                                 {
-                                    netHeadImg.map((item, index) => {
+                                    connectWifiHeadItemArr.map((item, index) => {
                                         return <CardItem
-                                            img={item}
-                                            text={netHeadText[index]}
+                                            img={item.img}
+                                            text={item.text}
                                             width="20%"
                                             key={index} />
                                     })
@@ -68,14 +66,13 @@ const ConnectNet = (props) => {
                             </div>
                         )
                 }
-
             </div>
             <div className="net-footer">
-                <AutoSwiper imgArr={netSwiperImg} />
+                <AutoSwiper imgArr={connectWifiSwiperImgArr} />
                 <div className="net-footer-card">
                     {
-                        netFootImg.map((item, index) => {
-                            return <CardItem img={item} text={netFootText[index]} width="24%" key={index} />
+                        connectWifiFootItemArr.map((item, index) => {
+                            return <CardItem img={item.img} text={item.text} width="24%" key={index} />
                         })
                     }
                 </div>
@@ -84,4 +81,4 @@ const ConnectNet = (props) => {
     )
 }
 
-export default ConnectNet
+export default ConnectWifi

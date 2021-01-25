@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { withRouter } from 'react-router-dom';
 import '../css/divide-group-item'
- 
+
 // image
 import Avator from '../img/avator'
 
@@ -23,10 +23,6 @@ const DivideGroupItem = (props) => {
         }
     }
 
-    
-    const goFriendInfo = () => {
-        props.history.push('/friendinfo')
-    }
     return (
         <div id="DivideGroupItem" ref={groupRef}>
             <div className="divide-group" onClick={groupClick} >
@@ -37,7 +33,10 @@ const DivideGroupItem = (props) => {
             {
                 props.groupMember.map((member, index) => {
                     return (
-                        <div className="member-item" key={index} onClick={goFriendInfo}>
+                        <div
+                            className="member-item"
+                            key={index}
+                            onClick={() => props.history.push('/friendinfo')}>
                             <div className="member-avator">
                                 <img src={member.avator || Avator} alt="avator" />
                             </div>

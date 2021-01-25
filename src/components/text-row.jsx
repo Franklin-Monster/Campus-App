@@ -7,7 +7,8 @@ const TextRow = (props) => {
         height: props.height,
         padding: props.padding,
         margin: props.margin,
-        background: props.background
+        background: props.background,
+        color: props.color
     }
     return (
         <div id="TextRow" style={style}>

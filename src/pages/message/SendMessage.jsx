@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import ReturnTitle from '@c/return-title'
 import './css/send-message'
-import { sendPlusImgArr, sendPlusTextArr } from './help'
+import { sendPlusItemArr } from './help'
 
 // image
 import More from './img/more'
@@ -24,7 +24,9 @@ const SendMessage = (props) => {
                 <ReturnTitle 
                 arrowColor='black' 
                 background="#FAFAFA" 
-                text={props.name} 
+                // text={props.name} 
+                text='Franklin'
+                color="#000"
                 rightImg={More} 
                 rightImgClick={() => props.history.push('/messageaction')}/>
             </div>
@@ -44,22 +46,22 @@ const SendMessage = (props) => {
                     <div className="plus-content">
 
                         {
-                            sendPlusImgArr.map((item, index) => {
+                            sendPlusItemArr.map((item, index) => {
                                 return (
                                     <div className="plus-item" key={index}>
-                                        <div><img src={item} alt={index} /></div>
-                                        <div>{sendPlusTextArr[index]}</div>
+                                        <div><img src={item.img} alt={index} /></div>
+                                        <div>{item.text}</div>
                                     </div>
                                 )
                             })
                         }
 
                         <div className="plus-item" style={{ visibility: 'hidden' }}>
-                            <div><img src={More} /></div>
+                            <div><img src={More} alt="none"/></div>
                             <div>照片</div>
                         </div>
                         <div className="plus-item" style={{ visibility: 'hidden' }}>
-                            <div><img src={More} /></div>
+                            <div><img src={More} alt="none"/></div>
                             <div>照片</div>
                         </div>
                     </div>

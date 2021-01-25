@@ -14,10 +14,6 @@ import ReturnTitle from '@c/return-title'
 
 
 const FriendInfo = (props) => {
-    const goSendMessage = () => {
-        props.history.push('/sendmessage')
-    }
-
     // 更改备注
     const changeRemark = () => {
         Modal.prompt('备注', '',
@@ -62,7 +58,7 @@ const FriendInfo = (props) => {
                         background="#3775F6"
                         color="#fff"
                         margin="2rem auto"
-                        onClick={goSendMessage} />
+                        onClick={() => props.history.push('/sendmessage')} />
                     <Button text="打电话" background="#00FF00" color="#fff" margin=".5rem auto" />
                 </div>
             </div>

@@ -11,7 +11,6 @@ import Message from '@c/message'
 import ReturnArrow from '../../assets/images/return'
 import Close from '../../assets/images/close'
 
-
 const PhoneLogin = (props) => {
     const [userPhone, setUserPhone] = useState(null)
     const [code, setCode] = useState(null)
@@ -71,7 +70,7 @@ const PhoneLogin = (props) => {
         <div id="PhoneLogin">
             <div className="phone-header">
                 <div className="header-return" onClick={returnBack}>
-                    <img src={ReturnArrow} alt="return"></img>
+                    <img src={ReturnArrow} alt="return" />
                 </div>
                 <div className="header-password">密码登录</div>
             </div>
@@ -91,7 +90,7 @@ const PhoneLogin = (props) => {
                         <span className="phone-end"
                             style={{ display: userPhone ? 'inline-block' : 'none' }}
                             onClick={() => { phoneRef.current.value = ''; setUserPhone(null) }}>
-                            <img src={Close} alt="close"></img>
+                            <img src={Close} alt="close" />
                         </span>
                     </div>
                     <div className="code-input">
@@ -113,7 +112,7 @@ const PhoneLogin = (props) => {
                         <span className="code-end"
                             style={{ display: code ? 'inline-block' : 'none' }}
                             onClick={() => { codeRef.current.value = ''; setCode(null) }} >
-                            <img src={Close} alt="close"></img>
+                            <img src={Close} alt="close" />
                         </span>
                     </div>
                 </div>

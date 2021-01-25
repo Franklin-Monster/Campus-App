@@ -1,0 +1,74 @@
+#MyCenter {
+    width: 100%;
+    background-color: #FAFAFA;
+    .mycenter-header {
+        height: 6rem;
+        display: flex;
+        padding: 1.25rem;
+        background-color: #3775F6;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mycenter-header-avator {
+        flex: 0.1;
+        margin: .625rem;
+        img {
+            width: 3rem;
+            height: 3rem;
+            padding: .625rem;
+            border: 1px #000 solid;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    }
+
+    .mycenter-header-text {
+        flex: 0.8;
+        margin-left: .5rem;
+    }
+
+    .text-name {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: .2rem;
+    }
+
+    .text-class{
+        color: #1b2b3b;
+        font-size: 0.5rem;
+    }
+
+    .mycenter-header-arrow {
+        width: 100%;
+        flex: 0.1;
+        img {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    .mycenter-body {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: .125rem;
+    }
+
+    .mycenter-card{
+        width: 90%;
+        background-color: #fff;
+        margin: 2rem auto;
+        padding: .5rem 0;
+        border-radius: .5rem; 
+    }
+    .mycenter-card-title{
+        font-weight: 600;
+        margin-left: 1rem;
+    }
+    .mycenter-card-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem .5rem;
+    }
+}
