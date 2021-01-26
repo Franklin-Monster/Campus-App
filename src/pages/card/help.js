@@ -1,4 +1,3 @@
-
 // image
 import Edu from './img/edu'
 import Pay from './img/pay'
@@ -40,7 +39,7 @@ export const cardItemArr = [
     {
         img: Order,
         text: "服务预约",
-        route: '/notfound'
+        route: '/serviceorder'
     },
     {
         img: ForLeave,

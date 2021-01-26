@@ -20,7 +20,7 @@ const MessageAction = Loadable(() => import('@p/message/MessageAction'))
 const UserInfo = Loadable(() => import('@p/mycenter/UserInfo'))
 const UserInstall = Loadable(() => import('@p/mycenter/UserInstall'))
 const NotFound = Loadable(() => import('@p/notfound/NotFound.jsx'))
-
+const ServiceOrder = Loadable(() => import('@p/card/life/ServiceOrder'))
 const routes = [
     {
         path: '/message',
@@ -105,7 +105,11 @@ const routes = [
     {
         path: '/notfound',
         component: NotFound
-    }
+    },
+    {
+        path: '/serviceorder',
+        component: ServiceOrder
+    },
 
 ]
 

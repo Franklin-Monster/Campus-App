@@ -63,6 +63,7 @@ const MyCenter = (props) => {
                                 text={item.text}
                                 key={index}
                                 margin=".2rem 0"
+                                onClick={() => props.history.push(item.route)}
                             />
                         )
                     })

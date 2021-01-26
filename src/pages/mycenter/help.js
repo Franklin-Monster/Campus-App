@@ -13,14 +13,17 @@ const myCenterArrowMenuArr = [
     {
         img: Pay,
         text: "支付",
+        route: '/notfound'
     },
     {
         img: Wallet,
         text: "卡包",
+        route: '/notfound'
     },
     {
         img: Install,
         text: "设置",
+        route: '/userinstall'
     },
 ]
 const myCenterCardItemArr = [

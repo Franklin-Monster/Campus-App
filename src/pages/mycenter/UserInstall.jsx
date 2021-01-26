@@ -1,4 +1,5 @@
 import React from 'react'
+import cookie from 'react-cookies'
 import './css/user-install'
 
 // component
@@ -6,7 +7,11 @@ import Button from '@c/button'
 import ArrowMenu from '@c/arrow-menu'
 import ReturnTitle from '@c/return-title'
 
-const UserInstall = () => {
+const UserInstall = (props) => {
+    const quitLogin = () => {
+        cookie.remove('isLogin')
+        props.history.push('/')
+    }
     return (
         <div id="UserInstall">
             <div className="install-header">
@@ -28,7 +33,8 @@ const UserInstall = () => {
                     padding=".5rem 0"
                     needConfirm={true}
                     confirmText="您确定退出当前账号吗？"
-                    successText="退出成功" />
+                    successText="退出成功"
+                    onClick={quitLogin} />
             </div>
         </div>
     )
