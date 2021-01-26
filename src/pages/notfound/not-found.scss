@@ -1,0 +1,33 @@
+#NotFound {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+  
+    .not-body {
+        width: 100%;
+        font-size: 2.4rem;
+        text-align: center;
+        height: 20vh;
+        line-height: 20vh;
+        border-radius: 1rem;
+        background-color: #3775F6;
+        color: #fff;
+        animation: content 10s ease  infinite alternate;
+        margin: auto;
+    }
+
+    @keyframes content {
+        0%{
+            transform: translate(-100%,-100%);
+        }
+        50%{
+            transform: translate(100%,200%);
+        }
+        100%{
+            transform: translate(-100%,400%);
+        }
+    }
+}
