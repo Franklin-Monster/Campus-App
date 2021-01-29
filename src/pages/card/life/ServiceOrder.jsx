@@ -25,9 +25,7 @@ const ServiceOrder = (props) => {
                     <CardItem img={Mind} text="心理健康" />
                 </div>
             </div>
-            <div className="order-footer">
-
-            </div>
+            <div className="order-footer"> </div>
         </div>
     )
 }

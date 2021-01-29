@@ -23,7 +23,7 @@ const payCenterCardItemArr = [
     {
         img: PayNet,
         text: "充网费",
-        route: "/paynent"
+        route: "/paynet"
     },
     {
         img: PayAir,

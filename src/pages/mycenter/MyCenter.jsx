@@ -16,7 +16,7 @@ const MyCenter = (props) => {
     const [userGender, setUserGender] = useState('男')
     const [userCollege, setUserCollege] = useState('经济与管理学院')
     const [userAvator, setUserAvator] = useState(Avator)
-
+   
     return (
         <div id="MyCenter">
             <div className="mycenter-header">

@@ -104,7 +104,7 @@ export const cardItemArr = [
     {
         img: Love,
         text: "我要交友",
-        route: '/notfound'
+        route: '/forfriend'
     },
     {
         img: Organ,
