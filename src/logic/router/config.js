@@ -22,8 +22,8 @@ const UserInstall = Loadable(() => import('@p/mycenter/UserInstall'))
 const NotFound = Loadable(() => import('@p/notfound/NotFound.jsx'))
 const ServiceOrder = Loadable(() => import('@p/card/life/ServiceOrder'))
 const ForFriend = Loadable(() => import('@p/card/entertainment/ForFriend'))
-const routes = [
-    {
+const VideoChat = Loadable(() => import('@p/message/VideoChat'))
+const routes = [{
         path: '/message',
         component: Message
     },
@@ -110,9 +110,14 @@ const routes = [
     {
         path: '/serviceorder',
         component: ServiceOrder
-    },{
+    },
+    {
         path: '/forfriend',
         component: ForFriend
+    },
+    {
+        path: '/videochat',
+        component: VideoChat
     }
 
 ]

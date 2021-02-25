@@ -1,21 +1,28 @@
-#List{
+#List {
     width: 100%;
-    background-color: #eee;
+    background-color: #FAFAFA;
+
     .list-header {
         width: 100%;
         padding-bottom: 1rem;
     }
+
     .header-searchBar {
         width: 100%;
-        margin-bottom: .5rem ;
+        height: 3rem;
+        margin-bottom: .5rem;
+        background-color: #3775F6;
     }
+
     .header-item {
         width: 100%;
     }
-    .list-body{
+
+    .list-body {
         position: relative;
     }
-    .body-tab{
+
+    .body-tab {
         height: 1.5rem;
         line-height: 1.5rem;
         display: flex;
@@ -23,20 +30,24 @@
         padding: .8rem 0;
         background-color: #fff;
     }
+
     .body-tab-item {
         width: 50%;
         font-size: 1rem;
         text-align: center;
     }
-    .body-content{
+
+    .body-content {
         display: flex;
     }
-    .address-body{
+
+    .address-body {
         width: 100%;
         transition: all .6s ease;
         overflow: hidden;
     }
-    .group-body{
+
+    .group-body {
         width: 0;
         overflow: hidden;
         transition: all .6s ease;

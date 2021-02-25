@@ -4,9 +4,10 @@ import Video from './img/video'
 import Place from './img/place'
 import Pay from './img/pay'
 import File from './img/file'
-
-export const sendPlusItemArr = [
-    {
+import {
+    goRoute
+} from '@/static/js/fun'
+export const sendPlusItemArr = [{
         img: Photo,
         text: '照片'
     },
@@ -16,7 +17,11 @@ export const sendPlusItemArr = [
     },
     {
         img: Video,
-        text: '语音通话'
+        text: '视频通话',
+        onClick: () => {
+            console.log('1');
+            goRoute('/videochat')
+        }
     },
     {
         img: Place,

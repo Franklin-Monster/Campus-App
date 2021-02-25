@@ -1,9 +1,46 @@
-#Message{
-    .message-header{
+#Message {
+    background-color: #FAFAFA;
+
+    .message-header {
         width: 100%;
         text-align: center;
         height: 1.5rem;
         padding: 1rem 0;
         background: #3775F6;
+    }
+
+    .message-box {
+        margin-top: .5rem;
+    }
+
+    .message-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 3.6rem;
+        padding: .2rem .6rem;
+        background-color: #fff;
+        margin-bottom: .1rem;
+
+        .message-avator {
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+
+        .message-info {
+            margin-left: .8rem;
+        }
+
+        .message-name {
+            font-size: 1.1rem;
+        }
+
+        .message-content {
+            margin-top: .3rem;
+            font-size: .6rem;
+            color: #aaa;
+        }
     }
 }
