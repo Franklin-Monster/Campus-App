@@ -4,24 +4,16 @@ import { sendPlusItemArr } from './help'
 
 // component
 import ReturnTitle from '@c/return-title'
-import { ImagePicker } from 'antd-mobile';
+import { ImagePicker } from 'antd-mobile'
+
 // image
 import More from './img/more'
 import Plus from './img/plus'
 import Voice from './img/voice'
 import Express from './img/express'
-
 const SendMessage = props => {
     const footerRef = useRef()
     const [mySendMessage, setMySendMessage] = useState([])
-    const constrains = {
-        video: true,
-        audio: true
-    }
-    navigator.mediaDevices.getUserMedia(constrains)
-        .then(stream => {
-            console.log('得到stream的类型是MediaStream')
-        })
 
     const onImageChange = files => {
         console.log(files)
@@ -40,6 +32,7 @@ const SendMessage = props => {
     const bodyClick = () => {
         footerRef.current.style.height = '2.4rem'
     }
+
     // 发送文字消息
     const sendMessage = e => {
         if (!e.target.value) return
@@ -54,6 +47,7 @@ const SendMessage = props => {
     }
     return (
         <div id="SendMessage">
+
             <div className="send-header">
                 <ReturnTitle
                     arrowColor='black'

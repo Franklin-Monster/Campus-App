@@ -1,0 +1,81 @@
+#VideoChat {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    .video-header {
+        opacity: .8;
+        top: 1rem;
+        left: 2rem;
+        position: absolute;
+    }
+
+    .header-reduce {
+        margin-bottom: .5rem;
+        margin-left: -1rem;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+
+        }
+    }
+
+    .video-content {
+        z-index: -1;
+    }
+
+    .friend-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .friend-avator {
+        img {
+            width: 4.2rem;
+            height: 4.2rem;
+        }
+    }
+
+    .friend-text {
+        margin-left: 1rem;
+    }
+
+    .friend-name {
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    .friend-state {
+        font-size: .8rem;
+        color: rgb(235, 231, 231);
+    }
+
+    .video-body {
+        width: 100%;
+    }
+
+    .video-footer {
+        width: 100%;
+        position: absolute;
+        bottom: 2rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-item {
+        width: 50%;
+        text-align: center;
+    }
+
+    .item-icon {
+        img {
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+    }
+
+    .item-text {
+        color: #fff;
+        font-size: .8rem;
+    }
+}

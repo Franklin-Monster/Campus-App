@@ -124,10 +124,25 @@
     }
 
     .upload-image {
-        width: 100%;
-        height: 100%;
+        width: 4rem;
+        height: 4rem;
         position: absolute;
+        left: .5rem;
         opacity: 0;
+
+        input {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    .am-image-picker,
+    .am-image-picker-list,
+    .am-flexbox-item,
+    .am-image-picker-item,
+    .am-image-picker-upload-btn {
+        width: 4rem;
+        height: 4rem;
     }
 
     .plus-item {

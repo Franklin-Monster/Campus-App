@@ -7,6 +7,7 @@ import File from './img/file'
 import {
     goRoute
 } from '@/static/js/fun'
+
 export const sendPlusItemArr = [{
         img: Photo,
         text: '照片'
@@ -21,6 +22,7 @@ export const sendPlusItemArr = [{
         onClick: () => {
             console.log('1');
             goRoute('/videochat')
+            return null
         }
     },
     {
@@ -35,5 +37,4 @@ export const sendPlusItemArr = [{
         img: File,
         text: '文件'
     },
-
 ]
