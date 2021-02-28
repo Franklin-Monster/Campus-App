@@ -23,6 +23,9 @@ const NotFound = Loadable(() => import('@p/notfound/NotFound.jsx'))
 const ServiceOrder = Loadable(() => import('@p/card/life/ServiceOrder'))
 const ForFriend = Loadable(() => import('@p/card/entertainment/ForFriend'))
 const VideoChat = Loadable(() => import('@p/message/VideoChat'))
+const AudioChat = Loadable(() => import('@p/message/AudioChat'))
+const TakePhoto = Loadable(() => import('@p/message/TakePhoto'))
+const TakePhotoFinish = Loadable(() => import('@p/message/TakePhotoFinish'))
 const routes = [{
         path: '/message',
         component: Message
@@ -118,8 +121,19 @@ const routes = [{
     {
         path: '/videochat',
         component: VideoChat
-    }
-
+    },
+    {
+        path: '/audiochat',
+        component: AudioChat
+    },
+    {
+        path: '/takephoto',
+        component: TakePhoto
+    },
+    {
+        path: '/takephotofinish',
+        component: TakePhotoFinish
+    },
 ]
 
 export default routes

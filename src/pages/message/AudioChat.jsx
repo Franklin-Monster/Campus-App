@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react'
-import './css/video-chat'
+import React from 'react'
+import './css/audio-chat'
 
 // component 
 import Message from '@c/message'
@@ -11,11 +11,7 @@ import Franklin from './img/Franklin'
 import VoicePhone from './img/voice-phone'
 import AudioUrl from './img/video.mp3'
 
-const VideoChat = () => {
-    const videoRef = useRef()
-    useEffect(() => {
-        getMedia();
-    }, [])
+const AudioChat = () => {
 
     // 挂断
     const ringOffClick = async () => {
@@ -26,21 +22,9 @@ const VideoChat = () => {
         window.location.replace('/sendmessage')
     }
 
-    // 获取摄像头
-    const getMedia = async () => {
-        const video = videoRef.current
-        const constraints = {
-            video: { width: '100%', height: 500 },
-            audio: false,
-        };
-        const MediaStream = await navigator.mediaDevices.getUserMedia(constraints)
-        video.srcObject = MediaStream
-        video.play()
-    }
-
     return (
-        <div id="VideoChat">
-            <div className="video-header">
+        <div id="AudioChat">
+            <div className="audio-header">
                 <audio style={{ height: '0' }} src={AudioUrl} loop controls="controls" autoPlay></audio>
                 <div className="header-reduce">
                     <img src={Reduce} alt="reduce" />
@@ -59,15 +43,10 @@ const VideoChat = () => {
                     </div>
                 </div>
             </div>
-            <div className="video-body">
-                <video className="video-content"
-                    ref={videoRef}
-                    width="1000px"
-                    height="100%"
-                    autoPlay={true}>
-                </video>
+            <div className="audio-body">
+
             </div>
-            <div className="video-footer">
+            <div className="audio-footer">
                 <div className="footer-item" onClick={ringOffClick}>
                     <div className="item-icon">
                         <img src={RingOff} alt="hung" />
@@ -89,4 +68,4 @@ const VideoChat = () => {
     )
 }
 
-export default VideoChat
+export default AudioChat

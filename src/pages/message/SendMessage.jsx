@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './css/send-message'
 import { sendPlusItemArr } from './help'
 
@@ -11,24 +11,43 @@ import More from './img/more'
 import Plus from './img/plus'
 import Voice from './img/voice'
 import Express from './img/express'
+import Franklin from './img/Franklin'
+
 const SendMessage = props => {
     const footerRef = useRef()
     const [mySendMessage, setMySendMessage] = useState([])
+    const propsQuery = props.location.query
 
+    // 接收拍摄的照片
+    useEffect(() => {
+        try {
+            if (propsQuery.photoSrc) {
+                setMySendMessage(mes => [...mes, {
+                    type: 'image',
+                    value: propsQuery.photoSrc
+                }])
+            }
+        } catch (err) {
+
+        }
+    }, [propsQuery])
+
+    // 监听选择图片
     const onImageChange = files => {
-        console.log(files)
         files.forEach(item => {
             setMySendMessage(mes => [...mes, {
                 type: 'image',
                 value: item.url
             }])
         })
-
     }
 
+    // 显示更多菜单
     const sendPlusClick = () => {
         footerRef.current.style.height = '15rem'
     }
+
+    // 隐藏更多菜单
     const bodyClick = () => {
         footerRef.current.style.height = '2.4rem'
     }
@@ -45,6 +64,7 @@ const SendMessage = props => {
             e.target.value = ''
         }
     }
+
     return (
         <div id="SendMessage">
 
@@ -68,7 +88,7 @@ const SendMessage = props => {
                                     return (
                                         <div className="message-item" key={index}>
                                             <div className="message-avator">
-                                                <img src={Voice} alt="avator" />
+                                                <img src={Franklin} alt="avator" />
                                             </div>
                                             <div className="message-wrap">
                                                 <div className="message-content">
@@ -82,7 +102,7 @@ const SendMessage = props => {
                                     return (
                                         <div className="message-item" key={index}>
                                             <div className="message-avator">
-                                                <img src={Voice} alt="avator" />
+                                                <img src={Franklin} alt="avator" />
                                             </div>
                                             <div className="message-wrap">
                                                 <div className="message-content">

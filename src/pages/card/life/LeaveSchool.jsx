@@ -9,9 +9,9 @@ import ReturnTitle from '@c/return-title'
 import { Calendar } from 'antd-mobile';
 
 // image
-import Avator from './img/avator'
 import Record from './img/record'
 import Notice from './img/notice'
+import Franklin from './img/Franklin'
 
 const LeaveSchool = (props) => {
     const [isCalendarShow, setIsCalendarShow] = useState()
@@ -43,7 +43,7 @@ const LeaveSchool = (props) => {
             <div className="leave-header">
                 <ReturnTitle background="#D22E2E" text="校内人员电子通行证" rightImg={Record} />
                 <div className="stu-avator">
-                    <img src={Avator} alt="avator" />
+                    <img src={Franklin} alt="avator" />
                     <div className="stu-info">Franklin</div>
                     <div className="stu-info">17信息一班</div>
                 </div>

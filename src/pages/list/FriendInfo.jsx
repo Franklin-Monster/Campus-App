@@ -4,7 +4,7 @@ import './css/friend-info'
 
 // image
 import More from './img/more'
-import Avator from './img/avator'
+import Franklin from './img/Franklin'
 
 // component
 import Button from '@c/button'
@@ -14,6 +14,7 @@ import ReturnTitle from '@c/return-title'
 
 
 const FriendInfo = (props) => {
+
     // 更改备注
     const changeRemark = () => {
         Modal.prompt('备注', '',
@@ -36,7 +37,7 @@ const FriendInfo = (props) => {
             <div className="friend-body">
                 <div className="friend-base">
                     <div className="friend-avator">
-                        <img src={Avator} alt="avator" />
+                        <img src={Franklin} alt="avator" />
                     </div>
                     <div className="friend-intro">
                         <div className="friend-name">
@@ -59,7 +60,11 @@ const FriendInfo = (props) => {
                         color="#fff"
                         margin="2rem auto"
                         onClick={() => props.history.push('/sendmessage')} />
-                    <Button text="打电话" background="#00FF00" color="#fff" margin=".5rem auto" />
+                    <Button text="打电话"
+                        background="#00FF00"
+                        color="#fff"
+                        margin=".5rem auto"
+                        onClick={() => props.history.push('/audiochat')} />
                 </div>
             </div>
             <div className="friend-footer"></div>

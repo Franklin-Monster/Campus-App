@@ -13,20 +13,20 @@ const ArrowMenu = (props) => {
         border: props.border,
         color: props.color
     }
-    
+
     return (
         <div className="menu-item" onClick={props.onClick || null} style={style}>
             {
                 props.frontImg && <span className="item-img">
-                    <img src={props.frontImg} alt="avator" />
+                    <img src={props.frontImg} alt="img" />
                 </span>
             }
             <span className="item-text"> {props.text} </span>
             <span className="item-arrow">
                 {
                     props.needArrow
-                        ? <img src={Arrow} alt="arrow"/> :
-                        props.endImg && <img src={props.endImg} alt="arrow"/>
+                        ? <img src={Arrow} alt="arrow" /> :
+                        props.endImg && <img src={props.endImg} alt="arrow" />
                 }
             </span>
         </div>

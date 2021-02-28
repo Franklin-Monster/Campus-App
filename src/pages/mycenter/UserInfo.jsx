@@ -6,7 +6,7 @@ import TextRow from '@c/text-row'
 import ReturnTitle from '@c/return-title'
 
 // image
-import UserAvator from './img/user'
+import Franklin from './img/Franklin'
 
 const UserInfo = () => {
     return (
@@ -14,7 +14,7 @@ const UserInfo = () => {
             <div className="info-header">
                 <ReturnTitle text="个人信息" />
                 <div className="user-avator">
-                    <img src={UserAvator} alt="avator" />
+                    <img src={Franklin} alt="avator" />
                 </div>
             </div>
             <div className="info-body">

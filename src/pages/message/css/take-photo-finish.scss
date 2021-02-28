@@ -1,0 +1,57 @@
+#TakePhotoFinish {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    background-color: #000;
+
+    .fin-header {
+        height: 3vh;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .fin-body {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .fin-footer {
+        height: 17vh;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .fin-action {
+        width: 76%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .fin-send {
+        width: 3.2rem;
+        height: 2rem;
+        line-height: 2rem;
+        background-color: #2DCC9F;
+        color: #fff;
+        border-radius: .2rem;
+        text-align: center;
+    }
+}

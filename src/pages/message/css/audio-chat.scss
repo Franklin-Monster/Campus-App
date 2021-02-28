@@ -1,10 +1,12 @@
-#VideoChat {
+#AudioChat {
     width: 100vw;
     height: 100vh;
-    position: absolute;
     overflow: hidden;
+    position: absolute;
+    background-color: #222;
 
-    .video-header {
+
+    .audio-header {
         top: 1rem;
         left: 2rem;
         position: absolute;
@@ -20,7 +22,7 @@
         }
     }
 
-    .video-content {
+    .audio-content {
         z-index: -1;
     }
 
@@ -50,11 +52,7 @@
         color: rgb(235, 231, 231);
     }
 
-    .video-body {
-        // width: 100%;
-    }
-
-    .video-footer {
+    .audio-footer {
         width: 100%;
         position: absolute;
         bottom: 2rem;

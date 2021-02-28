@@ -7,16 +7,16 @@ import CardItem from '@c/card-item'
 import ArrowMenu from '@c/arrow-menu'
 
 // image
-import Avator from './img/user'
+import Franklin from './img/Franklin'
 import RightArrow from './img/right-arrow'
 
 const MyCenter = (props) => {
     const [userName, setUserName] = useState('Franklin')
     const [userClass, setUserClass] = useState('17信息1班')
-    const [userGender, setUserGender] = useState('男')
-    const [userCollege, setUserCollege] = useState('经济与管理学院')
-    const [userAvator, setUserAvator] = useState(Avator)
-   
+    // const [userGender, setUserGender] = useState('男')
+    // const [userCollege, setUserCollege] = useState('经济与管理学院')
+    const [userAvator, setUserAvator] = useState(Franklin)
+
     return (
         <div id="MyCenter">
             <div className="mycenter-header">

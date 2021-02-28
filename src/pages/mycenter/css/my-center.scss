@@ -1,6 +1,7 @@
 #MyCenter {
     width: 100%;
     background-color: #FAFAFA;
+
     .mycenter-header {
         height: 6rem;
         display: flex;
@@ -13,10 +14,10 @@
     .mycenter-header-avator {
         flex: 0.1;
         margin: .625rem;
+
         img {
-            width: 3rem;
-            height: 3rem;
-            padding: .625rem;
+            width: 4.2rem;
+            height: 4.2rem;
             border: 1px #000 solid;
             background-color: #fff;
             border-radius: 50%;
@@ -34,7 +35,7 @@
         margin-bottom: .2rem;
     }
 
-    .text-class{
+    .text-class {
         color: #1b2b3b;
         font-size: 0.5rem;
     }
@@ -42,6 +43,7 @@
     .mycenter-header-arrow {
         width: 100%;
         flex: 0.1;
+
         img {
             width: 1rem;
             height: 1rem;
@@ -54,17 +56,19 @@
         border-radius: .125rem;
     }
 
-    .mycenter-card{
+    .mycenter-card {
         width: 90%;
         background-color: #fff;
         margin: 2rem auto;
         padding: .5rem 0;
-        border-radius: .5rem; 
+        border-radius: .5rem;
     }
-    .mycenter-card-title{
+
+    .mycenter-card-title {
         font-weight: 600;
         margin-left: 1rem;
     }
+
     .mycenter-card-content {
         display: flex;
         flex-wrap: wrap;

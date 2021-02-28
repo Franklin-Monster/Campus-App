@@ -5,7 +5,7 @@ import './css/message'
 import SearchBar from '@c/search-bar'
 
 // img
-import Avator from './img/camera'
+import Franklin from './img/Franklin'
 
 const Message = (props) => {
     return (
@@ -18,7 +18,7 @@ const Message = (props) => {
                     <div className="message-item"
                         onClick={() => props.history.push('/friendinfo')}>
                         <div className="message-avator">
-                            <img src={Avator} alt="avator" />
+                            <img src={Franklin} alt="avator" />
                         </div>
                         <div className="message-info">
                             <div className="message-name">
@@ -32,7 +32,7 @@ const Message = (props) => {
                     <div className="message-item"
                         onClick={() => props.history.push('/friendinfo')}>
                         <div className="message-avator">
-                            <img src={Avator} alt="avator" />
+                            <img src={Franklin} alt="avator" />
                         </div>
                         <div className="message-info">
                             <div className="message-name">
@@ -46,7 +46,7 @@ const Message = (props) => {
                     <div className="message-item"
                         onClick={() => props.history.push('/friendinfo')}>
                         <div className="message-avator">
-                            <img src={Avator} alt="avator" />
+                            <img src={Franklin} alt="avator" />
                         </div>
                         <div className="message-info">
                             <div className="message-name">

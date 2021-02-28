@@ -14,15 +14,16 @@ export const sendPlusItemArr = [{
     },
     {
         img: Camera,
-        text: '拍摄'
+        text: '拍摄',
+        onClick: () => {
+            goRoute('/takephoto')
+        }
     },
     {
         img: Video,
         text: '视频通话',
         onClick: () => {
-            console.log('1');
             goRoute('/videochat')
-            return null
         }
     },
     {
