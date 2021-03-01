@@ -8,18 +8,19 @@ import Message from '@c/message'
 import Reduce from './img/reduce'
 import RingOff from './img/ring-off'
 import Franklin from './img/Franklin'
-import VoicePhone from './img/voice-phone'
+import VideoPhone from './img/video-phone'
 import AudioUrl from './img/video.mp3'
 
-const AudioChat = () => {
-
+const AudioChat = (props) => {
     // 挂断
     const ringOffClick = async () => {
         Message({
             type: 'warn',
             text: '已挂断'
         })
-        window.location.replace('/sendmessage')
+        setTimeout(() => {
+            window.location.replace('/sendmessage')
+        }, 1000);
     }
 
     return (
@@ -57,10 +58,10 @@ const AudioChat = () => {
                 </div>
                 <div className="footer-item">
                     <div className="item-icon">
-                        <img src={VoicePhone} alt="voice" />
+                        <img src={VideoPhone} alt="voice" onClick={() => props.history.push('/videochat')} />
                     </div>
                     <div className="item-text">
-                        切换到语音通话
+                        切换到视频通话
                     </div>
                 </div>
             </div>

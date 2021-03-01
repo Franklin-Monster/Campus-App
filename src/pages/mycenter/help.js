@@ -61,7 +61,46 @@ const myCenterCardItemArr = [
     },
 ]
 
+const userInfoItemArr = [
+    {
+        key: '姓名',
+        value: 'Franklin'
+    },
+    {
+        key: '学号',
+        value: '1705080106'
+    },
+    {
+        key: '性别',
+        value: '男'
+    },
+    {
+        key: '学校',
+        value: '天津城建大学'
+    },
+    {
+        key: '学院',
+        value: '经济与管理学院'
+    },
+    {
+        key: '专业',
+        value: '信息管理与信息系统'
+    },
+    {
+        key: '班级',
+        value: '1班'
+    },
+    {
+        key: '班主任',
+        value: 'Mr Dong'
+    },
+    {
+        key: '辅导员',
+        value: 'Ms Xv'
+    },
+]
 export {
     myCenterCardItemArr,
-    myCenterArrowMenuArr
+    myCenterArrowMenuArr,
+    userInfoItemArr
 }

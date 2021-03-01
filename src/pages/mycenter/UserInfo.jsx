@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/user-info'
+import { userInfoItemArr } from './help'
 
 // component
 import TextRow from '@c/text-row'
@@ -19,20 +20,16 @@ const UserInfo = () => {
             </div>
             <div className="info-body">
                 <div className="user-info">
-                    <TextRow frontText="姓名" lastText="Franklin" width="90%" />
-                    <TextRow frontText="姓别" lastText="男" width="90%" />
-                    <TextRow frontText="学校" lastText="天津城建大学" width="90%" />
-                    <TextRow frontText="学院" lastText="经济与管理学院" width="90%" />
-                    <TextRow frontText="专业" lastText="信息管理与信息系统" width="90%" />
-                    <TextRow frontText="班级" lastText="1班" width="90%" />
-                    <TextRow frontText="班主任" lastText="Mr Dong" width="90%" />
-                    <TextRow frontText="辅导员" lastText="Ms Xv" width="90%" />
+                    {
+                        userInfoItemArr.map((item, index) => {
+                            return (
+                                <TextRow frontText={item.key} lastText={item.value} width="90%" key={index} />
+                            )
+                        })
+                    }
                 </div>
             </div>
-
-            <div className="info-footer">
-
-            </div>
+            <div className="info-footer"></div>
         </div>
     )
 }

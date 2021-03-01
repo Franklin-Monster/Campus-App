@@ -21,6 +21,12 @@ const SendMessage = props => {
     // 接收拍摄的照片
     useEffect(() => {
         try {
+            if (window.location.href.split('?')[1] === 'ringoff') {
+                setMySendMessage(mes => [...mes, {
+                    type: 'text',
+                    value: '已挂断'
+                }])
+            }
             if (propsQuery.photoSrc) {
                 setMySendMessage(mes => [...mes, {
                     type: 'image',
@@ -76,7 +82,8 @@ const SendMessage = props => {
                     text='Franklin'
                     color="#000"
                     rightImg={More}
-                    rightImgClick={() => props.history.push('/messageaction')} />
+                    rightImgClick={() => props.history.push('/messageaction')}
+                    returnClick={() => props.history.push('/friendinfo')} />
             </div>
             <div className="send-header-block"></div>
             <div className="send-body" onClick={bodyClick}>
@@ -114,7 +121,6 @@ const SendMessage = props => {
                                     )
                                 default: return null
                             }
-
                         })
                     }
                 </div>
@@ -148,7 +154,6 @@ const SendMessage = props => {
                                 )
                             })
                         }
-
                         <div className="plus-item" style={{ visibility: 'hidden' }}>
                             <div><img src={More} alt="none" /></div>
                             <div>照片</div>

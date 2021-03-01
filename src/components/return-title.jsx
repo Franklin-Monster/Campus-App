@@ -8,13 +8,14 @@ const ReturnTitle = (props) => {
         background: props.background,
         color: props.color
     }
+
     return (
         <div id="ReturnTitle" style={style}>
             <img
                 className="left-img"
                 src={props.arrowColor === 'black' ? ReturnArrowBlack : ReturnArrowWhite}
                 alt='return'
-                onClick={returnBack} />
+                onClick={props.returnClick || returnBack} />
             {props.text}
             {props.rightImg &&
                 <img

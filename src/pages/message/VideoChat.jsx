@@ -8,10 +8,10 @@ import Message from '@c/message'
 import Reduce from './img/reduce'
 import RingOff from './img/ring-off'
 import Franklin from './img/Franklin'
-import VoicePhone from './img/voice-phone'
+import AudioPhone from './img/audio-phone'
 import AudioUrl from './img/video.mp3'
 
-const VideoChat = () => {
+const VideoChat = (props) => {
     const videoRef = useRef()
     useEffect(() => {
         getMedia();
@@ -23,7 +23,16 @@ const VideoChat = () => {
             type: 'warn',
             text: '已挂断'
         })
-        window.location.replace('/sendmessage')
+        setTimeout(() => {
+            window.location.replace('/sendmessage?ringoff')
+        }, 1000);
+        // props.history.push(
+        //     {
+        //         pathname: '/takephotofinish',
+        //         query: {
+        //             text: '已取消通话'
+        //         }
+        //     })
     }
 
     // 获取摄像头
@@ -76,9 +85,9 @@ const VideoChat = () => {
                         挂断
                     </div>
                 </div>
-                <div className="footer-item">
+                <div className="footer-item" >
                     <div className="item-icon">
-                        <img src={VoicePhone} alt="voice" />
+                        <img src={AudioPhone} alt="voice" onClick={() => props.history.push('/audiochat')} />
                     </div>
                     <div className="item-text">
                         切换到语音通话
