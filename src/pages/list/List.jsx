@@ -14,7 +14,7 @@ import Arrow from './img/eee-arrow'
 const List = (props) => {
     const addressBodyRef = useRef()
     const groupBodyRef = useRef()
-    
+
     const groupTab = () => {
         addressBodyRef.current.style.transform = 'translateX(-120%)'
         addressBodyRef.current.style.width = '0'
@@ -44,16 +44,14 @@ const List = (props) => {
                 </div>
                 <div className="body-content">
                     <div className="address-body" ref={addressBodyRef}>
-                        <DivideGroupItem groupName="我的班级" groupMember={testFriendData} />
-                        <DivideGroupItem groupName="我的专业" groupMember={testFriendData} />
+                        <DivideGroupItem groupName="我的同学" groupMember={testFriendData} />
                         <DivideGroupItem groupName="我的老师" groupMember={testFriendData} />
-                        <DivideGroupItem groupName="我的课程" groupMember={testFriendData} />
+                        <DivideGroupItem groupName="我的好友" groupMember={testFriendData} />
                     </div>
                     <div className="group-body" ref={groupBodyRef}>
-                        <DivideGroupItem groupName="学习群" groupMember={testFriendData} />
-                        <DivideGroupItem groupName="好友群" groupMember={testFriendData} />
-                        <DivideGroupItem groupName="寝室群" groupMember={testFriendData} />
-                        
+                        <DivideGroupItem groupName="IT项目管理课程群" groupMember={testFriendData} />
+                        <DivideGroupItem groupName="信息系统分析与设计课程群" groupMember={testFriendData} />
+                        <DivideGroupItem groupName="数据结构与算法课程群" groupMember={testFriendData} />
                     </div>
                 </div>
             </div>
