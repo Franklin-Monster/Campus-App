@@ -6,10 +6,12 @@ import './tab.scss'
 
 
 // image
-import messageImg from '../../assets/images/message'
-import cardImg from '../../assets/images/card'
-import listImg from '../../assets/images/list'
-import myCenterImg from '../../assets/images/mycenter'
+import Add from '../../assets/images/add'
+import Card from '../../assets/images/card'
+import List from '../../assets/images/list'
+import Message from '../../assets/images/message'
+import MyCenter from '../../assets/images/mycenter'
+import AddFriend from '../../assets/images/add-friend'
 
 const Tab = (props) => {
     const [title, setTitle] = useState('消息')
@@ -25,7 +27,31 @@ const Tab = (props) => {
     }, [pathname])
 
     return <div id="Tab">
-        <div className="app-header" style={{ display: showTab ? 'block' : 'none' }}>{title}</div>
+        <div className="app-header" style={{ display: showTab ? 'block' : 'none' }}>
+            {/* {title} */}
+            {
+                (() => {
+                    switch (title) {
+                        case '消息': return <div>
+                            <span>{title}</span>
+                            <img src={Add} alt="add" />
+                        </div>
+                        case '通讯录': return <div>
+                            <span>{title}</span>
+                            <img src={AddFriend} alt="add" />
+                        </div>
+                        case '应用': return <div>
+                            <span>{title}</span>
+                        </div>
+                        case '我的': return <div>
+                            <span>{title}</span>
+                        </div>
+                        default: return null
+                    }
+                })()
+
+            }
+        </div>
         <div className="app-header-block" style={{ display: showTab ? 'block' : 'none' }}></div>
         <div className="route">
             {
@@ -41,7 +67,7 @@ const Tab = (props) => {
                         color: "#3775F6",
                     }}
                 >
-                    <img src={messageImg} alt="message" />
+                    <img src={Message} alt="message" />
                     <div className="app-footer-tab-item-text">消息</div>
                 </NavLink>
             </div>
@@ -50,7 +76,7 @@ const Tab = (props) => {
                     activeStyle={{
                         color: "#3775F6",
                     }}>
-                    <img src={listImg} alt="list" />
+                    <img src={List} alt="list" />
                     <div className="app-footer-tab-item-text">通讯录</div>
                 </NavLink>
             </div>
@@ -59,7 +85,7 @@ const Tab = (props) => {
                     activeStyle={{
                         color: "#3775F6",
                     }} >
-                    <img src={cardImg} alt="card" />
+                    <img src={Card} alt="card" />
                     <div className="app-footer-tab-item-text">应用</div>
                 </NavLink>
             </div>
@@ -68,7 +94,7 @@ const Tab = (props) => {
                     activeStyle={{
                         color: "#3775F6",
                     }}>
-                    <img src={myCenterImg} alt="mycenter" />
+                    <img src={MyCenter} alt="mycenter" />
                     <div className="app-footer-tab-item-text">我的</div>
                 </NavLink>
             </div>

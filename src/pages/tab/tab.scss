@@ -16,6 +16,13 @@
         position: fixed;
         top: 0;
         z-index: 9999;
+
+        img {
+            width: 1.2rem;
+            height: 1.2rem;
+            position: absolute;
+            right: .8rem;
+        }
     }
 
     .app-header-block {

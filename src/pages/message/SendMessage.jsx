@@ -83,7 +83,7 @@ const SendMessage = props => {
                     color="#000"
                     rightImg={More}
                     rightImgClick={() => props.history.push('/messageaction')}
-                    returnClick={() => props.history.push('/friendinfo')} />
+                />
             </div>
             <div className="send-header-block"></div>
             <div className="send-body" onClick={bodyClick}>
