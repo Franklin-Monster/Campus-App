@@ -11,19 +11,19 @@ import DivideGroupItem from './childComp/divide-group-item'
 import Avator from './img/user'
 import Arrow from './img/eee-arrow'
 
-const List = (props) => {
+const List = () => {
     const addressBodyRef = useRef()
     const groupBodyRef = useRef()
 
     const groupTab = () => {
-        addressBodyRef.current.style.transform = 'translateX(-120%)'
-        addressBodyRef.current.style.width = '0'
+        addressBodyRef.current.style.transform = 'translateX(-100%)'
         groupBodyRef.current.style.width = '100%'
+        addressBodyRef.current.style.width = '0'
     }
     const addressTab = () => {
         addressBodyRef.current.style.transform = 'translateX(0%)'
-        addressBodyRef.current.style.width = '100%'
         groupBodyRef.current.style.width = '0'
+        addressBodyRef.current.style.width = '100%'
     }
 
     return (

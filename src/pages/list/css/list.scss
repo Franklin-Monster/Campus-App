@@ -39,18 +39,17 @@
 
     .body-content {
         display: flex;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .address-body {
         width: 100%;
         transition: all .6s ease;
-        overflow: hidden;
     }
 
     .group-body {
         width: 0;
-        overflow: hidden;
         transition: all .6s ease;
     }
-
 }
