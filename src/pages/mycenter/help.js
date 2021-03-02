@@ -3,14 +3,13 @@ import Resume from './img/resume'
 import Notice from './img/notice'
 import Collect from './img/collect'
 import Active from './img/active'
-import Exam  from './img/exam'
+import Exam from './img/exam'
 import FriendCircle from './img/friend-circle'
 import Wallet from './img/wallet'
 import Pay from './img/pay'
 import Install from './img/install'
 
-const myCenterArrowMenuArr = [
-    {
+const myCenterArrowMenuArr = [{
         img: Pay,
         text: "支付",
         route: '/notfound'
@@ -26,8 +25,7 @@ const myCenterArrowMenuArr = [
         route: '/userinstall'
     },
 ]
-const myCenterCardItemArr = [
-    {
+const myCenterCardItemArr = [{
         img: Resume,
         text: "我的简历",
     },
@@ -61,8 +59,7 @@ const myCenterCardItemArr = [
     },
 ]
 
-const userInfoItemArr = [
-    {
+const userInfoItemArr = [{
         key: '姓名',
         value: 'Franklin'
     },

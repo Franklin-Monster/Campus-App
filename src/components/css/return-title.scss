@@ -1,25 +1,27 @@
-#ReturnTitle{
+#ReturnTitle {
     width: 100%;
     font-size: 1.3rem;
-    height:1.8rem;
+    height: 1.8rem;
     font-weight: 600;
-    padding: 0.6rem;
+    padding: 0.6rem 0;
     background-color: #3775F6;
     color: #fff;
     text-align: center;
-    .left-img{
+
+    .left-img {
         position: absolute;
         top: .9rem;
         left: .5rem;
         width: 1.3rem;
         height: 1.3rem;
-    }   
-    .right-img{
+    }
+
+    .right-img {
         position: absolute;
         top: .9rem;
         right: .5rem;
         width: 1.3rem;
         height: 1.3rem;
     }
-        
+
 }

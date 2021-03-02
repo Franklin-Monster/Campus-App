@@ -1,6 +1,10 @@
 #List {
     width: 100%;
+    position: absolute;
     background-color: #FAFAFA;
+    overflow-x: hidden;
+    top: 2.5rem;
+    bottom: 0;
 
     .list-header {
         width: 100%;

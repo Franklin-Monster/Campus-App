@@ -8,7 +8,8 @@ import ArrowMenu from '@c/arrow-menu'
 import DivideGroupItem from './childComp/divide-group-item'
 
 // image
-import Avator from './img/user'
+import User from './img/user'
+import Notice from './img/notice'
 import Arrow from './img/eee-arrow'
 
 const List = () => {
@@ -33,8 +34,8 @@ const List = () => {
                     <SearchBar placeholder="搜索"></SearchBar>
                 </div>
                 <div className="header-item">
-                    <ArrowMenu frontImg={Avator} endImg={Arrow} text="新朋友"></ArrowMenu>
-                    <ArrowMenu frontImg={Avator} endImg={Arrow} text="新朋友"></ArrowMenu>
+                    <ArrowMenu frontImg={User} endImg={Arrow} text="新的联系人"></ArrowMenu>
+                    <ArrowMenu frontImg={Notice} endImg={Arrow} text="课程群通知"></ArrowMenu>
                 </div>
             </div>
             <div className="list-body">

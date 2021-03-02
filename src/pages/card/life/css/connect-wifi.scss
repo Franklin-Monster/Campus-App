@@ -1,52 +1,61 @@
-#ConnectWifi{
+#ConnectWifi {
     width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
     background-color: #FAFAFA;
     overflow-x: hidden;
-    .net-body{
+
+    .net-body {
         width: 100%;
         background-color: #FF9900;
         color: #fff;
         padding: 2.4rem 0 1.2rem 0;
     }
-    .check-wifi{
+
+    .check-wifi {
         display: flex;
         justify-content: center;
         text-align: center;
         padding-bottom: 1.2rem;
-        img{
+
+        img {
             width: 6rem;
             height: 6rem;
         }
     }
-    .wifi-text{
+
+    .wifi-text {
         height: 6rem;
         margin: 0 .5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .wifi-name{
+
+    .wifi-name {
         font-size: 1.4rem;
         line-height: 2rem;
         font-weight: 500;
     }
-    .wifi-state{
+
+    .wifi-state {
         font-size: .9rem;
         opacity: .8;
     }
-    .wifi-set{
+
+    .wifi-set {
         display: flex;
         justify-content: space-around;
         font-size: .9rem;
     }
-    .input-item{
+
+    .input-item {
         width: 100%;
         text-align: center;
         padding: .5rem 0;
-        input{
+
+        input {
             width: 70%;
             outline: none;
             height: 2rem;
@@ -55,17 +64,25 @@
             margin: 0 .5rem;
         }
     }
-    .select-item{
+
+    .select-item {
         text-align: center;
-        span{
+
+        span {
             margin: .8rem 2rem;
+
+            input {
+                margin: 0 .2rem;
+            }
         }
     }
-    .net-footer{
+
+    .net-footer {
         width: 100%;
         margin: 1rem 0;
     }
-    .net-footer-card{
+
+    .net-footer-card {
         width: 90%;
         height: 2rem;
         display: flex;
@@ -75,5 +92,5 @@
         background-color: #fff;
         border-radius: .5rem;
     }
- 
+
 }

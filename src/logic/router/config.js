@@ -26,6 +26,8 @@ const VideoChat = Loadable(() => import('@p/message/VideoChat'))
 const AudioChat = Loadable(() => import('@p/message/AudioChat'))
 const TakePhoto = Loadable(() => import('@p/message/TakePhoto'))
 const TakePhotoFinish = Loadable(() => import('@p/message/TakePhotoFinish'))
+const AddFriend = Loadable(() => import('@p/list/AddFriend'))
+
 const routes = [{
         path: '/message',
         component: Message
@@ -133,6 +135,10 @@ const routes = [{
     {
         path: '/takephotofinish',
         component: TakePhotoFinish
+    },
+    {
+        path: '/addfriend',
+        component: AddFriend
     },
 ]
 

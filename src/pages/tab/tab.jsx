@@ -4,7 +4,6 @@ import TabRoute from '../../logic/router/index'
 import { pathnameToTitle } from '../../static/js/fun'
 import './tab.scss'
 
-
 // image
 import Add from '../../assets/images/add'
 import Card from '../../assets/images/card'
@@ -28,7 +27,6 @@ const Tab = (props) => {
 
     return <div id="Tab">
         <div className="app-header" style={{ display: showTab ? 'block' : 'none' }}>
-            {/* {title} */}
             {
                 (() => {
                     switch (title) {
@@ -38,7 +36,7 @@ const Tab = (props) => {
                         </div>
                         case '通讯录': return <div>
                             <span>{title}</span>
-                            <img src={AddFriend} alt="add" />
+                            <img src={AddFriend} alt="add" onClick={() => props.history.push('/addfriend')} />
                         </div>
                         case '应用': return <div>
                             <span>{title}</span>
