@@ -17,7 +17,7 @@ const List = () => {
     const groupBodyRef = useRef()
 
     const groupTab = () => {
-        addressBodyRef.current.style.transform = 'translateX(-100%)'
+        addressBodyRef.current.style.transform = 'translateX(-200%)'
         groupBodyRef.current.style.width = '100%'
         addressBodyRef.current.style.width = '0'
     }
