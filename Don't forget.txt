@@ -1,30 +1,31 @@
  ## 校园每个缴费默认都登录本人账号 给别人缴费时需要重新输入账号密码
 
- ## 更改node-modules中别名等webpack配置后Git不提交 ------ finish
+ ## 更改node-modules中别名等webpack配置后Git不提交 --finish
 
  ## 好友可以拉黑 默认同学老师不能拉黑
 
  ## 找工作card
 
- ## 移动图书馆card
+ ## 移动图书馆card 
 
  ## 跑步打卡card
 
- ## 二手市场card
+ ## 二手闲置card --finish
 
- ## 代取快递card
+ ## 代取快递card --finish
 
  ## 洗衣服card
 
  ## 桶装水card --finish
 
- ## 校园头条card
+ ## 校园头条card --finish
 
- ## 期末在线考试 card
+ ## 期末在线考试card
 
- ## 论坛 card +每日热榜
+ ## 论坛card +每日热榜
 
- ## name: 校园帮、 高校一点通、 乐享校园、 智享校园、 笑园、 未来校园、 微校园、 校园先知、 乐校园、 趣校园、 
+ ## name: 校园帮、 高校一点通、 乐享校园、 智享校园、 智讯校园、 移动校园、 笑园、 
+          未来校园、 口袋校园、 掌心校园、 微校园、 校园先知、 乐校园、 趣校园、 
 
  ## 健康打卡card
 

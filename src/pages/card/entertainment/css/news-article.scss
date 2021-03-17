@@ -1,0 +1,33 @@
+#NewsArticle {
+    .news-title {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: .5rem;
+    }
+
+    .news-time {
+        color: #aaa;
+        font-size: .8rem;
+        text-align: center;
+        margin: .5rem 0;
+    }
+
+    .news-content {
+        padding: .8rem;
+
+        p {
+            text-indent: 2rem;
+            text-align: justify;
+        }
+    }
+
+    .news-img {
+        text-align: center;
+
+        img {
+            width: 80%;
+            height: 80%;
+
+        }
+    }
+}
