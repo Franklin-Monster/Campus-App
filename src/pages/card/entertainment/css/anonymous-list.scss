@@ -1,0 +1,45 @@
+#AnonymousList {
+    .header-search {
+        background-color: #FAFAFA;
+        height: 3rem;
+    }
+
+    .post-content {
+        margin: .5rem 0;
+    }
+
+    .post-item {
+        border-bottom: #ccc .05rem solid;
+        padding: .5rem .5rem .3rem .5rem;
+        background-color: #fff;
+    }
+
+    .item-name {
+        font-size: .8rem;
+        color: #aaa;
+    }
+
+    .item-content {
+        margin: .8rem 0 1rem 0;
+    }
+
+    .item-operate {
+        height: 1.5rem;
+        font-size: .8rem;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .operate-box {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 0 .1rem;
+        }
+    }
+
+}

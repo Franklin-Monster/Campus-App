@@ -150,6 +150,6 @@ export const cardItemArr = [{
     {
         img: Anonymous,
         text: "校言",
-        route: '/anonymous'
+        route: '/anonymouslist'
     },
 ]

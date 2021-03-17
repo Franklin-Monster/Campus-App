@@ -29,7 +29,8 @@ const TakePhotoFinish = Loadable(() => import('@p/message/TakePhotoFinish'))
 const AddFriend = Loadable(() => import('@p/list/AddFriend'))
 const NewsList = Loadable(() => import('@p/card/entertainment/NewsList'))
 const NewsArticle = Loadable(() => import('@p/card/entertainment/NewsArticle'))
-const Anonymous = Loadable(() => import('@p/card/entertainment/Anonymous'))
+const AnonymousList = Loadable(() => import('@p/card/entertainment/AnonymousList'))
+const AnonymousItem = Loadable(() => import('@p/card/entertainment/AnonymousItem'))
 const routes = [{
         path: '/message',
         component: Message
@@ -151,8 +152,12 @@ const routes = [{
         component: NewsArticle
     },
     {
-        path: '/anonymous',
-        component: Anonymous
+        path: '/anonymouslist',
+        component: AnonymousList
+    },
+    {
+        path: '/anonymousitem',
+        component: AnonymousItem
     },
 ]
 

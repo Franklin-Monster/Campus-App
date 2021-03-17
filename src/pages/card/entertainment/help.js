@@ -1,5 +1,14 @@
 import newsImg1 from './img/news1'
 import newsImg2 from './img/news2'
+import A1 from './img/a1'
+import A2 from './img/a2'
+import A3 from './img/a3'
+import A4 from './img/a4'
+import A5 from './img/a5'
+import A6 from './img/a6'
+import A7 from './img/a7'
+import A8 from './img/a8'
+import A9 from './img/a9'
 
 const countryNews = [
     '2020江西教育培训风云榜',
@@ -87,9 +96,75 @@ const News = {
         }
     ]
 }
+
+const commentList = [{
+        avator: A1,
+        name: '河北大学',
+        content: '我同学说这个学校特别好',
+        time: '1小时前',
+        like: 66
+    },
+    {
+        avator: A2,
+        name: '厦门',
+        content: '土木专业很强哦',
+        time: '1小时前',
+        like: 54
+    },
+    {
+        avator: A3,
+        name: '清华大学',
+        content: '经济与管理学院也不错啊',
+        time: '1小时前',
+        like: 36
+    },
+    {
+        avator: A4,
+        name: '天津城建大学',
+        content: '我考了我们本专业的硕士',
+        time: '1小时前',
+        like: 24
+    },
+    {
+        avator: A5,
+        name: '南开大学',
+        content: '分数线不是太高，可以试试',
+        time: '1小时前',
+        like: 18
+    },
+    {
+        avator: A6,
+        name: '北京大学',
+        content: '我觉得可以',
+        time: '1小时前',
+        like: 15
+    },
+    {
+        avator: A7,
+        name: '东北大学',
+        content: 'm',
+        time: '1小时前',
+        like: 6
+    },
+    {
+        avator: A8,
+        name: '天津大学',
+        content: '高中同学有去的',
+        time: '1小时前',
+        like: 6
+    },
+    {
+        avator: A9,
+        name: '天津理工大学',
+        content: '和我们学校离得挺近',
+        time: '1小时前',
+        like: 0
+    }
+]
 export {
     countryNews,
     cityNews,
     schoolNews,
-    News
+    News,
+    commentList
 }

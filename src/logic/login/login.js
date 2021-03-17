@@ -7,17 +7,16 @@ import Message from '@c/message'
 import Button from '@c/button'
 
 // image
-import Warn from '../../assets/images/warn'
 import Logo from '../../assets/images/logo'
 
-const Login = (props) => {
+const Login = props => {
     const [isAgree, setIsAgree] = useState(false)
     const phoneLogin = () => {
         if (isAgree) {
             props.history.push('/phonelogin')
         } else {
             Message({
-                img: Warn,
+                type: 'warn',
                 text: '请同意隐私条款'
             })
         }
@@ -27,7 +26,7 @@ const Login = (props) => {
             props.history.push('/wxlogin')
         } else {
             Message({
-                img: Warn,
+                type: 'warn',
                 text: '请同意隐私条款'
             })
         }

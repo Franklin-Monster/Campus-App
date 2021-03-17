@@ -26,13 +26,6 @@ const VideoChat = (props) => {
         setTimeout(() => {
             window.location.replace('/sendmessage?ringoff')
         }, 1000);
-        // props.history.push(
-        //     {
-        //         pathname: '/takephotofinish',
-        //         query: {
-        //             text: '已取消通话'
-        //         }
-        //     })
     }
 
     // 获取摄像头
