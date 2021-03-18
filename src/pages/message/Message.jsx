@@ -15,12 +15,12 @@ const Message = (props) => {
             </div>
             <div className="message-body">
                 <div className="message-box">
-                    <div className="message-item"
-                        onClick={() => props.history.push('/friendinfo')}>
+                    <div className="message-item">
                         <div className="message-avator">
-                            <img src={Franklin} alt="avator" />
+                            <img src={Franklin} alt="avator"
+                                onClick={() => props.history.push('/friendinfo')} />
                         </div>
-                        <div className="message-info">
+                        <div className="message-info" onClick={() => props.history.push('/sendmessage')}>
                             <div className="message-name">
                                 Franklin
                             </div>

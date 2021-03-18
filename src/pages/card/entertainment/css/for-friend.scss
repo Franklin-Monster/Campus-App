@@ -1,0 +1,84 @@
+#ForFriend {
+
+    width: 100%;
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    // height: 200rem;
+    // transform: translateX();
+    .fri-body {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-content {
+        width: 90vw;
+        height: 26rem;
+        border-radius: 1rem;
+        margin: 1rem auto;
+        overflow: hidden;
+        // display: flex;
+        position: relative;
+
+        img {
+            width: 90vw;
+            border-radius: 1rem;
+            max-height: 26rem;
+            transition: all 1s ease;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .button-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 26rem;
+        z-index: 99;
+
+        img {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin: 0 1.5rem;
+        }
+    }
+
+    .fri-footer {
+        width: 100%;
+        height: 3.6rem;
+        background-color: yellow;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .footer-tab {
+        display: flex;
+    }
+
+    .footer-tab-item {
+        text-align: center;
+        width: 33.3vw;
+        padding: .5rem 0;
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    .tab-item-text {
+        font-size: .8rem;
+    }
+}
+
+
+// .WrapDragger {
+//     width: 100%;
+//     height: 200rem !important;
+// }

@@ -25,6 +25,7 @@ const countryNews = [
     '中国农业大学2021复试分数线,34所第一个发布,一个字,涨',
     '教学科研上云,中国地质大学携手EasyStack打造智慧校园'
 ]
+
 const cityNews = [
     '天津市大学排名:天大与南开不相上下,天津理工排第五!',
     '天津市17所高校新增33个本科专业',
@@ -96,6 +97,7 @@ const News = {
         }
     ]
 }
+
 const invitationList = [{
         name: '哈尔滨理工大学',
         content: '天津城建大学怎么样？想考研过去，求各位兄弟们给点建议',
@@ -132,6 +134,7 @@ const invitationList = [{
         like: 24
     },
 ]
+
 const commentList = [{
         avator: A1,
         name: '河北大学',
@@ -196,6 +199,7 @@ const commentList = [{
         like: 0
     }
 ]
+
 export {
     countryNews,
     cityNews,
