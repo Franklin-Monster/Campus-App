@@ -15,9 +15,10 @@ import Comment from './img/comment'
 import Express from './img/express'
 import Student from './img/student'
 
-const AnonymousItem = () => {
+const AnonymousItem = props => {
     const [commentArr, setCommentArr] = useState(commentList)
     const selectBoxRef = useRef()
+
     // 添加评论
     const addComment = e => {
         if (!e.target.value) return
@@ -58,17 +59,22 @@ const AnonymousItem = () => {
             <div className="an-body">
                 <div className="post-content">
                     <div className="item-name">
-                        哈尔滨理工大学学生
-                        </div>
+                        {props.location.query.name}
+                    </div>
                     <div className="item-content">
-                        天津城建大学怎么样？想考研过去，求各位兄弟们给点建议
-                        </div>
+                        {props.location.query.content}
+                    </div>
                     <div className="item-operate">
-                        <div className="operate-box"><img src={Relay} alt="relay" />24</div>
+                        <div className="operate-box"><img src={Relay} alt="forward" />
+                            {props.location.query.forward}
+                        </div>
                         <div className="operate-box"><img src={Comment} alt="comment" />
+                            {/* {props.location.query.comment} */}
                             {commentArr.length}
                         </div>
-                        <div className="operate-box"><img src={Like} alt="like" />64</div>
+                        <div className="operate-box"><img src={Like} alt="like" />
+                            {props.location.query.like}
+                        </div>
                     </div>
                 </div>
                 <div className="comment-content">

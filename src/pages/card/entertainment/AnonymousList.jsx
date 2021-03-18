@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/anonymous-list'
+import { invitationList } from './help'
 
 // component
 import SearchBar from '@c/search-bar'
@@ -21,54 +22,45 @@ const AnonymousList = props => {
             </div>
             <div className="anony-body">
                 <div className="post-content">
-                    <div className="post-item" onClick={() => props.history.push('/anonymousitem')}>
-                        <div className="item-name">
-                            Franklin
-                        </div>
-                        <div className="item-content">
-                            给对方噶水电费规划水电费规划水
-                            电费规划水电费规划水电费规划水电费
-                            规划水电费规划水电费规划水电费规划
-                            水电费规划水电费规划
-                        </div>
-                        <div className="item-operate">
-                            <div className="operate-box"><img src={Relay} alt="relay" />12</div>
-                            <div className="operate-box"><img src={Comment} alt="comment" />32</div>
-                            <div className="operate-box"><img src={Like} alt="like" />543</div>
-                        </div>
-                    </div>
-                    <div className="post-item">
-                        <div className="item-name">
-                            Franklin
-                        </div>
-                        <div className="item-content">
-                            给对方噶水电费规划
-                        </div>
-                        <div className="item-operate">
-                            <div className="operate-box"><img src={Relay} alt="relay" />12</div>
-                            <div className="operate-box"><img src={Comment} alt="comment" />32</div>
-                            <div className="operate-box"><img src={Like} alt="like" />543</div>
-                        </div>
-                    </div>
-                    <div className="post-item">
-                        <div className="item-name">
-                            Franklin
-                        </div>
-                        <div className="item-content">
-                            给对方噶水电费规划
-                        </div>
-                        <div className="item-operate">
-                            <div className="operate-box"><img src={Relay} alt="relay" />12</div>
-                            <div className="operate-box"><img src={Comment} alt="comment" />32</div>
-                            <div className="operate-box"><img src={Like} alt="like" />543</div>
-                        </div>
-                    </div>
-
+                    {
+                        invitationList.map(item => {
+                            return (
+                                <div className="post-item"
+                                    key={item.content}
+                                    onClick={() => props.history.push({
+                                        pathname: '/anonymousitem',
+                                        query: {
+                                            name: item.name,
+                                            content: item.content,
+                                            forward: item.forward,
+                                            comment: item.comment,
+                                            like: item.like
+                                        }
+                                    })}>
+                                    <div className="item-name">
+                                        {item.name}
+                                    </div>
+                                    <div className="item-content">
+                                        {item.content}
+                                    </div>
+                                    <div className="item-operate">
+                                        <div className="operate-box"><img src={Relay} alt="relay" />
+                                            {item.forward}
+                                        </div>
+                                        <div className="operate-box"><img src={Comment} alt="comment" />
+                                            {item.comment}
+                                        </div>
+                                        <div className="operate-box"><img src={Like} alt="like" />
+                                            {item.like}
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
-            <div className="anony-footer">
-
-            </div>
+            <div className="anony-footer"></div>
         </div>
     )
 }

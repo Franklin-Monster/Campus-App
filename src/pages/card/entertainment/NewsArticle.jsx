@@ -25,18 +25,18 @@ const NewsArticle = () => {
                             switch (item.type) {
                                 case 'text':
                                     return (
-                                        <p key={item}>{item.content}</p>
+                                        <p key={item.content}>{item.content}</p>
                                     )
                                 case 'image':
                                     return (
-                                        <div className="news-img" key={item}>
+                                        <div className="news-img" key={item.content}>
                                             <img src={item.content} alt="newsimg" />
                                         </div>
                                     )
                                 default: return null
                             }
                         })
-                    }  
+                    }
                 </div>
             </div>
             <div className="art-footer">

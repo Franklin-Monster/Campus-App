@@ -96,7 +96,42 @@ const News = {
         }
     ]
 }
-
+const invitationList = [{
+        name: '哈尔滨理工大学',
+        content: '天津城建大学怎么样？想考研过去，求各位兄弟们给点建议',
+        forward: 12,
+        comment: 9,
+        like: 64
+    },
+    {
+        name: '天津城建大学学生',
+        content: '求一本信息系统分析与设计的教材！！！',
+        forward: 0,
+        comment: 2,
+        like: 6
+    },
+    {
+        name: '北京大学学生',
+        content: '各位运筹学都是怎么学的啊，求大佬带带我！',
+        forward: 0,
+        comment: 6,
+        like: 8
+    },
+    {
+        name: '河北工业大学学生',
+        content: '天津市有什么好玩的地方啊，打算五一和室友去玩',
+        forward: 2,
+        comment: 8,
+        like: 12
+    },
+    {
+        name: '东北大学学生',
+        content: '东北冬天也太冷了把，南方人被冻的瑟瑟发抖',
+        forward: 6,
+        comment: 12,
+        like: 24
+    },
+]
 const commentList = [{
         avator: A1,
         name: '河北大学',
@@ -166,5 +201,6 @@ export {
     cityNews,
     schoolNews,
     News,
+    invitationList,
     commentList
 }
