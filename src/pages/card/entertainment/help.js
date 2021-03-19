@@ -10,6 +10,20 @@ import A7 from './img/a7'
 import A8 from './img/a8'
 import A9 from './img/a9'
 
+import P1 from './img/p1'
+import P2 from './img/p2'
+import P3 from './img/p3'
+import P4 from './img/p4'
+import P5 from './img/p5'
+import P6 from './img/p6'
+import P7 from './img/p7'
+import P8 from './img/p8'
+import P9 from './img/p9'
+import P10 from './img/p10'
+import P11 from './img/p11'
+import P12 from './img/p12'
+import P13 from './img/p13'
+
 const countryNews = [
     '2020江西教育培训风云榜',
     '中国大学占地面积排名1-10名',
@@ -200,11 +214,13 @@ const commentList = [{
     }
 ]
 
+const sildeImageArr = [P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13]
 export {
     countryNews,
     cityNews,
     schoolNews,
     News,
     invitationList,
-    commentList
+    commentList,
+    sildeImageArr
 }

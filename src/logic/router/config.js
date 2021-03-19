@@ -21,7 +21,9 @@ const UserInfo = Loadable(() => import('@p/mycenter/UserInfo'))
 const UserInstall = Loadable(() => import('@p/mycenter/UserInstall'))
 const NotFound = Loadable(() => import('@p/notfound/NotFound.jsx'))
 const ServiceOrder = Loadable(() => import('@p/card/life/ServiceOrder'))
-const ForFriend = Loadable(() => import('@p/card/entertainment/ForFriend'))
+const ForFriend = Loadable(() => import('@p/card/entertainment/forfriend/ForFriend'))
+const ForMessage = Loadable(() => import('@p/card/entertainment/forfriend/ForMessage'))
+const ForMine = Loadable(() => import('@p/card/entertainment/forfriend/ForMine'))
 const VideoChat = Loadable(() => import('@p/message/VideoChat'))
 const AudioChat = Loadable(() => import('@p/message/AudioChat'))
 const TakePhoto = Loadable(() => import('@p/message/TakePhoto'))
@@ -122,6 +124,14 @@ const routes = [{
     {
         path: '/forfriend',
         component: ForFriend
+    },
+    {
+        path: '/formessage',
+        component: ForMessage
+    },
+    {
+        path: '/formine',
+        component: ForMine
     },
     {
         path: '/videochat',
