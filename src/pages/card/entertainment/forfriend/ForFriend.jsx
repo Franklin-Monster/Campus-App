@@ -14,32 +14,47 @@ import Collect from '../img/collect'
 
 const ForFriend = props => {
     const [sildeImgArr, setSildeImgArr] = useState(sildeImageArr)
-    let startX = null, endX = null
+    const [startX, setStartX] = useState(null)
+    const [startY, setStartY] = useState(null)
+    const [endX, setEndX] = useState(null)
+    const [endY, setEndY] = useState(null)
+    const clientWidth = document.body.clientWidth
+    const clientHeight = document.documentElement.clientHeight
 
     // 开始拖拽
     const handleTouchStart = e => {
-        startX = e.touches[0].clientX
+        setStartX(e.touches[0].clientX)
+        setStartY(e.touches[0].clientY)
     }
 
     // 拖拽过程
     const handleTouchMove = e => {
-        endX = e.touches[0].clientX;
-        e.target.style.transform = `translateX(${endX}px)`
+        setEndX(e.touches[0].clientX)
+        setEndY(e.touches[0].clientY)
+        e.target.style.transform = `translate(${e.touches[0].clientX}px, ${e.touches[0].clientY}px)`
     }
 
     // 结束拖拽
     const handleTouchEnd = e => {
         // 根据拖拽距离判断是否滑动图片或回弹
-        if (endX - startX > document.body.clientWidth / 2) {
+        if (startY - endY > clientHeight / 2) {
+            e.target.style.transform = `translateY(-200%)`
+            deleteImg()
+        }
+        else if (endX - startX > clientWidth / 2) {
             e.target.style.transform = `translateX(200%)`
             deleteImg()
         }
-        else if (endX - startX < -document.body.clientWidth / 2) {
+        else if (endX - startX < -clientWidth / 2) {
             e.target.style.transform = `translateX(-200%)`
         }
         else {
             e.target.style.transform = `translateX(0)`
         }
+        setStartX(clientWidth / 2)
+        setStartY(clientHeight / 2)
+        setEndX(null)
+        setEndY(null)
     }
 
     // 延时删除数组中最后一个图片
@@ -47,7 +62,7 @@ const ForFriend = props => {
         setTimeout(() => {
             setSildeImgArr(sildeImgArr.filter((i, index) => index !== sildeImgArr.length - 1))
         }, 1000);
-        if (!sildeImgArr.length) {
+        if (sildeImgArr.length < 1) {
             MessageBox({
                 text: '附近的人暂时都被您划完啦'
             })

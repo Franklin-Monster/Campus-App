@@ -24,6 +24,7 @@ const ServiceOrder = Loadable(() => import('@p/card/life/ServiceOrder'))
 const ForFriend = Loadable(() => import('@p/card/entertainment/forfriend/ForFriend'))
 const ForMessage = Loadable(() => import('@p/card/entertainment/forfriend/ForMessage'))
 const ForMine = Loadable(() => import('@p/card/entertainment/forfriend/ForMine'))
+const ForSendMessage = Loadable(() => import('@p/card/entertainment/forfriend/ForSendMessage'))
 const VideoChat = Loadable(() => import('@p/message/VideoChat'))
 const AudioChat = Loadable(() => import('@p/message/AudioChat'))
 const TakePhoto = Loadable(() => import('@p/message/TakePhoto'))
@@ -132,6 +133,10 @@ const routes = [{
     {
         path: '/formine',
         component: ForMine
+    },
+    {
+        path: '/forsendmessage',
+        component: ForSendMessage
     },
     {
         path: '/videochat',

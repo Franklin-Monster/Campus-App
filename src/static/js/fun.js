@@ -19,3 +19,16 @@ export const pathnameToTitle = (key) => {
     return pathnameTable[key] || null;
 };
 
+// 获取当前时间 格式： 上午 12:00
+export const getNowTime = () => {
+    const date = new Date().toLocaleTimeString().split(':')
+    date.pop()
+    const dataFormate = date.join().replace(',', ':').split('')
+    const firstTime = dataFormate.slice(0, 2).join('')
+    const lastTime = dataFormate.slice(2).join('')
+    return (
+        <div className="message-time">
+            {firstTime}&nbsp;{lastTime}
+        </div>
+    )
+}

@@ -1,3 +1,6 @@
+import {
+    goRoute
+} from '@/static/js/fun'
 import newsImg1 from './img/news1'
 import newsImg2 from './img/news2'
 import A1 from './img/a1'
@@ -23,6 +26,13 @@ import P10 from './img/p10'
 import P11 from './img/p11'
 import P12 from './img/p12'
 import P13 from './img/p13'
+
+import Photo from './img/photo'
+import Camera from './img/camera'
+import Video from './img/video'
+import Place from './img/place'
+import Pay from './img/pay'
+import File from './img/file'
 
 const countryNews = [
     '2020江西教育培训风云榜',
@@ -215,6 +225,100 @@ const commentList = [{
 ]
 
 const sildeImageArr = [P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13]
+
+const messageList = [{
+        name: '范冰冰',
+        avator: P1,
+        content: '哈哈哈哈笑死我了!',
+        time: '刚刚'
+    },
+    {
+        name: '周冬雨',
+        avator: P2,
+        content: '你也太棒了吧',
+        time: '6分钟前'
+    },
+    {
+        name: '欧阳娜娜',
+        avator: P3,
+        content: '我唱歌给你听',
+        time: '8分钟前'
+    },
+    {
+        name: '杜鹃',
+        avator: P4,
+        content: '这个电影好不好看啊',
+        time: '16分钟前'
+    },
+    {
+        name: '张靓颖',
+        avator: P5,
+        content: '我教你海豚音啊',
+        time: '24分钟前'
+    },
+    {
+        name: '刘亦菲',
+        avator: P6,
+        content: '我就是仙女姐姐',
+        time: '1小时前'
+    },
+    {
+        name: '女明星',
+        avator: P7,
+        content: '你连女明星都不认识了嘛',
+        time: '6小时前'
+    },
+    {
+        name: '李宇春',
+        avator: P8,
+        content: '明天出来吃火锅',
+        time: '8小时前'
+    },
+    {
+        name: '唐嫣',
+        avator: P9,
+        content: '工作好累啊今天',
+        time: '1天前'
+    },
+    {
+        name: '范玮琪',
+        avator: P10,
+        content: '好想睡觉',
+        time: '3天前'
+    },
+
+]
+const sendPlusItemArr = [{
+        img: Photo,
+        text: '照片'
+    },
+    {
+        img: Camera,
+        text: '拍摄',
+        onClick: () => {
+            goRoute('/takephoto')
+        }
+    },
+    {
+        img: Video,
+        text: '视频通话',
+        onClick: () => {
+            goRoute('/videochat')
+        }
+    },
+    {
+        img: Place,
+        text: '位置'
+    },
+    {
+        img: Pay,
+        text: '转账'
+    },
+    {
+        img: File,
+        text: '文件'
+    },
+]
 export {
     countryNews,
     cityNews,
@@ -222,5 +326,7 @@ export {
     News,
     invitationList,
     commentList,
-    sildeImageArr
+    sildeImageArr,
+    messageList,
+    sendPlusItemArr
 }
