@@ -38,7 +38,7 @@ export const cardItemArr = [{
     {
         img: Eat,
         text: "食堂外送",
-        route: '/notfound'
+        route: '/fooddelivery'
     },
     {
         img: Order,

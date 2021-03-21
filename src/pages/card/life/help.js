@@ -18,9 +18,36 @@ import Swiper1 from './img/swiper1.jpeg'
 import Swiper2 from './img/swiper2.jpeg'
 import Swiper3 from './img/swiper3.jpeg'
 
-// pay-center js
-const payCenterCardItemArr = [
+import S1 from './img/s1'
+import S2 from './img/s2'
+import S3 from './img/s3'
+
+import Dish from './img/dish'
+import Fruit from './img/fruit'
+import Drink from './img/drink'
+import SuperMarket from './img/supermarket'
+
+// foodDeliver
+const foodDeliverySwiperArr = [S1, S2, S3]
+const foodDeliveryClassify = [{
+        image: Dish,
+        text: '美食'
+    },
     {
+        image: Fruit,
+        text: '水果蔬菜'
+    },
+    {
+        image: Drink,
+        text: '奶茶果汁'
+    },
+    {
+        image: SuperMarket,
+        text: '超市便利'
+    }
+]
+// pay-center js
+const payCenterCardItemArr = [{
         img: PayNet,
         text: "充网费",
         route: "/paynet"
@@ -58,8 +85,7 @@ const payCenterCardItemArr = [
 ]
 
 // connect-net js
-const connectWifiHeadItemArr = [
-    {
+const connectWifiHeadItemArr = [{
         img: Safe,
         text: "网络监测"
     },
@@ -72,8 +98,7 @@ const connectWifiHeadItemArr = [
         text: "WiFi设置"
     },
 ]
-const connectWifiFootItemArr = [
-    {
+const connectWifiFootItemArr = [{
         img: Fn,
         text: "功能介绍"
     },
@@ -89,8 +114,10 @@ const connectWifiFootItemArr = [
 const connectWifiSwiperImgArr = [Swiper1, Swiper2, Swiper3]
 
 export {
+    foodDeliverySwiperArr,
     payCenterCardItemArr,
     connectWifiHeadItemArr,
     connectWifiFootItemArr,
-    connectWifiSwiperImgArr
+    connectWifiSwiperImgArr,
+    foodDeliveryClassify
 }

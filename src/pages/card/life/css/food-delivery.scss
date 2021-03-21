@@ -1,0 +1,163 @@
+#FoodDelivery {
+    width: 100%;
+    overflow-x: hidden;
+
+    .delivery-header {
+        width: 100%;
+        height: 6rem;
+        position: fixed;
+        top: 0;
+    }
+
+    .header-block {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .delivery-body {
+        margin-top: .5rem;
+    }
+
+    .classify-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        border-radius: .5rem;
+        padding: 1rem 0;
+
+        .classify-item {
+            font-size: .8rem;
+            width: 25%;
+            text-align: center;
+
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+    .delivery-swiper-content {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .delivery-select-content {
+        width: 100%;
+        padding: .5rem 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        border-radius: .5rem;
+    }
+
+    .delivery-select-item {
+        width: 25%;
+        text-align: center;
+        height: 2.4rem;
+        transition: all .5s ease;
+        overflow: hidden;
+
+        .delivery-select-item-title {
+            width: 100%;
+            height: 2.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .delivery-select-tria {
+                border-style: solid;
+                border-width: .3rem .3rem 0 .3rem;
+                border-color: #aaa transparent transparent transparent;
+                margin-left: .2rem;
+                transition: all .3s ease;
+            }
+
+            .delivery-select-tria:hover {
+                transform: rotate(180deg);
+            }
+        }
+
+        .delivery-select-item-pull {
+            margin-top: .5rem;
+
+            .delivery-select-item-pull-item {
+                height: 1.5rem;
+                font-size: .9rem;
+                line-height: 1.5rem;
+                padding: .2rem 0;
+            }
+        }
+    }
+
+    .delivery-shop-content {
+        width: 95%;
+        margin: .5rem auto;
+
+    }
+
+    .delivery-shop-content-item {
+        width: 100%;
+        display: flex;
+        background-color: #fff;
+        border-radius: .5rem;
+        padding: .5rem 0;
+
+        .delivery-shop-content-item-left {
+            width: 20%;
+
+            img {
+                width: 100%;
+                height: 3.6rem;
+            }
+        }
+
+        .delivery-shop-content-item-middle {
+            flex: 1;
+            margin: 0 .5rem;
+
+            .shop-sell,
+            .shop-delivery,
+            .shop-active {
+                width: 100%;
+                font-size: .8rem;
+                color: #aaa;
+                display: flex;
+                align-items: center;
+                margin: .2rem 0;
+
+                img {
+                    width: .7rem;
+                    height: .7rem;
+                }
+
+                span {
+                    margin: 0 .3rem;
+                }
+            }
+
+            .shop-sell {
+                justify-content: space-between;
+            }
+
+            
+
+            .shop-active {
+                color: #EC4141;
+                margin: .5rem 0;
+                font-size: .6rem;
+
+                span {
+                    padding: .1rem;
+                    border: orange .05rem solid;
+                    border-radius: .5rem;
+                }
+            }
+        }
+
+
+    }
+
+
+}
