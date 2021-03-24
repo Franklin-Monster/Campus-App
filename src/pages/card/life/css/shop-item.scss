@@ -1,0 +1,239 @@
+#ShopItem {
+    .header-title {
+        width: 100%;
+        height: 3rem;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    .title-block {
+        width: 100%;
+        height: 3rem;
+    }
+
+    .shop-info {
+        margin: .5rem;
+        padding: 1rem;
+        display: flex;
+        background-color: #fff;
+        border-radius: .5rem;
+
+        .shop-info-left {
+            flex: 1;
+
+            .shop-name {
+                font-size: 1.2rem;
+                margin: .5rem .2rem;
+            }
+
+            .shop-delivery {
+                font-size: .8rem;
+                color: #aaa;
+                margin: .5rem 0;
+                display: flex;
+                align-items: center;
+
+                .shop-star {
+                    color: red;
+
+                    img {
+                        width: .7rem;
+                        height: .7rem;
+                        margin-right: .1rem;
+                    }
+
+                }
+
+                span {
+                    margin: 0 .2rem;
+                }
+            }
+
+            .shop-active {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                color: #EC4141;
+                margin: 1rem 0;
+                font-size: .6rem;
+
+                span {
+                    padding: .1rem;
+                    border: orange .05rem solid;
+                    border-radius: .5rem;
+                    margin: 0 .3rem;
+                }
+            }
+        }
+
+        .shop-info-right {
+            width: 30%;
+
+            img {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+    }
+
+    .header-swiper {
+        margin: .5rem 0;
+    }
+
+    .food-select-content {
+        display: flex;
+        width: 100%;
+    }
+
+    .food-select-left {
+        width: 15%;
+        background-color: #f1f1f1;
+        padding: .5rem;
+
+        .food-classify-content {
+            margin: .5rem 0;
+
+            .food-classify-item {
+                width: 100%;
+                text-align: center;
+                padding: .8rem 0;
+            }
+        }
+    }
+
+    .food-select-right {
+        flex: 1;
+        margin: .5rem 0;
+
+        .food-content {
+            .food-item-title {
+                width: 100%;
+                font-size: 1.2rem;
+                font-weight: bolder;
+                margin: .5rem 0;
+            }
+
+            .food-item {
+                display: flex;
+                padding: 1rem .5rem;
+                background-color: #fff;
+                border-radius: 10%;
+
+                .food-item-left {
+                    width: 6rem;
+
+                    img {
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+
+                .food-item-right {
+                    flex: 1;
+                    margin: 0 .5rem;
+
+                    .food-item-name {
+                        font-weight: bold;
+                    }
+
+                    .food-item-info {
+                        margin: .3rem 0;
+                        font-size: .75rem;
+                        width: fit-content;
+                        color: #fc9802;
+                        border-radius: .2rem;
+                    }
+
+                    .food-item-count {
+                        font-size: .75rem;
+                        transform: scale(0.9) translateX(-5%);
+                    }
+
+                    .food-item-select {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: .2rem 0;
+
+                        .food-item-price {
+                            font-weight: bold;
+                        }
+
+                        .food-item-add {
+                            img {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+
+                    .food-item-discount {
+                        color: #EC4141;
+                        font-size: .75rem;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .shop-footer-block {
+        width: 100%;
+        height: 3.6rem;
+    }
+
+    .shop-footer {
+        width: 100%;
+        height: 3.6rem;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        padding: .5rem;
+        border-top: #aaa .05rem solid;
+
+        .shop-footer-compute-content {
+            display: flex;
+            align-items: center;
+
+            .compute-left {
+                width: 50%;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+                .total-money {
+                    font-size: 1rem;
+                    margin-left: .5rem;
+                }
+
+                .delivery-money {
+                    color: #aaa;
+                    font-size: .4rem;
+                    margin: .5rem 0 0 .5rem;
+                }
+            }
+
+            .compute-right {
+                flex: 1;
+                display: flex;
+                padding: 0 1rem;
+                justify-content: flex-end;
+
+                .compute-button {
+                    color: #fff;
+                    background-color: #3775F6;
+                    height: 2.4rem;
+                    width: 8rem;
+                    text-align: center;
+                    line-height: 2.4rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}

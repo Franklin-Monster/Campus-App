@@ -91,7 +91,7 @@ const ForFriend = props => {
     return (
         <div id="ForFriend">
             <div className="fri-header">
-                <ReturnTitle text='休闲交友' />
+                <ReturnTitle text='休闲交友' returnClick={() => props.history.push('/card')} />
             </div>
             <div className="fri-body">
                 <div className="image-content">

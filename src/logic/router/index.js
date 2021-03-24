@@ -1,9 +1,12 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import routes from './config'
+import ScrollToTop from './ScrollToTop'
+
 const RouterIndex = (props) => {
     return (
         <>
+        <ScrollToTop>
             <Switch>
                 {
                     routes.map(route =>
@@ -15,7 +18,7 @@ const RouterIndex = (props) => {
                     )
                 }
             </Switch>
-
+        </ScrollToTop>
         </>
     )
 }

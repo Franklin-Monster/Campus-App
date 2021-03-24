@@ -9,7 +9,7 @@ const ForMine = props => {
     return (
         <div id="ForMine">
             <div className='mine-header'>
-                <ReturnTitle text='休闲交友' />
+                <ReturnTitle text='休闲交友' returnClick={() => props.history.push('/card')}/>
             </div>
             <div className='mine-body'>
 wode
