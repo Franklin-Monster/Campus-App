@@ -286,6 +286,7 @@ const shopItemFood = [{
         avator: Food1,
         info: '本店销量第1名',
         count: 686,
+        selectCount: 0,
         price: 12,
         discount: '7.6折，限1份'
     },
@@ -295,6 +296,7 @@ const shopItemFood = [{
         avator: Food2,
         info: '本店销量第3名',
         count: 624,
+        selectCount: 0,
         price: 11,
         discount: '7.8折，限1份'
     },
@@ -304,6 +306,7 @@ const shopItemFood = [{
         avator: Food3,
         info: '本店销量第2名',
         count: 656,
+        selectCount: 0,
         price: 7,
         discount: '8折，限2份'
     },
@@ -313,6 +316,7 @@ const shopItemFood = [{
         avator: Food4,
         info: '',
         count: 356,
+        selectCount: 0,
         price: 5,
         discount: ''
     },
@@ -322,6 +326,7 @@ const shopItemFood = [{
         avator: Food5,
         info: '',
         count: 588,
+        selectCount: 0,
         price: 6,
         discount: ''
     },
@@ -331,6 +336,7 @@ const shopItemFood = [{
         avator: Food6,
         info: '',
         count: 234,
+        selectCount: 0,
         price: 3,
         discount: ''
     },
@@ -340,6 +346,7 @@ const shopItemFood = [{
         avator: Food7,
         info: '',
         count: 359,
+        selectCount: 0,
         price: 2,
         discount: ''
     },
@@ -349,6 +356,7 @@ const shopItemFood = [{
         avator: Food8,
         info: '',
         count: 162,
+        selectCount: 0,
         price: 5,
         discount: ''
     },
@@ -358,6 +366,7 @@ const shopItemFood = [{
         avator: Food9,
         info: '',
         count: 86,
+        selectCount: 0,
         price: 7,
         discount: ''
     },
@@ -367,6 +376,7 @@ const shopItemFood = [{
         avator: Food10,
         info: '',
         count: 99,
+        selectCount: 0,
         price: 8,
         discount: ''
     },
@@ -376,6 +386,7 @@ const shopItemFood = [{
         avator: Food11,
         info: '',
         count: 224,
+        selectCount: 0,
         price: 5,
         discount: ''
     },
@@ -385,6 +396,7 @@ const shopItemFood = [{
         avator: Food12,
         info: '',
         count: 464,
+        selectCount: 0,
         price: 1,
         discount: ''
     },
@@ -394,6 +406,7 @@ const shopItemFood = [{
         avator: Food13,
         info: '',
         count: 124,
+        selectCount: 0,
         price: 4,
         discount: ''
     },
@@ -403,6 +416,7 @@ const shopItemFood = [{
         avator: Food14,
         info: '',
         count: 84,
+        selectCount: 0,
         price: 5,
         discount: ''
     },
@@ -412,6 +426,7 @@ const shopItemFood = [{
         avator: Food15,
         info: '',
         count: 374,
+        selectCount: 0,
         price: 3,
         discount: ''
     },
@@ -421,6 +436,7 @@ const shopItemFood = [{
         avator: Food16,
         info: '',
         count: 1824,
+        selectCount: 0,
         price: 1,
         discount: ''
     },
@@ -430,6 +446,7 @@ const shopItemFood = [{
         avator: Food17,
         info: '',
         count: 668,
+        selectCount: 0,
         price: 3,
         discount: ''
     }

@@ -1,28 +1,32 @@
 import React, { useState, useRef, useMemo } from 'react'
 import '../css/shop-item'
-import { shopItemFood } from '../help'
-import { foodDeliverySwiperArr } from '../help'
+import { shopItemFood, foodDeliverySwiperArr } from '../help'
 
 // component
-import SearchBar from '@c/search-bar'
 import AutoSwiper from '@c/auto-swiper'
 import ReturnTitle from '@c/return-title'
 
 // image
+import Cut from '../img/cut'
 import Add from '../img/add'
 import Star from '../img/star'
+import Clear from '../img/clear'
 import Shop1 from '../img/shop1'
 import Search from '../img/search'
 import Delivery from '../img/delivery'
 
 const ShopItem = props => {
     const [paramsObj, setParamsObj] = useState({})
+    const [foodArr, setFoodArr] = useState(shopItemFood)
     const [activeArr, setActiveArr] = useState([])
     const [startMoney, setStartMoney] = useState(0)
-    const [totalMoney, setTotalMoney] = useState(0)
     const [deliveryMoney, setDeliveryMoney] = useState(0)
+    const [totalMoney, setTotalMoney] = useState(0)
+    const [totalCount, setTotalCount] = useState(0)
+    const [shoppingCar, setShoppingCar] = useState([])
     const foodContentRef = useRef()
-
+    const shopFooterRef = useRef()
+    const shoppingCarRef = useRef()
     // 格式化地址栏参数
     useMemo(() => {
         const searchParams = props.location.search.split('&')
@@ -56,9 +60,67 @@ const ShopItem = props => {
         }
     }
 
+    // 增加商品数量
+    const addFoodCount = (food, index) => {
+        const tempFoodArr = foodArr
+        foodArr[index].selectCount++
+        setFoodArr(tempFoodArr)
+        setTotalMoney(totalMoney + parseInt(food.price))
+        setTotalCount(totalCount + 1)
+        const tempFoodObj = {
+            avator: food.avator,
+            price: food.price,
+            name: food.name,
+            selectCount: foodArr[index].selectCount
+        }
+        const tempShoppingCar = shoppingCar
+        tempShoppingCar[index] = tempFoodObj
+        setShoppingCar(tempShoppingCar)
+    }
+
+    // 减少商品数量
+    const reduceFoodCount = (food, index) => {
+        const tempFoodArr = foodArr
+        foodArr[index].selectCount !== 0
+            ? foodArr[index].selectCount-- : foodArr[index].selectCount = 0
+        setFoodArr(tempFoodArr)
+        setTotalMoney(totalMoney - parseInt(food.price))
+        setTotalCount(totalCount !== 0 ? totalCount - 1 : totalCount)
+        const tempShoppingCar = shoppingCar
+        if (tempShoppingCar[index].selectCount > 1) {
+            tempShoppingCar[index].selectCount--
+        } else {
+            tempShoppingCar.splice(index, 1)
+            hideShoppingCar()
+        }
+        setShoppingCar(tempShoppingCar)
+    }
+
+    // 显示购物车
+    const showShoppingCar = () => {
+        const length = shoppingCar.filter(item => item).length
+        shopFooterRef.current.style.height = `${length * 4.5 + 6.2}rem`
+        shoppingCarRef.current.style.height = `${length * 4.5 + 3}rem`
+    }
+
+    // 隐藏购物车
+    const hideShoppingCar = () => {
+        shopFooterRef.current.style.height = '3.2rem'
+        shoppingCarRef.current.style.height = '0'
+    }
+
+    // 清空购物车
+    const clearShoppingCar = () => {
+        setTotalMoney(0)
+        setTotalCount(0)
+        setFoodArr(shopItemFood)
+        setShoppingCar([])
+        hideShoppingCar()
+    }
+
     return (
         <div id="ShopItem">
-            <div className="shop-header">
+            <div className="shop-header" onClick={hideShoppingCar}>
                 <div className="header-title">
                     <ReturnTitle text="食堂外送" rightImg={Search} />
                 </div>
@@ -85,7 +147,7 @@ const ShopItem = props => {
                     <AutoSwiper imgArr={foodDeliverySwiperArr} />
                 </div>
             </div>
-            <div className="shop-body">
+            <div className="shop-body" onClick={hideShoppingCar}>
                 <div className="food-select-content">
                     <div className="food-select-left">
                         <div className="food-classify-content">
@@ -111,12 +173,12 @@ const ShopItem = props => {
                     <div className="food-select-right">
                         <div className="food-content" ref={foodContentRef}>
                             {
-                                shopItemFood.map((item, index) => {
+                                foodArr.map((item, index) => {
                                     let classify = null
-                                    if ((shopItemFood[index + 1]
-                                        && item.classify !== shopItemFood[index + 1].classify)
+                                    if ((foodArr[index + 1]
+                                        && item.classify !== foodArr[index + 1].classify)
                                         || index === 0) {
-                                        classify = shopItemFood[index + 1].classify
+                                        classify = foodArr[index + 1].classify
                                     }
                                     return (
                                         <div key={item.avator}>
@@ -128,15 +190,36 @@ const ShopItem = props => {
                                                     <img src={item.avator} alt="food" />
                                                 </div>
                                                 <div className="food-item-right">
-                                                    <div className="food-item-name">{item.name}</div>
-                                                    <div className="food-item-info">{item.info}</div>
-                                                    <div className="food-item-count">月售{item.count}</div>
+                                                    <div className="food-item-name">
+                                                        {item.name}
+                                                    </div>
+                                                    <div className="food-item-info">
+                                                        {item.info}
+                                                    </div>
+                                                    <div className="food-item-count">
+                                                        月售{item.count}
+                                                    </div>
                                                     <div className="food-item-select">
                                                         <span className="food-item-price">
                                                             ￥{item.price}
                                                         </span>
                                                         <span className="food-item-add">
-                                                            <img src={Add} alt="add" />
+                                                            {
+                                                                item.selectCount !== 0 && <img
+                                                                    src={Cut}
+                                                                    alt="cut"
+                                                                    onClick={() => reduceFoodCount(item, index)}
+                                                                />
+                                                            }
+                                                            {
+                                                                item.selectCount !== 0 && <span>
+                                                                    {item.selectCount}
+                                                                </span>
+                                                            }
+                                                            <img
+                                                                src={Add}
+                                                                alt="add"
+                                                                onClick={() => addFoodCount(item, index)} />
                                                         </span>
                                                     </div>
                                                     <div className="food-item-discount">
@@ -153,14 +236,58 @@ const ShopItem = props => {
                 </div>
             </div>
             <div className="shop-footer-block"></div>
-            <div className="shop-footer">
+            <div className="shop-footer" ref={shopFooterRef}>
+                <div className="shop-footer-shopping-car-content" ref={shoppingCarRef}>
+                    <div className="car-title">
+                        <span>已选商品</span>
+                        <span className="car-clear" onClick={clearShoppingCar}>
+                            <img src={Clear} alt="clear" />清空
+                            </span>
+                    </div>
+                    {
+                        shoppingCar.map((item, index) => {
+                            return (
+                                <div className="car-item" key={item.avator}>
+                                    <div className="car-item-left">
+                                        <img src={item.avator} alt="food" />
+                                    </div>
+                                    <div className="car-item-right">
+                                        <div className="car-item-name">{item.name}</div>
+                                        <div className="car-item-info">
+                                            <span className="car-item-price">￥{item.price}</span>
+                                            <span className="car-item-add">
+                                                <img
+                                                    src={Cut}
+                                                    alt="cut"
+                                                    onClick={() => reduceFoodCount(item, index)} />
+                                                <span>{item.selectCount}</span>
+                                                <img
+                                                    src={Add}
+                                                    alt="add"
+                                                    onClick={() => addFoodCount(item, index)} />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+
+                </div>
                 <div className="shop-footer-compute-content">
                     <div className="compute-left">
-                        <img src={Delivery} alt="deli" />
+                        <div className="shopping-car">
+                            {
+                                totalCount !== 0 && <div className="shopping-car-count">
+                                    {totalCount}
+                                </div>
+                            }
+                            <img src={Delivery} alt="deli" onClick={showShoppingCar} />
+                        </div>
                         <div>
                             <div className="total-money">
                                 {
-                                    totalMoney === 0 ? `￥${totalMoney}` : '未选购商品'
+                                    totalMoney === 0 ? '未选购商品' : `￥${totalMoney}`
                                 }
                             </div>
                             <div className="delivery-money">
@@ -169,7 +296,12 @@ const ShopItem = props => {
                         </div>
                     </div>
                     <div className="compute-right">
-                        <div className="compute-button">￥{startMoney}起送</div>
+                        <div className="compute-button">
+                            {
+                                totalMoney > startMoney
+                                    ? '去结算' : `差￥${startMoney - totalMoney} 起送`
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

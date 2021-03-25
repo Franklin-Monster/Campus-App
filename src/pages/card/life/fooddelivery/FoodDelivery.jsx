@@ -162,7 +162,8 @@ const FoodDelivery = props => {
                                                 起送 ￥{item.start}
                                             </span>
                                             <span>
-                                                {item.delivery === 0 ? '免配送费' : `配送￥${item.delivery}`}
+                                                {item.delivery === 0
+                                                    ? '免配送费' : `配送￥${item.delivery}`}
                                             </span>
                                             <span>
                                                 人均 ￥{item.avager}
