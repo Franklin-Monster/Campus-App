@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react'
+import React, { useState, useRef, useMemo, useEffect } from 'react'
 import '../css/shop-item'
 import { shopItemFood, foodDeliverySwiperArr } from '../help'
 
@@ -27,6 +27,7 @@ const ShopItem = props => {
     const foodContentRef = useRef()
     const shopFooterRef = useRef()
     const shoppingCarRef = useRef()
+
     // 格式化地址栏参数
     useMemo(() => {
         const searchParams = props.location.search.split('&')
@@ -299,7 +300,16 @@ const ShopItem = props => {
                         <div className="compute-button">
                             {
                                 totalMoney > startMoney
-                                    ? '去结算' : `差￥${startMoney - totalMoney} 起送`
+                                    ? <span onClick={() => {
+                                        props.history.push({
+                                            pathname: `/balanceshoppingcar`,
+                                            query: {
+                                                shoppingCar,
+                                                paramsObj,
+                                                totalMoney
+                                            }
+                                        })
+                                    }}>去结算</span> : `差￥${startMoney - totalMoney} 起送`
                             }
                         </div>
                     </div>
