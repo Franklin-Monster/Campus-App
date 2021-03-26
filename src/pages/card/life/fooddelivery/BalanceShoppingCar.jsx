@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../css/balance-shoppingcar'
 
 // component
 import ReturnTitle from '@c/return-title'
 
 // image
-import Shop1 from '../img/shop1'
 import RedPaper from '../img/red-paper'
 import RightArrowThin from '../img/right-arrow-thin'
 
 const BalanceShoppingCar = props => {
-    console.log(props)
     return (
         <div id="BalanceShoppingCar">
             <div className="balance-header">

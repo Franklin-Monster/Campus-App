@@ -135,7 +135,9 @@ const FoodDelivery = props => {
                             return (
                                 <div className="delivery-shop-content-item"
                                     key={item.logo}
-                                    onClick={() => props.history.push(path)}>
+                                    // onClick={() => props.history.push(path)}
+                                    onClick={() => window.location.href = path}
+                                >
                                     <div className="delivery-shop-content-item-left">
                                         <img src={item.logo} alt="logo" />
                                     </div>
