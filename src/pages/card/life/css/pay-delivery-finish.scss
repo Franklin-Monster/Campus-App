@@ -1,0 +1,130 @@
+#PayDeliveryFinish {
+    background: linear-gradient(#3775F6, #fff);
+
+    .finish-detail-content {
+        margin: 1rem .5rem;
+        padding: .5rem .8rem;
+        background-color: #fff;
+        border-radius: .5rem;
+
+        .finish-detail-title {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .finish-detail-item {
+            display: flex;
+            margin: 1rem 0;
+            justify-content: space-between;
+        }
+    }
+
+    .order-info-content {
+        margin: 1rem .5rem;
+        padding: .5rem .8rem;
+        background-color: #fff;
+        border-radius: .5rem;
+
+        .shop-name {
+            margin: 1rem 0 1.5rem .6rem;
+        }
+
+        .shopping-car-content {
+            margin: .5rem 0;
+
+            .shopping-car-item {
+                display: flex;
+                margin: 1rem 0;
+
+                .car-item-left {
+                    width: 3.6rem;
+                    margin: 0 .5rem;
+
+                    img {
+                        width: 3.6rem;
+                        height: 3.6rem;
+                        vertical-align: middle;
+                    }
+                }
+
+                .car-item-middle {
+                    flex: 1;
+
+                    .car-item-name {
+                        font-weight: bold;
+                    }
+
+                    .car-item-count {
+                        font-size: .6rem;
+                        color: #aaa;
+                    }
+                }
+
+                .car-item-right {
+                    width: 1.8rem;
+
+                    span {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+
+        .order-money {
+            font-size: 1.2rem;
+            text-align: end;
+            color: red;
+            font-size: 1.6rem;
+            margin: 1rem 0;
+
+            span {
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .finish-footer-block {
+        width: 100%;
+        height: 10rem;
+    }
+
+    .finish-footer {
+        width: 100%;
+        // height: 10rem;
+        position: fixed;
+        bottom: 0;
+        border-top: #aaa .05rem solid;
+    }
+
+    .finish-box {
+        padding: 1rem .6rem;
+        background-color: #fff;
+
+        .finish-time {
+            margin: 1rem;
+
+            span {
+                color: orangered;
+            }
+        }
+
+        .finish-operate-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .finish-operate-item {
+            width: 33.3%;
+            text-align: center;
+            font-size: .75rem;
+            margin: 1rem 0;
+
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+
+        }
+    }
+}

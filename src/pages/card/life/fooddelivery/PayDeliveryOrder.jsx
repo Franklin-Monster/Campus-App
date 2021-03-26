@@ -16,7 +16,7 @@ const PayDeliveryOrder = props => {
 
     // 格式化地址栏参数
     useMemo(() => {
-        const searchParams = props.location.search.split('&')
+        const searchParams = props.location.pathname.split('&')
         searchParams.shift()
         const tempObj = {}
         searchParams.map(item => {
@@ -70,7 +70,9 @@ const PayDeliveryOrder = props => {
                 <div className="pay-confirm-button" onClick={() => props.history.push({
                     pathname: '/paydeliveryfinish',
                     query: {
-                        shoppingCar: props.location.query.shoppingCar
+                        shoppingCar: props.location.query.shoppingCar,
+                        orderName,
+                        orderTotalMoney
                     }
                 })}>
                     确认支付
