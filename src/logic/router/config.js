@@ -37,6 +37,7 @@ const AnonymousItem = Loadable(() => import('@p/card/entertainment/AnonymousItem
 const FoodDelivery = Loadable(() => import('@p/card/life/fooddelivery/FoodDelivery'))
 const ShopItem = Loadable(() => import('@p/card/life/fooddelivery/ShopItem'))
 const BalanceShoppingCar = Loadable(() => import('@p/card/life/fooddelivery/BalanceShoppingCar'))
+const PayDeliveryOrder = Loadable(() => import('@p/card/life/fooddelivery/PayDeliveryOrder'))
 const routes = [{
         path: '/message',
         component: Message
@@ -188,6 +189,10 @@ const routes = [{
     {
         path: '/balanceshoppingcar',
         component: BalanceShoppingCar
+    },
+    {
+        path: '/paydeliveryorder',
+        component: PayDeliveryOrder
     },
 ]
 

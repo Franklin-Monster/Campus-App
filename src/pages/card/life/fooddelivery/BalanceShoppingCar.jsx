@@ -9,10 +9,12 @@ import RedPaper from '../img/red-paper'
 import RightArrowThin from '../img/right-arrow-thin'
 
 const BalanceShoppingCar = props => {
+    console.log(props)
     return (
         <div id="BalanceShoppingCar">
             <div className="balance-header">
-                <ReturnTitle text="确认订单" />
+                <ReturnTitle text="确认订单"
+                    returnClick={() => props.history.push('/fooddelivery')} />
                 <div className="select-delivery-way-content">
                     <div className="select-delivery-title">
                         <span>外卖配送</span>
@@ -24,7 +26,9 @@ const BalanceShoppingCar = props => {
                                 <div className="terminal-info">
                                     <div className="place-info">
                                         <span>天津城建大学骏善斋201</span>
-                                        <span><img src={RightArrowThin} alt="arrow" /></span>
+                                        <span>
+                                            <img src={RightArrowThin} alt="arrow" />
+                                        </span>
                                     </div>
                                     <div className="person-info">
                                         王瀚堃 先生 15076935128
@@ -55,8 +59,12 @@ const BalanceShoppingCar = props => {
                                             <img src={item.avator} alt="shop" />
                                         </div>
                                         <div className="car-item-middle">
-                                            <div className="car-item-name">{item.name}</div>
-                                            <div className="car-item-count">×{item.selectCount}</div>
+                                            <div className="car-item-name">
+                                                {item.name}
+                                            </div>
+                                            <div className="car-item-count">
+                                                ×{item.selectCount}
+                                            </div>
                                         </div>
                                         <div className="car-item-right">
                                             <span>￥</span>
@@ -97,8 +105,19 @@ const BalanceShoppingCar = props => {
             </div>
             <div className="balance-footer-block"></div>
             <div className="balance-footer">
-                <span className="order-total-money"><span>￥</span>{props.location.query.totalMoney}</span>
-                <span className="order-submit-button">提交订单</span>
+                <span className="order-total-money">
+                    <span>￥</span>
+                    {props.location.query.totalMoney}
+                </span>
+                <span className="order-submit-button"
+                    onClick={() => props.history.push({
+                        pathname: `/paydeliveryorder/?&name=${decodeURI(props.location.query.paramsObj.name)}&totalMoney=${props.location.query.totalMoney}`,
+                        query: {
+                            shoppingCar: props.location.query.shoppingCar
+                        }
+                    })}>
+                    提交订单
+                </span>
             </div>
         </div>
     )
