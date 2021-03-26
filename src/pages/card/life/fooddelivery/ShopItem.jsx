@@ -1,8 +1,9 @@
-import React, { useState, useRef, useMemo, useEffect } from 'react'
+import React, { useState, useRef, useMemo } from 'react'
 import '../css/shop-item'
 import { shopItemFood, foodDeliverySwiperArr } from '../help'
 
 // component
+import Message from '@c/message'
 import AutoSwiper from '@c/auto-swiper'
 import ReturnTitle from '@c/return-title'
 
@@ -63,7 +64,7 @@ const ShopItem = props => {
 
     // 增加商品数量
     const addFoodCount = (food, index) => {
-        const tempFoodArr = foodArr
+        const tempFoodArr = foodArr.slice()
         foodArr[index].selectCount++
         setFoodArr(tempFoodArr)
         setTotalMoney(totalMoney + parseInt(food.price))
@@ -81,7 +82,7 @@ const ShopItem = props => {
 
     // 减少商品数量
     const reduceFoodCount = (food, index) => {
-        const tempFoodArr = foodArr
+        const tempFoodArr = foodArr.slice()
         foodArr[index].selectCount !== 0
             ? foodArr[index].selectCount-- : foodArr[index].selectCount = 0
         setFoodArr(tempFoodArr)
@@ -112,11 +113,16 @@ const ShopItem = props => {
 
     // 清空购物车
     const clearShoppingCar = () => {
+        Message({
+            type: 'success',
+            text: '已清空购物车'
+        })
         setTotalMoney(0)
         setTotalCount(0)
         setFoodArr(shopItemFood)
         setShoppingCar([])
         hideShoppingCar()
+        console.log(foodArr)
     }
 
     return (

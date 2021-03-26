@@ -13,7 +13,7 @@ const PayDeliveryFinish = props => {
     return (
         <div id="PayDeliveryFinish">
             <div className="finish-header">
-                <ReturnTitle text="等待送达" />
+                <ReturnTitle text="等待送达" returnClick={() => props.history.push('fooddelivery')} />
             </div>
             <div className="finish-body">
                 <div className="finish-detail-content">

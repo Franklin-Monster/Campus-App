@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/balance-shoppingcar'
 
 // component
+import Message from '@c/message'
 import ReturnTitle from '@c/return-title'
 
 // image
@@ -9,7 +10,6 @@ import RedPaper from '../img/red-paper'
 import RightArrowThin from '../img/right-arrow-thin'
 
 const BalanceShoppingCar = props => {
-    console.log(props)
     return (
         <div id="BalanceShoppingCar">
             <div className="balance-header">
@@ -110,12 +110,18 @@ const BalanceShoppingCar = props => {
                     {props.location.query.totalMoney}
                 </span>
                 <span className="order-submit-button"
-                    onClick={() => props.history.push({
-                        pathname: `/paydeliveryorder/?&name=${decodeURI(props.location.query.paramsObj.name)}&totalMoney=${props.location.query.totalMoney}`,
-                        query: {
-                            shoppingCar: props.location.query.shoppingCar
-                        }
-                    })}>
+                    onClick={() => {
+                        Message({
+                            type: 'success',
+                            text: '提交订单成功！'
+                        })
+                        props.history.push({
+                            pathname: `/paydeliveryorder/?&name=${decodeURI(props.location.query.paramsObj.name)}&totalMoney=${props.location.query.totalMoney}`,
+                            query: {
+                                shoppingCar: props.location.query.shoppingCar
+                            }
+                        })
+                    }}>
                     提交订单
                 </span>
             </div>

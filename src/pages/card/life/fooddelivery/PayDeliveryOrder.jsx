@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import '../css/pay-delivery-order'
 
 // component
+import Message from '@c/message'
 import ReturnTitle from '@c/return-title'
 
 // image
@@ -67,14 +68,20 @@ const PayDeliveryOrder = props => {
                 </div>
             </div>
             <div className="pay-footer">
-                <div className="pay-confirm-button" onClick={() => props.history.push({
-                    pathname: '/paydeliveryfinish',
-                    query: {
-                        shoppingCar: props.location.query.shoppingCar,
-                        orderName,
-                        orderTotalMoney
-                    }
-                })}>
+                <div className="pay-confirm-button" onClick={() => {
+                    Message({
+                        type: 'success',
+                        text: '支付成功！'
+                    })
+                    props.history.push({
+                        pathname: '/paydeliveryfinish',
+                        query: {
+                            shoppingCar: props.location.query.shoppingCar,
+                            orderName,
+                            orderTotalMoney
+                        }
+                    })
+                }}>
                     确认支付
                 </div>
             </div>
