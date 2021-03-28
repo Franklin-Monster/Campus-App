@@ -1,24 +1,27 @@
-#PayNet{
+#PayNet {
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: #f1f2f3;
     position: absolute;
     top: 0;
     bottom: 0;
     overflow-x: hidden;
-    .paynet-body{
+
+    .paynet-body {
         width: 100%;
         margin-top: 2rem;
     }
-    .select-amount{
+
+    .select-amount {
         width: 100%;
         display: flex;
         justify-content: space-around;
     }
-    .amount-item{
+
+    .amount-item {
         width: 30%;
         background-color: #fff;
         text-align: center;
-        border: .1rem #eee solid; 
+        border: .1rem #eee solid;
         padding: .2rem 0;
         margin: .2rem 0;
     }

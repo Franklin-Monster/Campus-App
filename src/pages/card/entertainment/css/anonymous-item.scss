@@ -45,7 +45,7 @@
     .comment-item {
         display: flex;
         padding: .5rem;
-        border-bottom: #FAFAFA .08rem solid;
+        border-bottom: #f1f2f3 .08rem solid;
     }
 
     .item-left {
@@ -114,7 +114,7 @@
         bottom: 3.6rem;
         transition: all .6s ease;
         overflow: hidden;
-        border-top: #FAFAFA .05rem solid;
+        border-top: #f1f2f3 .05rem solid;
 
         img {
             width: 1.5rem;
@@ -158,7 +158,7 @@
             height: 1.5rem;
             border: none;
             border-radius: 1rem;
-            background-color: #FAFAFA;
+            background-color: #f1f2f3;
             padding: 0 .5rem;
             outline: none;
         }

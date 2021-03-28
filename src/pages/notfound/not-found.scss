@@ -3,9 +3,9 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    background-color: #FAFAFA;
+    background-color: #f1f2f3;
     overflow-x: hidden;
-  
+
     .not-body {
         width: 100%;
         font-size: 2.4rem;
@@ -15,19 +15,21 @@
         border-radius: 1rem;
         background-color: #3775F6;
         color: #fff;
-        animation: content 10s ease  infinite alternate;
+        animation: content 10s ease infinite alternate;
         margin: auto;
     }
 
     @keyframes content {
-        0%{
-            transform: translate(-100%,-100%);
+        0% {
+            transform: translate(-100%, -100%);
         }
-        50%{
-            transform: translate(100%,200%);
+
+        50% {
+            transform: translate(100%, 200%);
         }
-        100%{
-            transform: translate(-100%,400%);
+
+        100% {
+            transform: translate(-100%, 400%);
         }
     }
 }

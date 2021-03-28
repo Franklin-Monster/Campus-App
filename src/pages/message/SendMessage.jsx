@@ -19,7 +19,6 @@ const SendMessage = props => {
     const [mySendMessage, setMySendMessage] = useState([])
     const [friendName, setFriendName] = useState('')
     const [friendMessage, setFriendMessage] = useState('')
-    const [friendAvator, setFriendAvator] = useState(null)
     const [teacher, setTeacher] = useState(null)
     const photo = sessionStorage.getItem("photo")
     const isOpenMedia = sessionStorage.getItem('media')
@@ -60,7 +59,6 @@ const SendMessage = props => {
         })
         setFriendName(tempObj.name)
         setFriendMessage(tempObj.message)
-        setFriendAvator(tempObj.avator)
         setTeacher(tempObj.teacher)
     }, [props])
 
@@ -102,11 +100,17 @@ const SendMessage = props => {
             <div className="send-header">
                 <ReturnTitle
                     arrowColor='black'
-                    background="#FAFAFA"
+                    background="#f1f2f3"
                     text={decodeURI(friendName)}
                     color="#000"
                     rightImg={More}
-                    rightImgClick={() => props.history.push('/messageaction')}
+                    rightImgClick={() => {
+                        if (teacher) {
+                            props.history.push('/groupmessageaction')
+                        } else {
+                            props.history.push('/messageaction')
+                        }
+                    }}
                 />
             </div>
             <div className="send-header-block"></div>

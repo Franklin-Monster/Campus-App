@@ -2,8 +2,7 @@ import React from 'react'
 import Arrow from './img/eee-arrow'
 import './css/arrow-menu'
 
-const ArrowMenu = (props) => {
-
+const ArrowMenu = props => {
     const style = {
         width: props.width,
         height: props.height,

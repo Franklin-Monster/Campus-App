@@ -1,26 +1,31 @@
-#ServiceOrder{
+#ServiceOrder {
     width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
-    background-color: #FAFAFA;
+    background-color: #f1f2f3;
     overflow-x: hidden;
-    .order-body{
+
+    .order-body {
         margin: 2rem 0;
     }
-    .order-card-content{
+
+    .order-card-content {
         display: flex;
         justify-content: space-around;
         margin: 4rem 0;
     }
-    #card-item:hover{
+
+    #card-item:hover {
         animation: cardItemAnimate .3s linear 2 alternate;
     }
+
     @keyframes cardItemAnimate {
-        0%{
+        0% {
             transform: translateY(-20%) rotate(-15deg);
         }
-        100%{
+
+        100% {
             transform: translateY(-20%) rotate(15deg);
         }
     }

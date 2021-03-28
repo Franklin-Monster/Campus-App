@@ -6,7 +6,7 @@ const NotFound = () => {
     return (
         <div id="NotFound">
             <div className="not-header">
-                <ReturnTitle arrowColor="black" background="#FAFAFA" />
+                <ReturnTitle arrowColor="black" background="#f1f2f3" />
             </div>
             <div className="not-body">
                 此页面正在开发中
@@ -16,4 +16,4 @@ const NotFound = () => {
 }
 
 
-export default NotFound 
+export default NotFound

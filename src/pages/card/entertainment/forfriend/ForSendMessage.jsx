@@ -92,7 +92,7 @@ const ForSendMessage = props => {
             <div className="send-header">
                 <ReturnTitle
                     arrowColor='black'
-                    background="#FAFAFA"
+                    background="#f1f2f3"
                     text={decodeURI(friendName)}
                     color="#000"
                 />

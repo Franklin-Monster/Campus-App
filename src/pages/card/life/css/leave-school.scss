@@ -1,45 +1,52 @@
-#LeaveSchool{
+#LeaveSchool {
     width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
     overflow-x: hidden;
-    background-color: #FAFAFA;
-    .leave-header{
+    background-color: #f1f2f3;
+
+    .leave-header {
         background-color: #D22E2E;
     }
-    .stu-avator{
+
+    .stu-avator {
         width: 100%;
         height: 8rem;
         text-align: center;
         padding: 1rem 0;
         font-size: 1rem;
         color: #fff;
-        img{
+
+        img {
             width: 20%;
             object-fit: contain;
             margin-bottom: .5rem;
         }
     }
-    .stu-info{
+
+    .stu-info {
         margin: .2rem 0;
     }
+
     .notice-bar {
         padding: .1rem 0;
         display: flex;
         background-color: #FEFCEC;
         color: #F76A24;
-        img{
+
+        img {
             width: 1rem;
             height: 1rem;
             margin: 0 .5rem;
         }
-        span{
+
+        span {
             text-align: end;
             flex: 1;
             margin: 0 .5rem;
-     
+
         }
     }
-    
+
 }

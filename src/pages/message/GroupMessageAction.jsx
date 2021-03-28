@@ -1,13 +1,13 @@
 import React from 'react'
-import './css/message-action'
-import { Modal } from 'antd-mobile'
+import './css/group-message-action'
 
 // component
+import { Modal } from 'antd-mobile'
 import ArrowMenu from '@c/arrow-menu'
 import ReturnTitle from '@c/return-title'
 import { List, Switch } from 'antd-mobile'
 
-const MessageAction = props => {
+const GroupMessageAction = props => {
     const clearChat = () => {
         Modal.alert('注意', '您确定要清空聊天记录吗？', [
             { text: '取消', onPress: () => console.log('cancel'), style: { color: 'blue' } },
@@ -16,15 +16,16 @@ const MessageAction = props => {
     }
 
     return (
-        <div id="MessageAction">
+        <div id="GroupMessageAction">
             <div className="action-header">
                 <ReturnTitle
                     arrowColor='black'
                     background="#f1f2f3"
                     color="#000"
-                    text="聊天设置" />
+                    text="课程群设置" />
             </div>
             <div className="action-body">
+                <ArrowMenu text="群成员" margin=".2rem auto" />
                 <ArrowMenu text="查找聊天内容" margin=".2rem auto"
                     onClick={() => props.history.push('/searchchatcontent')} />
                 <List.Item
@@ -52,4 +53,4 @@ const MessageAction = props => {
     )
 }
 
-export default MessageAction
+export default GroupMessageAction

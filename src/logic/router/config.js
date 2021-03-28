@@ -1,4 +1,5 @@
-import Loadable from './loadble';
+import Loadable from './loadble'
+
 const Message = Loadable(() => import('@p/message/Message'))
 const Card = Loadable(() => import('@p/card/Card'))
 const List = Loadable(() => import('@p/list/List'))
@@ -17,6 +18,7 @@ const FriendInfo = Loadable(() => import('@p/list/FriendInfo'))
 const FriendAction = Loadable(() => import('@p/list/FriendAction'))
 const SendMessage = Loadable(() => import('@p/message/SendMessage'))
 const MessageAction = Loadable(() => import('@p/message/MessageAction'))
+const GroupMessageAction = Loadable(() => import('@p/message/GroupMessageAction'))
 const UserInfo = Loadable(() => import('@p/mycenter/UserInfo'))
 const UserInstall = Loadable(() => import('@p/mycenter/UserInstall'))
 const NotFound = Loadable(() => import('@p/notfound/NotFound.jsx'))
@@ -39,6 +41,8 @@ const ShopItem = Loadable(() => import('@p/card/life/fooddelivery/ShopItem'))
 const BalanceShoppingCar = Loadable(() => import('@p/card/life/fooddelivery/BalanceShoppingCar'))
 const PayDeliveryOrder = Loadable(() => import('@p/card/life/fooddelivery/PayDeliveryOrder'))
 const PayDeliveryFinish = Loadable(() => import('@p/card/life/fooddelivery/PayDeliveryFinish'))
+const SearchChatContent = Loadable(() => import('@p/message/SearchChatContent'))
+
 const routes = [{
         path: '/message',
         component: Message
@@ -110,6 +114,10 @@ const routes = [{
     {
         path: '/messageaction',
         component: MessageAction
+    },
+    {
+        path: '/groupmessageaction',
+        component: GroupMessageAction
     },
     {
         path: '/userinfo',
@@ -198,6 +206,10 @@ const routes = [{
     {
         path: '/paydeliveryfinish',
         component: PayDeliveryFinish
+    },
+    {
+        path: '/searchchatcontent',
+        component: SearchChatContent
     },
 ]
 

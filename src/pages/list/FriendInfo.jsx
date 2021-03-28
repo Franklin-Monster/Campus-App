@@ -29,7 +29,7 @@ const FriendInfo = (props) => {
             <div className="friend-header">
                 <ReturnTitle
                     arrowColor='black'
-                    background="#FAFAFA"
+                    background="#f1f2f3"
                     text=""
                     rightImg={More}
                     rightImgClick={() => props.history.push('/friendaction')} />

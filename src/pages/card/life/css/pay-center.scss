@@ -1,21 +1,25 @@
-#PayCenter{
+#PayCenter {
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: #f1f2f3;
     position: absolute;
     top: 0;
     bottom: 0;
     overflow-x: hidden;
-    .paycenter-header{
+
+    .paycenter-header {
         background-color: #3775F6;
     }
-    .header-swiper{
+
+    .header-swiper {
         padding: 1rem 0 2rem 0;
         margin-bottom: 2rem;
     }
-    .paycenter-body{
+
+    .paycenter-body {
         width: 100%;
     }
-    .body-item{
+
+    .body-item {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;

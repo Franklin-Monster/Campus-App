@@ -24,7 +24,7 @@ const FriendAction = () => {
             <div className="action-header">
                 <ReturnTitle
                     arrowColor='black'
-                    background="#FAFAFA"
+                    background="#f1f2f3"
                     color="#000"
                     text="朋友设置" />
             </div>
