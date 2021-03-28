@@ -1,9 +1,10 @@
 import React, { useState, useRef, useMemo } from 'react'
 import '../css/shop-item'
+import { Modal } from 'antd-mobile'
 import { shopItemFood, foodDeliverySwiperArr } from '../help'
 
 // component
-import Message from '@c/message'
+
 import AutoSwiper from '@c/auto-swiper'
 import ReturnTitle from '@c/return-title'
 
@@ -113,16 +114,18 @@ const ShopItem = props => {
 
     // 清空购物车
     const clearShoppingCar = () => {
-        Message({
-            type: 'success',
-            text: '已清空购物车'
-        })
-        setTotalMoney(0)
-        setTotalCount(0)
-        setFoodArr(shopItemFood)
-        setShoppingCar([])
-        hideShoppingCar()
-        console.log(foodArr)
+        Modal.alert('注意', '您确定要清空购物车吗？', [
+            { text: '取消', onPress: () => console.log('cancel'), style: { color: 'blue' } },
+            {
+                text: '清空', onPress: () => {
+                    setTotalMoney(0)
+                    setTotalCount(0)
+                    setFoodArr(shopItemFood)
+                    setShoppingCar([])
+                    hideShoppingCar()
+                }, style: { color: 'red' }
+            },
+        ])
     }
 
     return (
