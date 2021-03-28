@@ -38,29 +38,43 @@
     .receive-message-item {
         width: 100%;
         display: flex;
-        align-items: center;
-        margin: 1rem 0;
-        margin-right: .5rem;
+        margin: 1rem 0 1rem .5rem;
 
         .receive-message-avator {
-            margin: 0 1rem 0 .5rem;
+            margin: 0 .3rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            color: #fff;
+            background-color: #3775F6;
+            text-align: center;
+            line-height: 2.4rem;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
 
-            img {
-                width: 2.4rem;
-                height: 2.4rem;
+        .receive-message-right {
+            flex: 1;
+
+            .receive-message-name {
+                margin: -.5rem 0 .2rem -1.5rem;
+                color: #aaa;
+                font-size: .75rem;
+                transform: scale(.8);
             }
         }
 
         .receive-message-wrap {
-            max-width: 70%;
+            max-width: 90%;
             display: flex;
             align-items: center;
 
             .receive-message-content {
-                background-color: #2E85FF;
-                border: solid .2rem #2E85FF;
+                background-color: #fff;
+                border: solid .2rem #fff;
                 padding: .5rem;
                 border-radius: .5rem;
+                font-size: .85rem;
 
                 img {
                     width: 4.8rem;
@@ -71,7 +85,7 @@
             .receive-message-tria {
                 border-style: solid;
                 border-width: .4rem .5rem .4rem 0;
-                border-color: transparent #2E85FF transparent transparent;
+                border-color: transparent #fff transparent transparent;
                 margin-left: -.1rem;
             }
         }
@@ -93,8 +107,8 @@
     }
 
     .message-content {
-        background-color: #2E85FF;
-        border: solid .2rem #2E85FF;
+        background-color: #fff;
+        border: solid .2rem #fff;
         padding: .5rem;
         border-radius: .5rem;
 
@@ -107,7 +121,7 @@
     .message-tria {
         border-style: solid;
         border-width: .4rem 0 .4rem .5rem;
-        border-color: transparent transparent transparent #2E85FF;
+        border-color: transparent transparent transparent #fff;
         margin-left: -.1rem;
     }
 
@@ -117,6 +131,7 @@
         img {
             width: 2.4rem;
             height: 2.4rem;
+            border-radius: 50%;
         }
     }
 

@@ -20,6 +20,7 @@ const SendMessage = props => {
     const [friendName, setFriendName] = useState('')
     const [friendMessage, setFriendMessage] = useState('')
     const [friendAvator, setFriendAvator] = useState(null)
+    const [teacher, setTeacher] = useState(null)
     const photo = sessionStorage.getItem("photo")
     const isOpenMedia = sessionStorage.getItem('media')
     const isRingOff = sessionStorage.getItem('isRingOff')
@@ -60,6 +61,7 @@ const SendMessage = props => {
         setFriendName(tempObj.name)
         setFriendMessage(tempObj.message)
         setFriendAvator(tempObj.avator)
+        setTeacher(tempObj.teacher)
     }, [props])
 
     // 监听选择图片
@@ -113,12 +115,15 @@ const SendMessage = props => {
                 <div className="receive-message-box">
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            <img src={friendAvator} alt="avator" />
+                            {String(teacher).split('')[0]}
                         </div>
-                        <div className="receive-message-wrap">
-                            <div className="receive-message-tria"></div>
-                            <div className="receive-message-content">
-                                {decodeURI(friendMessage)}
+                        <div className="receive-message-right">
+                            {teacher && <div className="receive-message-name">{decodeURI(teacher)}</div>}
+                            <div className="receive-message-wrap">
+                                <div className="receive-message-tria"></div>
+                                <div className="receive-message-content">
+                                    {decodeURI(friendMessage)}
+                                </div>
                             </div>
                         </div>
                     </div>
