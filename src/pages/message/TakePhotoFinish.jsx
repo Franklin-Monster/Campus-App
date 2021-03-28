@@ -9,14 +9,13 @@ import Filter from './img/filter'
 import Expression from './img/expression'
 import ReturnArrow from './img/return-arrow'
 
-const TakePhotoFinish = (props) => {
+const TakePhotoFinish = props => {
+    const photo = props.location.search.split('=')[1]
+
     // 发送照片
     const sendPhoto = () => {
-        props.history.push(
-            {
-                pathname: '/sendmessage',
-                query: { photoSrc: props.location.query.photoSrc }
-            })
+        sessionStorage.setItem("photo", photo)
+        props.history.go(-2)
     }
     return (
         <div id="TakePhotoFinish">
@@ -24,7 +23,7 @@ const TakePhotoFinish = (props) => {
                 <img src={ReturnArrow} alt="return" onClick={() => props.history.goBack()} />
             </div>
             <div className="fin-body">
-                <img src={props.location.query.photoSrc} alt="photosrc" />
+                <img src={photo} alt="photosrc" />
             </div>
             <div className="fin-footer">
                 <div className="fin-action">

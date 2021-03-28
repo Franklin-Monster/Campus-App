@@ -19,13 +19,62 @@
         height: 3.6rem;
     }
 
-    .send-body {
-        // height: calc(100vh - 3.6rem - 3.4rem);
-    }
-
     .message-box {
         width: 100%;
         margin-top: 1rem;
+    }
+
+    .message-time {
+        width: 100%;
+        text-align: center;
+        color: #aaa;
+    }
+
+    .receive-message-box {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .receive-message-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        margin-right: .5rem;
+
+        .receive-message-avator {
+            margin: 0 1rem 0 .5rem;
+
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+
+        .receive-message-wrap {
+            max-width: 70%;
+            display: flex;
+            align-items: center;
+
+            .receive-message-content {
+                background-color: #2E85FF;
+                border: solid .2rem #2E85FF;
+                padding: .5rem;
+                border-radius: .5rem;
+
+                img {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                }
+            }
+
+            .receive-message-tria {
+                border-style: solid;
+                border-width: .4rem .5rem .4rem 0;
+                border-color: transparent #2E85FF transparent transparent;
+                margin-left: -.1rem;
+            }
+        }
     }
 
     .message-item {
@@ -50,8 +99,8 @@
         border-radius: .5rem;
 
         img {
-            width: 4.8rem;
-            height: 4.8rem;
+            width: 12rem;
+            height: 8rem;
         }
     }
 
@@ -61,8 +110,6 @@
         border-color: transparent transparent transparent #2E85FF;
         margin-left: -.1rem;
     }
-
-    .message-tria:hover {}
 
     .message-avator {
         margin: 0 1rem 0 .5rem;
@@ -116,13 +163,10 @@
         }
     }
 
-    .send-plus {}
-
     .plus-content {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-
     }
 
     .upload-image {
@@ -162,5 +206,4 @@
             border-radius: .6rem;
         }
     }
-
 }

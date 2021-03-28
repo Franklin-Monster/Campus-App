@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from 'react'
+import { returnBack } from '@/static/js/fun'
 import './css/take-photo'
 
 // image
 import TakePicture from './img/take-picture'
 import ReturnArrow from './img/return-arrow'
 import ChangeCamera from './img/change-camera'
+import TakePhotoSound from './img/take-photo-sound.mp3'
 
-const TakePhoto = (props) => {
+const TakePhoto = props => {
     const videoRef = useRef()
     useEffect(() => {
         getMedia();
@@ -26,24 +28,22 @@ const TakePhoto = (props) => {
 
     // 拍照
     const takePhotoClick = () => {
-        let video = videoRef.current
-        let canvas = document.createElement("canvas")
-        canvas.width = video.videoWidth
-        canvas.height = video.videoHeight
-        canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height)
-        props.history.push(
-            {
-                pathname: '/takephotofinish',
-                query: {
-                    photoSrc: canvas.toDataURL("image/jpg")
-                }
-            })
+        const audio = new Audio(TakePhotoSound)
+        audio.play().then(() => {
+            const video = videoRef.current
+            const canvas = document.createElement("canvas")
+            canvas.width = video.videoWidth
+            canvas.height = video.videoHeight
+            canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height)
+            sessionStorage.setItem("media", true)
+            props.history.push(`/takephotofinish/?&photo=${canvas.toDataURL("image/jpg")}`)
+        })
     }
 
     return (
         <div id="TakePhoto">
             <div className="photo-header">
-                <img src={ReturnArrow} alt="return" onClick={() => window.location.replace('/sendmessage')} />
+                <img src={ReturnArrow} alt="return" onClick={() => returnBack()} />
                 <img src={ChangeCamera} alt="change" />
             </div>
             <div className="photo-body">

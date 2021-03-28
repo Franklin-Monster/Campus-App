@@ -11,7 +11,7 @@ import Franklin from './img/Franklin'
 import AudioPhone from './img/audio-phone'
 import AudioUrl from './img/video.mp3'
 
-const VideoChat = (props) => {
+const VideoChat = props => {
     const videoRef = useRef()
     useEffect(() => {
         getMedia();
@@ -23,8 +23,10 @@ const VideoChat = (props) => {
             type: 'warn',
             text: '已挂断'
         })
+        sessionStorage.setItem("isRingOff", 'ringoff')
+        sessionStorage.setItem("media", true)
         setTimeout(() => {
-            window.location.replace('/sendmessage?ringoff')
+            props.history.go(-1)
         }, 1000);
     }
 

@@ -235,19 +235,19 @@ const messageList = [{
     {
         name: '周冬雨',
         avator: P2,
-        content: '你也太棒了吧',
+        content: '他扒拉我',
         time: '6分钟前'
     },
     {
         name: '欧阳娜娜',
         avator: P3,
-        content: '我唱歌给你听',
+        content: '我拉大提琴超好听',
         time: '8分钟前'
     },
     {
         name: '杜鹃',
         avator: P4,
-        content: '这个电影好不好看啊',
+        content: '明天晚上去看电影嘛？',
         time: '16分钟前'
     },
     {
@@ -288,6 +288,7 @@ const messageList = [{
     },
 
 ]
+
 const sendPlusItemArr = [{
         img: Photo,
         text: '照片'
@@ -319,6 +320,7 @@ const sendPlusItemArr = [{
         text: '文件'
     },
 ]
+
 export {
     countryNews,
     cityNews,

@@ -13,7 +13,7 @@ const ForMessage = props => {
     return (
         <div id="ForMessage">
             <div className='message-header'>
-                <ReturnTitle text='休闲交友' returnClick={() => props.history.push('/card')}/>
+                <ReturnTitle text='休闲交友' returnClick={() => props.history.push('/card')} />
                 <div className="header-title">
                     <div>消息</div>
                     <div><img src={Sort} alt="sort" /></div>
@@ -32,7 +32,7 @@ const ForMessage = props => {
                                     </div>
                                     <div className="message-info"
                                         onClick={() => props.history.push({
-                                            pathname: '/forsendmessage',
+                                            pathname: `/forsendmessage/?&name=${item.name}&avator=${item.avator}&message=${item.content}`,
                                             query: {
                                                 name: item.name,
                                                 avator: item.avator,

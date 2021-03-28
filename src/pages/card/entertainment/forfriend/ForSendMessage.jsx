@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useMemo } from 'react'
 import '../css/for-send-message'
 import { sendPlusItemArr } from '../help'
 import { getNowTime } from '@/static/js/fun'
@@ -16,7 +16,25 @@ import Franklin from '../img/Franklin'
 const ForSendMessage = props => {
     const footerRef = useRef()
     const [mySendMessage, setMySendMessage] = useState([])
+    const [friendName, setFriendName] = useState('')
+    const [friendMessage, setFriendMessage] = useState('')
+    const [friendAvator, setFriendAvator] = useState(null)
     const propsQuery = props.location.query
+
+    // 格式化地址栏参数
+    useMemo(() => {
+        const searchParams = props.location.search.split('&')
+        searchParams.shift()
+        const tempObj = {}
+        searchParams.map(item => {
+            const params = item.split('=')
+            tempObj[params[0]] = params[1]
+            return null
+        })
+        setFriendName(tempObj.name)
+        setFriendMessage(tempObj.message)
+        setFriendAvator(tempObj.avator)
+    }, [props])
 
     // 接收拍摄的照片
     useEffect(() => {
@@ -75,26 +93,25 @@ const ForSendMessage = props => {
                 <ReturnTitle
                     arrowColor='black'
                     background="#FAFAFA"
-                    text={propsQuery.name}
+                    text={decodeURI(friendName)}
                     color="#000"
                 />
             </div>
             <div className="send-header-block"></div>
             <div className="send-body" onClick={bodyClick}>
-
                 {getNowTime()}
                 <div className="receive-message-box">
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            <img src={propsQuery.avator} alt="avator" />
+                            <img src={friendAvator} alt="avator" />
                         </div>
                         <div className="receive-message-wrap">
                             <div className="receive-message-tria"
                                 style={{ borderColor: 'transparent #fff transparent transparent' }}></div>
                             <div className="receive-message-info">
-                                <img src={propsQuery.avator} alt="rece" />
+                                <img src={friendAvator} alt="rece" />
                                 <div className="receive-message-text">
-                                    <span>{propsQuery.name}</span>，
+                                    <span>{decodeURI(friendName)}</span>，
                                     <span>24</span>，
                                     <span>天津理工大学</span>，
                                     <span>（5km）</span>
@@ -104,12 +121,12 @@ const ForSendMessage = props => {
                     </div>
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            <img src={propsQuery.avator} alt="avator" />
+                            <img src={friendAvator} alt="avator" />
                         </div>
                         <div className="receive-message-wrap">
                             <div className="receive-message-tria"></div>
                             <div className="receive-message-content">
-                                {propsQuery.content}
+                                {decodeURI(friendMessage)}
                             </div>
                         </div>
                     </div>

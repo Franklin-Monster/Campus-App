@@ -11,15 +11,18 @@ import Franklin from './img/Franklin'
 import VideoPhone from './img/video-phone'
 import AudioUrl from './img/video.mp3'
 
-const AudioChat = (props) => {
+const AudioChat = props => {
+
     // 挂断
     const ringOffClick = async () => {
         Message({
             type: 'warn',
             text: '已挂断'
         })
+        sessionStorage.setItem("isRingOff", 'ringoff')
+        sessionStorage.setItem("media", true)
         setTimeout(() => {
-            window.location.replace('/sendmessage')
+            props.history.go(-2)
         }, 1000);
     }
 

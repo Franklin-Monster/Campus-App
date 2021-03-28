@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useMemo } from 'react'
 import './css/send-message'
+import { getNowTime } from '@/static/js/fun'
 import { sendPlusItemArr } from './help'
 
 // component
@@ -16,27 +17,50 @@ import Franklin from './img/Franklin'
 const SendMessage = props => {
     const footerRef = useRef()
     const [mySendMessage, setMySendMessage] = useState([])
-    const propsQuery = props.location.query
+    const [friendName, setFriendName] = useState('')
+    const [friendMessage, setFriendMessage] = useState('')
+    const [friendAvator, setFriendAvator] = useState(null)
+    const photo = sessionStorage.getItem("photo")
+    const isOpenMedia = sessionStorage.getItem('media')
+    const isRingOff = sessionStorage.getItem('isRingOff')
 
-    // 接收拍摄的照片
+    // 接收拍摄的照片并处理sessionStorage中的数据
     useEffect(() => {
-        try {
-            if (window.location.href.split('?')[1] === 'ringoff') {
-                setMySendMessage(mes => [...mes, {
-                    type: 'text',
-                    value: '已挂断'
-                }])
-            }
-            if (propsQuery.photoSrc) {
-                setMySendMessage(mes => [...mes, {
-                    type: 'image',
-                    value: propsQuery.photoSrc
-                }])
-            }
-        } catch (err) {
-
+        if (isOpenMedia) {
+            sessionStorage.removeItem('media')
+            window.location.reload()
+            return
         }
-    }, [propsQuery])
+        if (photo) {
+            setMySendMessage(mes => [...mes, {
+                type: 'image',
+                value: photo
+            }])
+            !isOpenMedia && sessionStorage.removeItem('photo')
+        }
+        if (isRingOff) {
+            setMySendMessage(mes => [...mes, {
+                type: 'text',
+                value: '已挂断'
+            }])
+            !isOpenMedia && sessionStorage.removeItem('isRingOff')
+        }
+    }, [isOpenMedia, photo, isRingOff])
+
+    // 格式化地址栏参数
+    useMemo(() => {
+        const searchParams = props.location.search.split('&')
+        searchParams.shift()
+        const tempObj = {}
+        searchParams.map(item => {
+            const params = item.split('=')
+            tempObj[params[0]] = params[1]
+            return null
+        })
+        setFriendName(tempObj.name)
+        setFriendMessage(tempObj.message)
+        setFriendAvator(tempObj.avator)
+    }, [props])
 
     // 监听选择图片
     const onImageChange = files => {
@@ -73,13 +97,11 @@ const SendMessage = props => {
 
     return (
         <div id="SendMessage">
-
             <div className="send-header">
                 <ReturnTitle
                     arrowColor='black'
                     background="#FAFAFA"
-                    // text={props.name} 
-                    text='Franklin'
+                    text={decodeURI(friendName)}
                     color="#000"
                     rightImg={More}
                     rightImgClick={() => props.history.push('/messageaction')}
@@ -87,13 +109,27 @@ const SendMessage = props => {
             </div>
             <div className="send-header-block"></div>
             <div className="send-body" onClick={bodyClick}>
+                {getNowTime()}
+                <div className="receive-message-box">
+                    <div className="receive-message-item">
+                        <div className="receive-message-avator">
+                            <img src={friendAvator} alt="avator" />
+                        </div>
+                        <div className="receive-message-wrap">
+                            <div className="receive-message-tria"></div>
+                            <div className="receive-message-content">
+                                {decodeURI(friendMessage)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="message-box">
                     {
-                        mySendMessage.map((item, index) => {
+                        mySendMessage.map(item => {
                             switch (item.type) {
                                 case 'text':
                                     return (
-                                        <div className="message-item" key={index}>
+                                        <div className="message-item" key={item.value}>
                                             <div className="message-avator">
                                                 <img src={Franklin} alt="avator" />
                                             </div>
@@ -107,7 +143,7 @@ const SendMessage = props => {
                                     )
                                 case 'image':
                                     return (
-                                        <div className="message-item" key={index}>
+                                        <div className="message-item" key={item.value}>
                                             <div className="message-avator">
                                                 <img src={Franklin} alt="avator" />
                                             </div>
@@ -156,11 +192,11 @@ const SendMessage = props => {
                         }
                         <div className="plus-item" style={{ visibility: 'hidden' }}>
                             <div><img src={More} alt="none" /></div>
-                            <div>照片</div>
+                            <div>123</div>
                         </div>
                         <div className="plus-item" style={{ visibility: 'hidden' }}>
                             <div><img src={More} alt="none" /></div>
-                            <div>照片</div>
+                            <div>123</div>
                         </div>
                     </div>
                 </div>
