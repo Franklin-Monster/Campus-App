@@ -115,10 +115,11 @@ const SendMessage = props => {
                 <div className="receive-message-box">
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            {String(teacher).split('')[0]}
+                            {String(decodeURI(teacher)).split('')[0]}
                         </div>
                         <div className="receive-message-right">
-                            {teacher && <div className="receive-message-name">{decodeURI(teacher)}</div>}
+                            {teacher && <div className="receive-message-name">
+                                {decodeURI(teacher)}</div>}
                             <div className="receive-message-wrap">
                                 <div className="receive-message-tria"></div>
                                 <div className="receive-message-content">
@@ -138,11 +139,14 @@ const SendMessage = props => {
                                             <div className="message-avator">
                                                 <img src={Franklin} alt="avator" />
                                             </div>
-                                            <div className="message-wrap">
-                                                <div className="message-content">
-                                                    {item.value}
+                                            <div className="message-right">
+                                                {teacher && <div className="message-name">Franklin</div>}
+                                                <div className="message-wrap">
+                                                    <div className="message-content">
+                                                        {item.value}
+                                                    </div>
+                                                    <div className="message-tria"></div>
                                                 </div>
-                                                <div className="message-tria"></div>
                                             </div>
                                         </div>
                                     )
@@ -152,12 +156,16 @@ const SendMessage = props => {
                                             <div className="message-avator">
                                                 <img src={Franklin} alt="avator" />
                                             </div>
-                                            <div className="message-wrap">
-                                                <div className="message-content">
-                                                    <img src={item.value} alt="img" />
+                                            <div className="message-right">
+                                                {teacher && <div className="message-name">Franklin</div>}
+                                                <div className="message-wrap">
+                                                    <div className="message-content">
+                                                        <img src={item.value} alt="img" />
+                                                    </div>
+                                                    <div className="message-tria"></div>
                                                 </div>
-                                                <div className="message-tria"></div>
                                             </div>
+
                                         </div>
                                     )
                                 default: return null
