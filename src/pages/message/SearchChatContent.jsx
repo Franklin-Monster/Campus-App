@@ -15,6 +15,19 @@ const SearchChatContent = () => {
                 <div className="search-bar-content">
                     <SearchBar placeholder="查找聊天内容" />
                 </div>
+                <div className="search-nav-content">
+                    <div className="search-nav-title">
+                        快速搜索聊天内容
+                    </div>
+                    <div className="search-nav-item">
+                            <span>群成员</span>
+                            <span>日期</span>
+                            <span>图片或视频</span>
+                            <span>文件</span>
+                            <span>链接</span>
+                            <span>课程</span>
+                    </div>
+                </div>
             </div>
             <div className="search-footer">
 
