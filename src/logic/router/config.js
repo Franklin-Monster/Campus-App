@@ -42,6 +42,7 @@ const BalanceShoppingCar = Loadable(() => import('@p/card/life/fooddelivery/Bala
 const PayDeliveryOrder = Loadable(() => import('@p/card/life/fooddelivery/PayDeliveryOrder'))
 const PayDeliveryFinish = Loadable(() => import('@p/card/life/fooddelivery/PayDeliveryFinish'))
 const SearchChatContent = Loadable(() => import('@p/message/SearchChatContent'))
+const FriendCircle = Loadable(() => import('@p/mycenter/FriendCircle'))
 
 const routes = [{
         path: '/message',
@@ -210,6 +211,10 @@ const routes = [{
     {
         path: '/searchchatcontent',
         component: SearchChatContent
+    },
+    {
+        path: '/friendcircle',
+        component: FriendCircle
     },
 ]
 

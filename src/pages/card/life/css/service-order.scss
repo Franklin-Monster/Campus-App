@@ -16,7 +16,7 @@
         margin: 4rem 0;
     }
 
-    #card-item:hover {
+    #card-item:active {
         animation: cardItemAnimate .3s linear 2 alternate;
     }
 

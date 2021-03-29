@@ -12,6 +12,7 @@ const UserInstall = (props) => {
         cookie.remove('isLogin')
         props.history.push('/')
     }
+    
     return (
         <div id="UserInstall">
             <div className="install-header">

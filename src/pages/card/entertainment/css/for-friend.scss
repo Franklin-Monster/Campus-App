@@ -49,7 +49,7 @@
             transition: all .1s ease;
         }
 
-        img:hover {
+        img:active {
             transform: translateY(-1rem) rotate(15deg);
         }
     }

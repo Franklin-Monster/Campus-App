@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { myCenterCardItemArr, myCenterArrowMenuArr } from './help'
 import './css/my-center'
 
@@ -10,22 +10,17 @@ import ArrowMenu from '@c/arrow-menu'
 import Franklin from './img/Franklin'
 import RightArrow from './img/right-arrow'
 
-const MyCenter = (props) => {
-    const [userName, setUserName] = useState('Franklin')
-    const [userClass, setUserClass] = useState('17信息1班')
-    // const [userGender, setUserGender] = useState('男')
-    // const [userCollege, setUserCollege] = useState('经济与管理学院')
-    const [userAvator, setUserAvator] = useState(Franklin)
+const MyCenter = props => {
 
     return (
         <div id="MyCenter">
             <div className="mycenter-header">
                 <div className="mycenter-header-avator">
-                    <img src={userAvator} alt="avator" />
+                    <img src={Franklin} alt="avator" />
                 </div>
                 <div className="mycenter-header-text">
-                    <div className="text-name"> {userName} </div>
-                    <div className="text-class"> {userClass} </div>
+                    <div className="text-name">Franklin</div>
+                    <div className="text-class">17信息1班</div>
                 </div>
                 <div className="mycenter-header-arrow">
                     <img
@@ -44,11 +39,15 @@ const MyCenter = (props) => {
                                     <CardItem
                                         img={item.img}
                                         text={item.text}
-                                        key={index}
+                                        key={item.img + index}
                                         width="20%"
                                         height="20%"
-                                        fontSize=".8rem"
+                                        fontSize=".75rem"
                                         margin=".5rem .25rem"
+                                        onClick={() => {
+                                            if (item.route) props.history.push(item.route)
+                                            else props.history.push('/notfound')
+                                        }}
                                     />
                                 )
                             })
@@ -56,13 +55,14 @@ const MyCenter = (props) => {
                     </div>
                 </div>
                 {
-                    myCenterArrowMenuArr.map((item, index) => {
+                    myCenterArrowMenuArr.map(item => {
                         return (
                             <ArrowMenu
                                 frontImg={item.img}
                                 text={item.text}
-                                key={index}
+                                key={item.text}
                                 margin=".2rem 0"
+                                fontSize=".85rem"
                                 onClick={() => props.history.push(item.route)}
                             />
                         )
