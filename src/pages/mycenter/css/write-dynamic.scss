@@ -1,0 +1,54 @@
+#WriteDynamic {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #f1f2f3;
+    height: 100rem;
+
+    .dynamic-body {
+        margin-top: 1rem;
+
+        .textarea-content {
+            margin: .5rem .5rem 0 .5rem;
+            padding: .5rem;
+            background-color: #fff;
+
+            textarea {
+                width: 100%;
+                outline: none;
+                border: none;
+            }
+        }
+
+        .select-image-content {
+            margin: 0 .5rem 0 .5rem;
+            padding: .5rem;
+            background-color: #fff;
+
+        }
+
+        .add-tag-content {
+            margin: 0 .5rem .5rem .5rem;
+            padding: .5rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                padding: .2rem;
+                background-color: #f1f2f3;
+                font-size: .75rem;
+                color: #bbb;
+
+                img {
+                    width: .6rem;
+                    height: .6rem;
+                    vertical-align: middle;
+                    margin: 0 .2rem;
+                }
+            }
+        }
+    }
+}

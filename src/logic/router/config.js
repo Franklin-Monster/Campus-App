@@ -43,6 +43,7 @@ const PayDeliveryOrder = Loadable(() => import('@p/card/life/fooddelivery/PayDel
 const PayDeliveryFinish = Loadable(() => import('@p/card/life/fooddelivery/PayDeliveryFinish'))
 const SearchChatContent = Loadable(() => import('@p/message/SearchChatContent'))
 const FriendCircle = Loadable(() => import('@p/mycenter/FriendCircle'))
+const WriteDynamic = Loadable(() => import('@p/mycenter/WriteDynamic'))
 
 const routes = [{
         path: '/message',
@@ -215,6 +216,10 @@ const routes = [{
     {
         path: '/friendcircle',
         component: FriendCircle
+    },
+    {
+        path: '/writedynamic',
+        component: WriteDynamic
     },
 ]
 

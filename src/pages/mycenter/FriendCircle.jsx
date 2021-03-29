@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import './css/friend-circle'
 import { friendCircleData } from './help'
 
@@ -13,11 +13,18 @@ import Comment from './img/comment'
 import LikeRed from './img/like-red'
 import Franklin from './img/Franklin'
 
-const FriendCircle = () => {
+const FriendCircle = props => {
     const [friendCircleArr, setFriendCircleArr] = useState(friendCircleData)
     const [refresh, setRefresh] = useState(false)
     const [addCommentIndex, setAddCommentIndex] = useState(null)
     const addCommentRef = useRef()
+
+    // 获取新增动态
+    useMemo(() => {
+        if (props.history.location.query) {
+            friendCircleArr.unshift(props.history.location.query)
+        }
+    }, [props.history.location.query, friendCircleArr])
 
     // 主动触发视图更新
     useEffect(() => {
@@ -70,7 +77,9 @@ const FriendCircle = () => {
                         arrowColor="black"
                         background="#f1f2f3"
                         color='#000'
-                        rightImg={Edit} />
+                        rightImg={Edit}
+                        rightImgClick={() => props.history.push('/writedynamic')}
+                        returnClick={() => props.history.push('/mycenter')} />
                 </div>
                 <div className="return-title-block"></div>
             </div>
@@ -83,7 +92,8 @@ const FriendCircle = () => {
                     {
                         friendCircleArr.map((item, index) => {
                             return (
-                                <div className="friend-circle-item" key={item.name + item.time}>
+                                <div className="friend-circle-item"
+                                    key={item.name + index}>
                                     <div className="friend-circle-left">
                                         <img src={item.avator} alt="friava" />
                                     </div>
@@ -99,8 +109,9 @@ const FriendCircle = () => {
                                             item.content.image &&
                                             <div className="friend-image">
                                                 {
-                                                    item.content.image.map(image => {
-                                                        return <img src={image} alt="friimg" key={image} />
+                                                    item.content.image.map((image, index) => {
+                                                        return <img src={image} alt="error"
+                                                            key={image + index} />
                                                     })
                                                 }
                                             </div>
@@ -127,7 +138,8 @@ const FriendCircle = () => {
                                                 {
                                                     item.likeList.map((like, i) => {
                                                         return (
-                                                            <span className="friend-like-item" key={like}>
+                                                            <span className="friend-like-item"
+                                                                key={like}>
                                                                 <span>{like}</span>
                                                                 {i !== item.likeList.length - 1
                                                                     && (<span>,</span>)}
