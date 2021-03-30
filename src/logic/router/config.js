@@ -44,6 +44,8 @@ const PayDeliveryFinish = Loadable(() => import('@p/card/life/fooddelivery/PayDe
 const SearchChatContent = Loadable(() => import('@p/message/SearchChatContent'))
 const FriendCircle = Loadable(() => import('@p/mycenter/FriendCircle'))
 const WriteDynamic = Loadable(() => import('@p/mycenter/WriteDynamic'))
+const TodoMatter = Loadable(() => import('@p/mycenter/TodoMatter'))
+const TodoList = Loadable(() => import('@p/mycenter/TodoList'))
 
 const routes = [{
         path: '/message',
@@ -220,6 +222,14 @@ const routes = [{
     {
         path: '/writedynamic',
         component: WriteDynamic
+    },
+    {
+        path: '/todomatter',
+        component: TodoMatter
+    },
+    {
+        path: '/todolist',
+        component: TodoList
     },
 ]
 

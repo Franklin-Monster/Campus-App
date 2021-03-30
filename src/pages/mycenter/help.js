@@ -61,7 +61,8 @@ const myCenterCardItemArr = [{
     },
     {
         img: Todo,
-        text: "代办事项",
+        text: "待办事项",
+        route: '/todomatter'
     },
     {
         img: Notice,

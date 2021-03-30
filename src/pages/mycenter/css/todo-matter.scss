@@ -1,0 +1,111 @@
+#TodoMatter {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    background-color: #f1f2f3;
+
+    .todo-search-bar-content {
+        margin: .5rem;
+        animation: top-slide .8s ease;
+    }
+
+    .todo-body {
+        width: 100%;
+        margin-top: 1rem;
+
+        .plan-content {
+            margin: .5rem;
+            display: flex;
+
+            .today-content {
+                animation: left-slide .8s ease;
+            }
+
+            .todo-content {
+                animation: right-slide .8s ease;
+            }
+
+            .all-todo-content {
+                animation: bottom-slide .8s ease;
+            }
+
+            .today-content,
+            .todo-content,
+            .all-todo-content {
+                width: 50%;
+                padding: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #fff;
+                margin: .5rem;
+                border-radius: 1rem;
+
+                img {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+
+                .plan-content-item-left {
+                    text-align: center;
+                }
+
+                .plan-content-item-right {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+
+                .plan-content-item-text {
+                    color: #aaa;
+                    font-size: .9rem;
+                }
+            }
+
+            .all-todo-content {
+                width: 100%;
+            }
+        }
+    }
+
+    @keyframes left-slide {
+        from {
+            transform: translateX(-100vw);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes right-slide {
+        from {
+            transform: translateX(100vw);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes top-slide {
+        from {
+            transform: translateY(-100vh);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bottom-slide {
+        from {
+            transform: translateY(100vh);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+}
