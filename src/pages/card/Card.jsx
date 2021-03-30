@@ -10,7 +10,7 @@ import SearchBar from '@c/search-bar'
 // image
 import Block from './img/air'
 
-const Card = (props) => {
+const Card = props => {
 
     return (
         <div id="Card">
@@ -31,6 +31,7 @@ const Card = (props) => {
                                             key={index}
                                             width="20%"
                                             height="20%"
+                                            fontSize=".8rem"
                                             onClick={() => props.history.push(item.route)}
                                         />
                                     )
@@ -53,6 +54,7 @@ const Card = (props) => {
                                             key={index}
                                             width="20%"
                                             height="20%"
+                                            fontSize=".8rem"
                                             onClick={() => props.history.push(item.route)}
                                         />
                                     )
@@ -76,6 +78,7 @@ const Card = (props) => {
                                             key={index}
                                             width="20%"
                                             height="20%"
+                                            fontSize=".8rem"
                                             onClick={() => props.history.push(item.route)}
                                         />
                                     )
@@ -98,6 +101,7 @@ const Card = (props) => {
                                             key={index}
                                             width="20%"
                                             height="20%"
+                                            fontSize=".8rem"
                                             onClick={() => props.history.push(item.route)}
                                         />
                                     )
@@ -108,6 +112,7 @@ const Card = (props) => {
                         <CardItem
                             width="20%"
                             height="20%"
+                            fontSize=".8rem"
                             img={Block}
                             visibility="hidden"
                         />
@@ -115,20 +120,20 @@ const Card = (props) => {
                             width="20%"
                             height="20%"
                             img={Block}
+                            fontSize=".8rem"
                             visibility="hidden"
                         />
                         <CardItem
                             width="20%"
                             height="20%"
                             img={Block}
+                            fontSize=".8rem"
                             visibility="hidden"
                         />
                     </div>
                 </div>
             </div>
-            <div className="card-footer">
-
-            </div>
+            <div className="card-footer"> </div>
         </div>
     )
 }
