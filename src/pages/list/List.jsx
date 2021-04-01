@@ -34,8 +34,20 @@ const List = () => {
                     <SearchBar placeholder="搜索"></SearchBar>
                 </div>
                 <div className="header-item">
-                    <ArrowMenu frontImg={User} endImg={Arrow} text="新的联系人"></ArrowMenu>
-                    <ArrowMenu frontImg={Notice} endImg={Arrow} text="课程群通知"></ArrowMenu>
+                    <ArrowMenu
+                        frontImg={User}
+                        endImg={Arrow}
+                        text="新的联系人"
+                        fontSize=".8rem"
+                        frontImgWidth="1rem"
+                        frontImgHeight="1rem" />
+                    <ArrowMenu
+                        frontImg={Notice}
+                        endImg={Arrow}
+                        text="课程群通知"
+                        fontSize=".8rem"
+                        frontImgWidth="1rem"
+                        frontImgHeight="1rem" />
                 </div>
             </div>
             <div className="list-body">

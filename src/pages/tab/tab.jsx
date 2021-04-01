@@ -12,18 +12,18 @@ import Message from '../../assets/images/message'
 import MyCenter from '../../assets/images/mycenter'
 import AddFriend from '../../assets/images/add-friend'
 
-const Tab = (props) => {
+const Tab = props => {
     const [title, setTitle] = useState('消息')
     const [showTab, setShowTab] = useState(true)
-    const pathname = window.location.pathname
+    const hash = window.location.hash
 
     // 监听路由
     useEffect(() => {
-        setTitle(pathnameToTitle(pathname))
-        if (!pathnameToTitle(pathname)) {
+        setTitle(pathnameToTitle(hash))
+        if (!pathnameToTitle(hash)) {
             setShowTab(false)
         } else setShowTab(true)
-    }, [pathname])
+    }, [hash])
 
     return <div id="Tab">
         <div className="app-header" style={{ display: showTab ? 'block' : 'none' }}>

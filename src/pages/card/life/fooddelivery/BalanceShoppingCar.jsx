@@ -10,6 +10,7 @@ import RedPaper from '../img/red-paper'
 import RightArrowThin from '../img/right-arrow-thin'
 
 const BalanceShoppingCar = props => {
+    
     return (
         <div id="BalanceShoppingCar">
             <div className="balance-header">
@@ -116,9 +117,11 @@ const BalanceShoppingCar = props => {
                             text: '提交订单成功！'
                         })
                         props.history.push({
-                            pathname: `/paydeliveryorder/?&name=${decodeURI(props.location.query.paramsObj.name)}&totalMoney=${props.location.query.totalMoney}`,
+                            pathname: '/paydeliveryorder',
                             query: {
-                                shoppingCar: props.location.query.shoppingCar
+                                name: decodeURI(props.location.query.paramsObj.name),
+                                shoppingCar: props.location.query.shoppingCar,
+                                totalMoney: props.location.query.totalMoney
                             }
                         })
                     }}>

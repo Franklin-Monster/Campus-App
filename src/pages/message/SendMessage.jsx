@@ -19,6 +19,7 @@ const SendMessage = props => {
     const [mySendMessage, setMySendMessage] = useState([])
     const [friendName, setFriendName] = useState('')
     const [friendMessage, setFriendMessage] = useState('')
+    const [friendAvator, setFriendAvator] = useState('')
     const [teacher, setTeacher] = useState(null)
     const photo = sessionStorage.getItem("photo")
     const isOpenMedia = sessionStorage.getItem('media')
@@ -57,6 +58,7 @@ const SendMessage = props => {
             tempObj[params[0]] = params[1]
             return null
         })
+        setFriendAvator(tempObj.avator)
         setFriendName(tempObj.name)
         setFriendMessage(tempObj.message)
         setTeacher(tempObj.teacher)
@@ -119,16 +121,14 @@ const SendMessage = props => {
                 <div className="receive-message-box">
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            {String(decodeURI(teacher)).split('')[0]}
+                            {teacher ? String(decodeURI(teacher)).split('')[0]
+                                : <img src={friendAvator} alt="avator" />}
                         </div>
                         <div className="receive-message-right">
-                            {teacher && <div className="receive-message-name">
-                                {decodeURI(teacher)}</div>}
+                            {teacher && <div className="receive-message-name">{decodeURI(teacher)}</div>}
                             <div className="receive-message-wrap">
                                 <div className="receive-message-tria"></div>
-                                <div className="receive-message-content">
-                                    {decodeURI(friendMessage)}
-                                </div>
+                                <div className="receive-message-content">{decodeURI(friendMessage)}</div>
                             </div>
                         </div>
                     </div>
@@ -146,9 +146,7 @@ const SendMessage = props => {
                                             <div className="message-right">
                                                 {teacher && <div className="message-name">Franklin</div>}
                                                 <div className="message-wrap">
-                                                    <div className="message-content">
-                                                        {item.value}
-                                                    </div>
+                                                    <div className="message-content">{item.value}</div>
                                                     <div className="message-tria"></div>
                                                 </div>
                                             </div>

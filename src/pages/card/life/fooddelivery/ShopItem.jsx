@@ -29,7 +29,7 @@ const ShopItem = props => {
     const foodContentRef = useRef()
     const shopFooterRef = useRef()
     const shoppingCarRef = useRef()
-
+    
     // 格式化地址栏参数
     useMemo(() => {
         const searchParams = props.location.search.split('&')
@@ -252,7 +252,7 @@ const ShopItem = props => {
                         <span>已选商品</span>
                         <span className="car-clear" onClick={clearShoppingCar}>
                             <img src={Clear} alt="clear" />清空
-                            </span>
+                        </span>
                     </div>
                     {
                         shoppingCar.map((item, index) => {

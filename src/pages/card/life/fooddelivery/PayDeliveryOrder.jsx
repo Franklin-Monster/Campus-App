@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React from 'react'
 import '../css/pay-delivery-order'
 
 // component
@@ -12,22 +12,6 @@ import UnionPay from '../img/union-pay'
 import RightArrowThin from '../img/right-arrow-thin'
 
 const PayDeliveryOrder = props => {
-    const [orderName, setOrderName] = useState('')
-    const [orderTotalMoney, setOrderTotalMoney] = useState(0)
-
-    // 格式化地址栏参数
-    useMemo(() => {
-        const searchParams = props.location.pathname.split('&')
-        searchParams.shift()
-        const tempObj = {}
-        searchParams.map(item => {
-            const params = item.split('=')
-            tempObj[params[0]] = params[1]
-            return null
-        })
-        setOrderName(tempObj.name)
-        setOrderTotalMoney(tempObj.totalMoney)
-    }, [props])
 
     return (
         <div id="PayDeliveryOrder">
@@ -39,10 +23,10 @@ const PayDeliveryOrder = props => {
                         支付剩余时间15:00
                     </div>
                     <div className="pay-total-money">
-                        <span>￥</span>{orderTotalMoney}
+                        <span>￥</span>{props.location.query.totalMoney}
                     </div>
                     <div className="pay-name">
-                        {decodeURI(orderName)} &nbsp;&nbsp;订单详情
+                        {decodeURI(props.location.query.name)} &nbsp;&nbsp;订单详情
                         <img src={RightArrowThin} alt="arrow" />
                     </div>
                 </div>
@@ -76,9 +60,9 @@ const PayDeliveryOrder = props => {
                     props.history.push({
                         pathname: '/paydeliveryfinish',
                         query: {
+                            orderName: props.location.query.name,
                             shoppingCar: props.location.query.shoppingCar,
-                            orderName,
-                            orderTotalMoney
+                            orderTotalMoney: props.location.query.totalMoney
                         }
                     })
                 }}>

@@ -135,15 +135,19 @@ const FoodDelivery = props => {
                             return (
                                 <div className="delivery-shop-content-item"
                                     key={item.logo}
-                                    // onClick={() => props.history.push(path)}
-                                    onClick={() => window.location.href = path}
+                                    onClick={() => window.location.hash = path}
                                 >
                                     <div className="delivery-shop-content-item-left">
                                         <img src={item.logo} alt="logo" />
                                     </div>
                                     <div className="delivery-shop-content-item-right">
                                         <div className="shop-name">
-                                            {item.name}
+                                            <span>{item.name}</span>
+                                            <span className="shop-sell-time">
+                                                <span>{item.time}分钟</span>
+                                                &nbsp; &nbsp;
+                                                <span>{item.place}</span>
+                                            </span>
                                         </div>
                                         <div className="shop-sell">
                                             <span>
@@ -153,10 +157,6 @@ const FoodDelivery = props => {
                                                 <span className="shop-sell-count">
                                                     月售{item.count}单
                                                 </span>
-                                            </span>
-                                            <span className="shop-sell-time">
-                                                <span>{item.time}分钟</span>
-                                                <span>{item.place}</span>
                                             </span>
                                         </div>
                                         <div className="shop-delivery">

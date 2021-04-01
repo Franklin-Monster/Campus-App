@@ -17,7 +17,11 @@ const ArrowMenu = props => {
         <div className="menu-item" onClick={props.onClick || null} style={style}>
             {
                 props.frontImg && <span className="item-img">
-                    <img src={props.frontImg} alt="img" />
+                    <img src={props.frontImg} alt="img"
+                        style={{
+                            width: props.frontImgWidth,
+                            height: props.frontImgHeight
+                        }} />
                 </span>
             }
             <span className="item-text"> {props.text} </span>

@@ -122,15 +122,26 @@
             flex: 1;
             margin: 0 .5rem;
 
+            .shop-name {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .shop-sell-time {
+                    color: #aaa;
+                    font-size: .75rem;
+                }
+            }
+
             .shop-sell,
             .shop-delivery,
             .shop-active {
                 width: 100%;
-                font-size: .8rem;
+                font-size: .75rem;
                 color: #aaa;
                 display: flex;
                 align-items: center;
-                margin: .2rem 0;
+                margin: .5rem 0;
 
                 img {
                     width: .7rem;

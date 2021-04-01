@@ -1,4 +1,4 @@
-const history = require("history").createBrowserHistory()
+const history = require("history").createHashHistory()
 
 export const returnBack = () => {
     return history.goBack();
@@ -11,10 +11,10 @@ export const goRoute = (route) => {
 
 export const pathnameToTitle = (key) => {
     const pathnameTable = {
-        '/card': '应用',
-        '/message': '消息',
-        '/list': '通讯录',
-        '/mycenter': '我的',
+        '#/card': '应用',
+        '#/message': '消息',
+        '#/list': '通讯录',
+        '#/mycenter': '我的',
     };
     return pathnameTable[key] || null;
 };
@@ -31,6 +31,14 @@ export const getNowTime = () => {
             {firstTime}&nbsp;{lastTime}
         </div>
     )
+}
+
+// 格式化当前时间 格式：2021-3-31 9:09
+export const formatNowTime = time => {
+    const date = time || new Date(Date.now())
+    const newDate = date.toLocaleDateString().split('/').join('-')
+    const nowTime = date.toLocaleTimeString().slice(2).slice(0, -3)
+    return newDate + ' ' + nowTime
 }
 
 // 防抖

@@ -28,7 +28,7 @@ const TodoMatter = props => {
                             <div className="plan-content-item-text">今天</div>
                         </div>
                         <div className="plan-content-item-right">
-                            0
+                            3
                         </div>
                     </div>
                     <div className="todo-content"
@@ -38,7 +38,7 @@ const TodoMatter = props => {
                             <div className="plan-content-item-text">计划</div>
                         </div>
                         <div className="plan-content-item-right">
-                            0
+                            3
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const TodoMatter = props => {
                             <div className="plan-content-item-text">全部</div>
                         </div>
                         <div className="plan-content-item-right">
-                            0
+                            3
                         </div>
                     </div>
                 </div>

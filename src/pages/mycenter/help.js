@@ -290,9 +290,37 @@ const friendCircleData = [{
         commentList: []
     }
 ]
+
+const todoItemList = [{
+        name: '疫苗接种',
+        todoTime: '2021-4-10 13:00',
+        remark: '准备带有摄像头的电脑',
+        remainTime: '2021-4-10 12:30',
+        isRepeat: true,
+        isFinish: false
+    },
+    {
+        name: '百度面试',
+        todoTime: '2021-4-15 15:00',
+        remark: '准备带有摄像头的电脑',
+        remainTime: '2021-4-15 14:30',
+        isRepeat: true,
+        isFinish: false
+    },
+    {
+        name: '论文指导',
+        todoTime: '2021-4-1 9:30',
+        remark: '准备带有摄像头的电脑',
+        remainTime: '2021-4-1 9:00',
+        isRepeat: true,
+        isFinish: false
+    },
+]
+
 export {
     myCenterCardItemArr,
     myCenterArrowMenuArr,
     userInfoItemArr,
-    friendCircleData
+    friendCircleData,
+    todoItemList
 }
