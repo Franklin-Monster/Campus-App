@@ -15,11 +15,12 @@
     }
 
     .item-name {
-        font-size: .8rem;
+        font-size: .75rem;
         color: #aaa;
     }
 
     .item-content {
+        font-size: .9rem;
         margin: .8rem 0 1rem 0;
     }
 
@@ -42,4 +43,8 @@
         }
     }
 
+    .anony-footer-block {
+        width: 100%;
+        height: 3.75rem;
+    }
 }

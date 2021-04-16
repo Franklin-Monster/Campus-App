@@ -3,10 +3,12 @@ import './css/anonymous-list'
 import { invitationList } from './help'
 
 // component
+import AnonyTab from './AnonyTab'
 import SearchBar from '@c/search-bar'
 import ReturnTitle from '@c/return-title'
 
 // image
+import Add from './img/add'
 import Like from './img/like'
 import Relay from './img/relay'
 import Comment from './img/comment'
@@ -15,7 +17,7 @@ const AnonymousList = props => {
     return (
         <div id="AnonymousList">
             <div className="anony-header">
-                <ReturnTitle text="校言" />
+                <ReturnTitle text="校言" rightImg={Add} />
                 <div className="header-search">
                     <SearchBar placeholder="请输入关键字查找" />
                 </div>
@@ -60,7 +62,8 @@ const AnonymousList = props => {
                     }
                 </div>
             </div>
-            <div className="anony-footer"></div>
+            <div className="anony-footer-block"></div>
+            <div className="anony-footer"><AnonyTab /></div>
         </div>
     )
 }

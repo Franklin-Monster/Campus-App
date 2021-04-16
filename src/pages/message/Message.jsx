@@ -19,8 +19,7 @@ const Message = props => {
                             return (
                                 <div className="message-item" key={item.name}>
                                     <div className="message-avator">
-                                        <img src={item.avator} alt="avator"
-                                            onClick={() => props.history.push('/friendinfo')} />
+                                        <img src={item.avator} alt="avator" />
                                     </div>
                                     <div className="message-info"
                                         onClick={() => props.history.push(`/sendmessage/?&name=${item.name}&message=${item.content}&avator=${item.avator}&teacher=${item.teacher}`)}>
@@ -37,10 +36,10 @@ const Message = props => {
                                 <div className="message-item" key={item.avator}>
                                     <div className="message-avator">
                                         <img src={item.avator} alt="avator"
-                                            onClick={() => props.history.push('/friendinfo')} />
+                                            onClick={() => props.history.push(`/friendinfo/?&name=${item.name}&message=${item.content}&avator=${item.avator}`)} />
                                     </div>
                                     <div className="message-info"
-                                        onClick={() => props.history.push(`/sendmessage/?&name=${item.name}&message=${item.content}&avator=${item.avator}&group=${false}`)}>
+                                        onClick={() => props.history.push(`/sendmessage/?&name=${item.name}&message=${item.content}&avator=${item.avator}`)}>
                                         <div className="message-name">{item.name}</div>
                                         <div className="message-content">{item.content}</div>
                                     </div>
@@ -50,10 +49,7 @@ const Message = props => {
                     }
                 </div>
             </div>
-            <div className="message-footer">
-
-            </div>
-
+            <div className="message-footer"></div>
         </div>
     )
 }

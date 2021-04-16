@@ -10,7 +10,7 @@ import RedPaper from '../img/red-paper'
 import RightArrowThin from '../img/right-arrow-thin'
 
 const BalanceShoppingCar = props => {
-    
+
     return (
         <div id="BalanceShoppingCar">
             <div className="balance-header">
@@ -32,7 +32,7 @@ const BalanceShoppingCar = props => {
                                         </span>
                                     </div>
                                     <div className="person-info">
-                                        王瀚堃 先生 15076935128
+                                        Franklin 先生 13888888888
                                 </div>
                                 </div>
                                 <div className="time-info">

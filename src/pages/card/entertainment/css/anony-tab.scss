@@ -1,0 +1,28 @@
+#AnonyTab {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+    .anony-footer-tab-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        border-top: #ccc .05rem solid;
+        padding: .5rem 0 .2rem 0;
+
+        .anony-footer-tab-item {
+            text-align: center;
+
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            div {
+                font-size: .8rem;
+            }
+        }
+    }
+
+}

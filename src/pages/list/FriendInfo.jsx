@@ -1,10 +1,8 @@
-import React from 'react'
-
+import React, { useMemo, useState } from 'react'
 import './css/friend-info'
 
 // image
 import More from './img/more'
-import Franklin from './img/Franklin'
 
 // component
 import Button from '@c/button'
@@ -12,8 +10,25 @@ import { Modal } from 'antd-mobile'
 import ArrowMenu from '@c/arrow-menu'
 import ReturnTitle from '@c/return-title'
 
+const FriendInfo = props => {
+    const [friendName, setFriendName] = useState('')
+    const [friendMessage, setFriendMessage] = useState('')
+    const [friendAvator, setFriendAvator] = useState('')
 
-const FriendInfo = (props) => {
+    // 格式化地址栏参数
+    useMemo(() => {
+        const searchParams = props.location.search.split('&')
+        searchParams.shift()
+        const tempObj = {}
+        searchParams.map(item => {
+            const params = item.split('=')
+            tempObj[params[0]] = params[1]
+            return null
+        })
+        setFriendAvator(tempObj.avator)
+        setFriendName(decodeURI(tempObj.name))
+        setFriendMessage(decodeURI(tempObj.message))
+    }, [props])
 
     // 更改备注
     const changeRemark = () => {
@@ -37,29 +52,29 @@ const FriendInfo = (props) => {
             <div className="friend-body">
                 <div className="friend-base">
                     <div className="friend-avator">
-                        <img src={Franklin} alt="avator" />
+                        <img src={friendAvator} alt="avator" />
                     </div>
                     <div className="friend-intro">
                         <div className="friend-name">
-                            Franklin
-                    </div>
+                            {friendName}
+                        </div>
                         <div className="friend-number">
                             学号：1705080106
                     </div>
                     </div>
                 </div>
                 <div className="friend-info">
-                    <ArrowMenu text="备注" height="2rem" fontSize="1.1rem"
+                    <ArrowMenu text="备注" height="2rem"
                         onClick={changeRemark} />
-                    <ArrowMenu text="所属架构" height="2rem" fontSize="1.1rem" />
-                    <ArrowMenu text="个人空间" height="2rem" fontSize="1.1rem" />
+                    <ArrowMenu text="所属架构" height="2rem" />
+                    <ArrowMenu text="个人空间" height="2rem" />
                 </div>
                 <div className="friend-button">
                     <Button text="发消息"
                         background="#3775F6"
                         color="#fff"
                         margin="2rem auto"
-                        onClick={() => props.history.push('/sendmessage')} />
+                        onClick={() => props.history.push(`/sendmessage/?&name=${friendName}&message=${friendMessage}&avator=${friendAvator}`)} />
                     <Button text="打电话"
                         background="#00FF00"
                         color="#fff"

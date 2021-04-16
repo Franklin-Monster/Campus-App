@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import Success from './img/success'
 import Attention from './img/warn'
 import Fail from './img/fail'
-const Message = (props) => {
+const Message = props => {
     const [animate, setAnimate] = useState('message-in 1s')
     const style = {
         color: props.color,
@@ -18,7 +18,7 @@ const Message = (props) => {
         setAnimate('message-out 0.8s')
     }, 900);
 
-    const selectType = (type) => {
+    const selectType = type => {
         switch (type) {
             case 'success':
                 style.background = '#F0F9EB'
@@ -55,7 +55,7 @@ const Message = (props) => {
     )
 }
 let div = null
-const useMessage = (args) => {
+const useMessage = args => {
     if (ReactDOM.findDOMNode(div)) {
         ReactDOM.unmountComponentAtNode(div)
     }

@@ -121,11 +121,13 @@ const SendMessage = props => {
                 <div className="receive-message-box">
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            {teacher ? String(decodeURI(teacher)).split('')[0]
-                                : <img src={friendAvator} alt="avator" />}
+                            {/* {teacher ? String(decodeURI(teacher)).split('')[0]
+                                : <img src={friendAvator} alt="avator" />} */}
+                            {!teacher ? <img src={friendAvator} alt="avator" />
+                                : String(decodeURI(teacher)).split('')[0]}
                         </div>
                         <div className="receive-message-right">
-                            {teacher && <div className="receive-message-name">{decodeURI(teacher)}</div>}
+                            {teacher !== undefined && <div className="receive-message-name">{decodeURI(teacher)}</div>}
                             <div className="receive-message-wrap">
                                 <div className="receive-message-tria"></div>
                                 <div className="receive-message-content">{decodeURI(friendMessage)}</div>

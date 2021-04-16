@@ -1,7 +1,7 @@
 import React from 'react'
 import './not-found'
-
 import ReturnTitle from '@c/return-title'
+
 const NotFound = () => {
     return (
         <div id="NotFound">
@@ -14,6 +14,5 @@ const NotFound = () => {
         </div>
     )
 }
-
 
 export default NotFound

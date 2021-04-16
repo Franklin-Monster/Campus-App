@@ -31,7 +31,7 @@ const List = () => {
         <div id="List">
             <div className="list-header">
                 <div className="header-searchBar">
-                    <SearchBar placeholder="搜索"></SearchBar>
+                    <SearchBar placeholder="搜索好友"></SearchBar>
                 </div>
                 <div className="header-item">
                     <ArrowMenu
@@ -58,7 +58,7 @@ const List = () => {
                 <div className="body-content">
                     <div className="address-body" ref={addressBodyRef}>
                         <DivideGroupItem groupName="我的同学" groupMember={testFriendData} />
-                        <DivideGroupItem groupName="我的老师" groupMember={testFriendData} />
+                        <DivideGroupItem groupName="我的教师" groupMember={testFriendData} />
                         <DivideGroupItem groupName="我的好友" groupMember={testFriendData} />
                     </div>
                     <div className="group-body" ref={groupBodyRef}>
