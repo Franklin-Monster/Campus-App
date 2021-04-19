@@ -49,13 +49,13 @@ const classGroupMessage = [{
         avator: Group,
         content: '明天上午8.30在A506上机',
         teacher: '侯老师'
-    }, 
+    },
     {
         name: '统计学课程群',
         avator: Group,
         content: '大家记得晚上交学案',
         teacher: '刘老师'
-    }, 
+    },
     {
         name: '数据库原理课程群',
         avator: Group,

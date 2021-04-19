@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { classGroupMessage } from './help'
 import { messageList } from '@/pages/card/entertainment/help'
+import { getMessage } from '@/logic/net/api'
 
 // component
 import './css/message'
 import SearchBar from '@c/search-bar'
 
+// image
+import Group from './img/group'
 const Message = props => {
+    //     const [classGroupMessage, setClassGroupClass] = useState([])
+    //     getMessage().then(res => setClassGroupClass(res.data))
     return (
         <div id="Message">
             <div className="message-header">
@@ -19,7 +24,7 @@ const Message = props => {
                             return (
                                 <div className="message-item" key={item.name}>
                                     <div className="message-avator">
-                                        <img src={item.avator} alt="avator" />
+                                        <img src={Group} alt="avator" />
                                     </div>
                                     <div className="message-info"
                                         onClick={() => props.history.push(`/sendmessage/?&name=${item.name}&message=${item.content}&avator=${item.avator}&teacher=${item.teacher}`)}>
