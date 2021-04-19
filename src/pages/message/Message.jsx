@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { classGroupMessage } from './help'
+import React, { useState, useEffect } from 'react'
 import { messageList } from '@/pages/card/entertainment/help'
-import { getMessage } from '@/logic/net/api'
+import { getClassGroupMessage } from '@api'
 
 // component
 import './css/message'
@@ -9,9 +8,15 @@ import SearchBar from '@c/search-bar'
 
 // image
 import Group from './img/group'
+
 const Message = props => {
-    //     const [classGroupMessage, setClassGroupClass] = useState([])
-    //     getMessage().then(res => setClassGroupClass(res.data))
+    const [classGroupMessage, setClassGroupClass] = useState([])
+
+    // 获取课程群消息
+    useEffect(() => {
+        getClassGroupMessage().then(res => setClassGroupClass(res.data))
+    }, [])
+
     return (
         <div id="Message">
             <div className="message-header">

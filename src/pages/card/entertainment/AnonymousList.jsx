@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './css/anonymous-list'
-import { invitationList } from './help'
+import { getInvitationList } from '@api'
 
 // component
 import AnonyTab from './AnonyTab'
@@ -14,6 +14,13 @@ import Relay from './img/relay'
 import Comment from './img/comment'
 
 const AnonymousList = props => {
+    const [invitationList, setInvitationList] = useState([])
+
+    // 获取帖子列表
+    useEffect(() => {
+        getInvitationList().then(res => setInvitationList(res.data))
+    }, [])
+
     return (
         <div id="AnonymousList">
             <div className="anony-header">
@@ -32,7 +39,7 @@ const AnonymousList = props => {
                                     onClick={() => props.history.push({
                                         pathname: '/anonymousitem',
                                         query: {
-                                            name: item.name,
+                                            name: item.master_name,
                                             content: item.content,
                                             forward: item.forward,
                                             comment: item.comment,

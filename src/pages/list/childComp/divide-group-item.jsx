@@ -45,7 +45,7 @@ const DivideGroupItem = (props) => {
                                     {member.name}
                                 </div>
                                 <div className="member-sign">
-                                    {member.sign}
+                                    {member.sign || member.class}
                                 </div>
                             </div>
                         </div>
