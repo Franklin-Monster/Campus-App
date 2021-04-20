@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { messageList } from '@/pages/card/entertainment/help'
-import { getClassGroupMessage } from '@api'
+import { getClassGroupMessage, getFriendMessage } from '@api'
 
 // component
 import './css/message'
@@ -11,10 +10,12 @@ import Group from './img/group'
 
 const Message = props => {
     const [classGroupMessage, setClassGroupClass] = useState([])
+    const [friendMessageList, setFriendMessageList] = useState([])
 
-    // 获取课程群消息
+    // 获取消息列表
     useEffect(() => {
         getClassGroupMessage().then(res => setClassGroupClass(res.data))
+        getFriendMessage().then(res => setFriendMessageList(res.data))
     }, [])
 
     return (
@@ -41,11 +42,11 @@ const Message = props => {
                         })
                     }
                     {
-                        messageList.map(item => {
+                        friendMessageList.map((item, index) => {
                             return (
-                                <div className="message-item" key={item.avator}>
+                                <div className="message-item" key={item.name + String(index)}>
                                     <div className="message-avator">
-                                        <img src={item.avator} alt="avator"
+                                        <img src={require(`../card/entertainment/img/p${item.message_id}`).default} alt="avator"
                                             onClick={() => props.history.push(`/friendinfo/?&name=${item.name}&message=${item.content}&avator=${item.avator}`)} />
                                     </div>
                                     <div className="message-info"

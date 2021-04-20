@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/for-friend'
-import { sildeImageArr } from '../help'
+import { getFriendPicture } from '@api'
 
 // component
 import ForTab from './ForTab'
@@ -13,14 +13,16 @@ import Love from '../img/love'
 import Collect from '../img/collect'
 
 const ForFriend = props => {
-    const [sildeImgArr, setSildeImgArr] = useState(sildeImageArr)
+    const [sildeImgArr, setSildeImgArr] = useState([])
     const [startX, setStartX] = useState(null)
     const [startY, setStartY] = useState(null)
     const [endX, setEndX] = useState(null)
     const [endY, setEndY] = useState(null)
     const clientWidth = document.body.clientWidth
     const clientHeight = document.documentElement.clientHeight
-
+    useEffect(() => {
+        getFriendPicture().then(res => setSildeImgArr(res.data))
+    }, [])
     // 开始拖拽
     const handleTouchStart = e => {
         setStartX(e.touches[0].clientX)
@@ -103,8 +105,8 @@ const ForFriend = props => {
                     {
                         sildeImgArr.map(item => {
                             return (
-                                <img src={item}
-                                    key={item}
+                                <img src={require(`../img/p${item.message_id}`).default}
+                                    key={item.message_id}
                                     alt="img"
                                     onTouchStart={handleTouchStart}
                                     onTouchMove={handleTouchMove}

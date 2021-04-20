@@ -3,29 +3,20 @@ import {
 } from '@/static/js/fun'
 import newsImg1 from './img/news1'
 import newsImg2 from './img/news2'
-import A1 from './img/a1'
-import A2 from './img/a2'
-import A3 from './img/a3'
-import A4 from './img/a4'
-import A5 from './img/a5'
-import A6 from './img/a6'
-import A7 from './img/a7'
-import A8 from './img/a8'
-import A9 from './img/a9'
 
-import P1 from './img/p1'
-import P2 from './img/p2'
-import P3 from './img/p3'
-import P4 from './img/p4'
-import P5 from './img/p5'
-import P6 from './img/p6'
-import P7 from './img/p7'
-import P8 from './img/p8'
-import P9 from './img/p9'
-import P10 from './img/p10'
-import P11 from './img/p11'
-import P12 from './img/p12'
-import P13 from './img/p13'
+// import P1 from './img/p1'
+// import P2 from './img/p2'
+// import P3 from './img/p3'
+// import P4 from './img/p4'
+// import P5 from './img/p5'
+// import P6 from './img/p6'
+// import P7 from './img/p7'
+// import P8 from './img/p8'
+// import P9 from './img/p9'
+// import P10 from './img/p10'
+// import P11 from './img/p11'
+// import P12 from './img/p12'
+// import P13 from './img/p13'
 
 import Photo from './img/photo'
 import Camera from './img/camera'
@@ -74,135 +65,70 @@ const News = {
     ]
 }
 
-const commentList = [{
-        avator: A1,
-        name: '河北大学',
-        content: '我同学说这个学校特别好',
-        time: '1小时前',
-        like: 66
-    },
-    {
-        avator: A2,
-        name: '厦门',
-        content: '土木专业很强哦',
-        time: '1小时前',
-        like: 54
-    },
-    {
-        avator: A3,
-        name: '清华大学',
-        content: '经济与管理学院也不错啊',
-        time: '1小时前',
-        like: 36
-    },
-    {
-        avator: A4,
-        name: '天津城建大学',
-        content: '我考了我们本专业的硕士',
-        time: '1小时前',
-        like: 24
-    },
-    {
-        avator: A5,
-        name: '南开大学',
-        content: '分数线不是太高，可以试试',
-        time: '1小时前',
-        like: 18
-    },
-    {
-        avator: A6,
-        name: '北京大学',
-        content: '我觉得可以',
-        time: '1小时前',
-        like: 15
-    },
-    {
-        avator: A7,
-        name: '东北大学',
-        content: 'm',
-        time: '1小时前',
-        like: 6
-    },
-    {
-        avator: A8,
-        name: '天津大学',
-        content: '高中同学有去的',
-        time: '1小时前',
-        like: 6
-    },
-    {
-        avator: A9,
-        name: '天津理工大学',
-        content: '和我们学校离得挺近',
-        time: '1小时前',
-        like: 0
-    }
-]
+// const sildeImageArr = [P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13]
 
-const sildeImageArr = [P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13]
+// const messageList = [{
+//         name: '范冰冰',
+//         avator: P1,
+//         content: '争做新时代青年！',
+//         time: '刚刚'
+//     },
+//     {
+//         name: '周冬雨',
+//         avator: P2,
+//         content: '他扒拉我',
+//         time: '6分钟前'
+//     },
+//     {
+//         name: '欧阳娜娜',
+//         avator: P3,
+//         content: '我拉大提琴超好听',
+//         time: '8分钟前'
+//     },
+//     {
+//         name: '杜鹃',
+//         avator: P4,
+//         content: '明天晚上去看电影嘛？',
+//         time: '16分钟前'
+//     },
+//     {
+//         name: '张靓颖',
+//         avator: P5,
+//         content: '我教你海豚音啊',
+//         time: '24分钟前'
+//     },
+//     {
+//         name: '刘亦菲',
+//         avator: P6,
+//         content: '我就是仙女姐姐',
+//         time: '1小时前'
+//     },
+//     {
+//         name: '女明星',
+//         avator: P7,
+//         content: '你连女明星都不认识了嘛',
+//         time: '6小时前'
+//     },
+//     {
+//         name: '李宇春',
+//         avator: P8,
+//         content: '明天出来吃火锅',
+//         time: '8小时前'
+//     },
+//     {
+//         name: '唐嫣',
+//         avator: P9,
+//         content: '工作好累啊今天',
+//         time: '1天前'
+//     },
+//     {
+//         name: '范玮琪',
+//         avator: P10,
+//         content: '好想睡觉',
+//         time: '3天前'
+//     },
 
-const messageList = [{
-        name: '范冰冰',
-        avator: P1,
-        content: '争做新时代青年！',
-        time: '刚刚'
-    },
-    {
-        name: '周冬雨',
-        avator: P2,
-        content: '他扒拉我',
-        time: '6分钟前'
-    },
-    {
-        name: '欧阳娜娜',
-        avator: P3,
-        content: '我拉大提琴超好听',
-        time: '8分钟前'
-    },
-    {
-        name: '杜鹃',
-        avator: P4,
-        content: '明天晚上去看电影嘛？',
-        time: '16分钟前'
-    },
-    {
-        name: '张靓颖',
-        avator: P5,
-        content: '我教你海豚音啊',
-        time: '24分钟前'
-    },
-    {
-        name: '刘亦菲',
-        avator: P6,
-        content: '我就是仙女姐姐',
-        time: '1小时前'
-    },
-    {
-        name: '女明星',
-        avator: P7,
-        content: '你连女明星都不认识了嘛',
-        time: '6小时前'
-    },
-    {
-        name: '李宇春',
-        avator: P8,
-        content: '明天出来吃火锅',
-        time: '8小时前'
-    },
-    {
-        name: '唐嫣',
-        avator: P9,
-        content: '工作好累啊今天',
-        time: '1天前'
-    },
-    {
-        name: '范玮琪',
-        avator: P10,
-        content: '好想睡觉',
-        time: '3天前'
-    },
-
-]
+// ]
 
 const sendPlusItemArr = [{
         img: Photo,
@@ -238,8 +164,7 @@ const sendPlusItemArr = [{
 
 export {
     News,
-    commentList,
-    sildeImageArr,
-    messageList,
+    // sildeImageArr,
+    // messageList,
     sendPlusItemArr
 }

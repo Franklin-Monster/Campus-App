@@ -18,7 +18,7 @@ const ForSendMessage = props => {
     const [mySendMessage, setMySendMessage] = useState([])
     const [friendName, setFriendName] = useState('')
     const [friendMessage, setFriendMessage] = useState('')
-    const [friendAvator, setFriendAvator] = useState(null)
+    const [friendId, setFriendId] = useState('')
     const propsQuery = props.location.query
 
     // 格式化地址栏参数
@@ -33,7 +33,7 @@ const ForSendMessage = props => {
         })
         setFriendName(tempObj.name)
         setFriendMessage(tempObj.message)
-        setFriendAvator(tempObj.avator)
+        setFriendId(tempObj.id)
     }, [props])
 
     // 接收拍摄的照片
@@ -103,13 +103,13 @@ const ForSendMessage = props => {
                 <div className="receive-message-box">
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            <img src={friendAvator} alt="avator" />
+                            {friendId && <img src={require(`../img/p${friendId}`).default} alt="avator" />}
                         </div>
                         <div className="receive-message-wrap">
                             <div className="receive-message-tria"
                                 style={{ borderColor: 'transparent #fff transparent transparent' }}></div>
                             <div className="receive-message-info">
-                                <img src={friendAvator} alt="rece" />
+                                {friendId && <img src={require(`../img/p${friendId}`).default} alt="avator" />}
                                 <div className="receive-message-text">
                                     <span>{decodeURI(friendName)}</span>，
                                     <span>24</span>，
@@ -121,7 +121,7 @@ const ForSendMessage = props => {
                     </div>
                     <div className="receive-message-item">
                         <div className="receive-message-avator">
-                            <img src={friendAvator} alt="avator" />
+                            {friendId && <img src={require(`../img/p${friendId}`).default} alt="avator" />}
                         </div>
                         <div className="receive-message-wrap">
                             <div className="receive-message-tria"></div>

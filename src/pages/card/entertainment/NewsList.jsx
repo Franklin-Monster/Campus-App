@@ -37,21 +37,16 @@ const NewsList = props => {
                 break;
             default: setShowNews(countryNews)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [newsTab])
     return (
         <div id="NewsList">
             <div className="news-header">
                 <ReturnTitle text="校园头条" />
                 <div className="header-tab">
-                    <div className="tab-item" onClick={() => setNewsTab('全国头条')}>
-                        全国头条
-                    </div>
-                    <div className="tab-item" onClick={() => setNewsTab('天津头条')}>
-                        天津头条
-                    </div>
-                    <div className="tab-item" onClick={() => setNewsTab('本校头条')}>
-                        本校头条
-                    </div>
+                    <div className="tab-item" onClick={() => setNewsTab('全国头条')}>全国头条</div>
+                    <div className="tab-item" onClick={() => setNewsTab('天津头条')}>天津头条</div>
+                    <div className="tab-item" onClick={() => setNewsTab('本校头条')}>本校头条</div>
                 </div>
             </div>
             <div className="header-block"></div>

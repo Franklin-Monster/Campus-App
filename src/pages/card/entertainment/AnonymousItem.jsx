@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect, useMemo } from 'react'
 import './css/anonymous-item'
-import { commentList } from './help'
+import { getInvitationComment, addInvitationComment } from '@api'
 
 // component
+import Message from '@c/message'
 import ReturnTitle from '@c/return-title'
 
 // image
@@ -16,22 +17,61 @@ import Express from './img/express'
 import Student from './img/student'
 
 const AnonymousItem = props => {
-    const [commentArr, setCommentArr] = useState(commentList)
+    const [commentArr, setCommentArr] = useState([])
+    const [invitationName, setInvitationName] = useState('')
+    const [invitationContent, setInvitationContent] = useState('')
+    const [invitationForward, setInvitationForword] = useState(0)
+    const [invitationComment, setInvitationComment] = useState(0)
+    const [invitationLike, setInvitationLike] = useState(0)
     const selectBoxRef = useRef()
 
+    // 格式化地址栏参数
+    useMemo(() => {
+        const searchParams = props.location.search.split('&')
+        searchParams.shift()
+        const tempObj = {}
+        searchParams.map(item => {
+            const params = item.split('=')
+            tempObj[params[0]] = params[1]
+            return null
+        })
+        setInvitationName(tempObj.name)
+        setInvitationContent(tempObj.content)
+        setInvitationForword(tempObj.forward)
+        setInvitationComment(tempObj.comment)
+        setInvitationLike(tempObj.like)
+    }, [props])
+
+    // 初始化评论列表
+    useEffect(() => {
+        refreshInvitationComment()
+    }, [])
+
+    // 更新评论列表
+    const refreshInvitationComment = () => {
+        getInvitationComment().then(res => setCommentArr(res.data))
+    }
+
     // 添加评论
-    const addComment = e => {
+    const addComment = async e => {
         if (!e.target.value) return
         if (e.code === 'Enter') {
             const value = e.target.value
-            setCommentArr(comment => [{
-                avator: A4,
-                name: '天津城建大学',
-                content: value,
-                time: '刚刚',
-                like: 0
-            }, ...comment])
+            await addInvitationComment({ content: value }).then(res => {
+                if (res.data === 'success') {
+                    Message({
+                        text: '发表评论成功',
+                        type: 'success'
+                    })
+                } else {
+                    Message({
+                        text: '发表评论失败，请重试',
+                        type: 'error'
+                    })
+                }
+            })
             e.target.value = ''
+            refreshInvitationComment()
         }
     }
 
@@ -59,34 +99,34 @@ const AnonymousItem = props => {
             <div className="an-body">
                 <div className="post-content">
                     <div className="item-name">
-                        {props.location.query.name}
+                        {decodeURI(invitationName)}
                     </div>
                     <div className="item-content">
-                        {props.location.query.content}
+                        {decodeURI(invitationContent)}
                     </div>
                     <div className="item-operate">
                         <div className="operate-box"><img src={Relay} alt="forward" />
-                            {props.location.query.forward}
+                            {invitationForward}
                         </div>
                         <div className="operate-box"><img src={Comment} alt="comment" />
-                            {/* {props.location.query.comment} */}
-                            {commentArr.length}
+                            {invitationComment}
                         </div>
                         <div className="operate-box"><img src={Like} alt="like" />
-                            {props.location.query.like}
+                            {invitationLike}
                         </div>
                     </div>
                 </div>
                 <div className="comment-content">
-                    <div className="comment-title">
-                        评论
-                    </div>
+                    <div className="comment-title">评论 </div>
                     {
-                        commentArr.map(item => {
+                        commentArr.map((item, index) => {
                             return (
-                                <div className="comment-item" key={item.content}>
+                                <div className="comment-item" key={item.content + String(index)}>
                                     <div className="item-left">
-                                        <img src={item.avator} alt="avator" />
+                                        {item.comment_id > 9 ?
+                                            <img src={require(`./img/a4`).default} alt="avator" />
+                                            : <img src={require(`./img/a${item.comment_id}`).default} alt="avator" />
+                                        }
                                     </div>
                                     <div className="item-middle">
                                         <div className="item-name">
@@ -119,12 +159,10 @@ const AnonymousItem = props => {
                     <div className="select-item" onClick={selectNameItem}>
                         <img src={Student} alt="stu" />
                         <div className="select-item-name">花名： Franklin</div>
-                        {/* <img src={Select} alt="select" className="select-item-select" /> */}
                     </div>
                     <div className="select-item" onClick={selectNameItem}>
                         <img src={Avator} alt="ava" />
                         <div className="select-item-name">实名： 周杰伦</div>
-                        {/* <img src={Select} alt="select" className="select-item-select" /> */}
                     </div>
                 </div>
                 <div className="comment-box">

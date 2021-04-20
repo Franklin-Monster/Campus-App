@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/for-message'
-import { messageList } from '../help'
+import { getFriendMessage } from '@api'
 
 // component
 import ForTab from './ForTab'
@@ -10,6 +10,13 @@ import ReturnTitle from '@c/return-title'
 import Sort from '../img/sort'
 
 const ForMessage = props => {
+    const [messageList, setMessageList] = useState([])
+
+    // 获取好友消息列表
+    useEffect(() => {
+        getFriendMessage().then(res => setMessageList(res.data))
+    }, [])
+
     return (
         <div id="ForMessage">
             <div className='message-header'>
@@ -27,17 +34,17 @@ const ForMessage = props => {
                             return (
                                 <div className="message-item" key={item.content}>
                                     <div className="message-avator">
-                                        <img src={item.avator} alt="avator"
+                                        <img src={require(`../img/p${item.message_id}`).default} alt="avator"
                                             onClick={() => props.history.push('/friendinfo')} />
                                     </div>
                                     <div className="message-info"
                                         onClick={() => props.history.push({
-                                            pathname: `/forsendmessage/?&name=${item.name}&avator=${item.avator}&message=${item.content}`,
-                                            query: {
-                                                name: item.name,
-                                                avator: item.avator,
-                                                content: item.content
-                                            }
+                                            pathname: `/forsendmessage/?&name=${item.name}&id=${item.message_id}&message=${item.content}`,
+                                            // query: {
+                                            //     name: item.name,
+                                            //     avator: item.message_id,
+                                            //     content: item.content
+                                            // }
                                         })}>
                                         <div className="message-name">
                                             {item.name}

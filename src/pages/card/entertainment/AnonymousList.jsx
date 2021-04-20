@@ -36,16 +36,7 @@ const AnonymousList = props => {
                             return (
                                 <div className="post-item"
                                     key={item.content}
-                                    onClick={() => props.history.push({
-                                        pathname: '/anonymousitem',
-                                        query: {
-                                            name: item.master_name,
-                                            content: item.content,
-                                            forward: item.forward,
-                                            comment: item.comment,
-                                            like: item.like
-                                        }
-                                    })}>
+                                    onClick={() => props.history.push(`/anonymousitem?&name=${item.master_name}&content=${item.content}&forward=${item.forward}&comment=${item.comment}&like=${item.like}`)}>
                                     <div className="item-name">
                                         {item.name}
                                     </div>

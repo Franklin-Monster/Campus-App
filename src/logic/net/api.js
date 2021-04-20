@@ -5,9 +5,18 @@ import {
 } from './index'
 
 // message
+// 获取课程群消息
 export const getClassGroupMessage = () => {
     return messageAxios({
         url: '/getclassgroupmessage',
+        method: 'get',
+    })
+}
+
+// 获取好友消息
+export const getFriendMessage = () => {
+    return messageAxios({
+        url: '/getfriendmessage',
         method: 'get',
     })
 }
@@ -37,10 +46,36 @@ export const getNewsList = () => {
         method: 'get',
     })
 }
+
 // 获取校言列表
 export const getInvitationList = () => {
     return cardAxios({
         url: '/getinvitationlist',
+        method: 'get',
+    })
+}
+
+// 获取校言评论列表
+export const getInvitationComment = () => {
+    return cardAxios({
+        url: '/getinvitationcomment',
+        method: 'get',
+    })
+}
+
+// 添加校言评论
+export const addInvitationComment = params => {
+    return cardAxios({
+        url: '/addinvitationcomment',
+        method: 'get',
+        params
+    })
+}
+
+// 获取休闲交友照片
+export const getFriendPicture = () => {
+    return cardAxios({
+        url: '/getfriendpicture',
         method: 'get',
     })
 }
