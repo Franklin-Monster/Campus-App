@@ -43,7 +43,7 @@ const AnonymousItem = props => {
     }, [props])
 
     // 初始化评论列表
-    useEffect(() => {
+    useEffect(() => {   
         refreshInvitationComment()
     }, [])
 

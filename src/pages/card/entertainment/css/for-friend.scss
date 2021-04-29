@@ -83,4 +83,67 @@
     .tab-item-text {
         font-size: .8rem;
     }
+
+    @keyframes success-in {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+
+    .success-box {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color:#fff, $alpha: .85);
+        z-index: 999;
+        text-align: center;
+        display: none;
+        animation: success-in .8s ease;
+
+        .success-title {
+            width: 100%;
+            text-align: center;
+            font-size: 3rem;
+            margin: 2.4rem 0;
+            font-weight: 900;
+            font-style: italic;
+            color: #FC5531;
+        }
+
+        .success-image {
+            img {
+                width: 50vw;
+                height: 36vh;
+            }
+        }
+
+        .success-info {
+            font-size: 1.2rem;
+            margin: 2.4rem 0;
+            color: #746e6e;
+        }
+
+        .success-button {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            div {
+                width: 3.6rem;
+                height: 3.6rem;
+                background-color: #F79217;
+                border-radius: 50%;
+                line-height: 3.6rem;
+                margin: 0 2.4rem;
+                color: #fff;
+            }
+        }
+    }
 }

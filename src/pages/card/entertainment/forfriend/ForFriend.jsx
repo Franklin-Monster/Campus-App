@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../css/for-friend'
 import { getFriendPicture } from '@api'
 
@@ -18,13 +18,18 @@ const ForFriend = props => {
     const [startY, setStartY] = useState(null)
     const [endX, setEndX] = useState(null)
     const [endY, setEndY] = useState(null)
+    const [successImg, setSuccessImg] = useState(null)
     const clientWidth = document.body.clientWidth
     const clientHeight = document.documentElement.clientHeight
+    const successRef = useRef()
+
+    //获取朋友图片
     useEffect(() => {
         getFriendPicture().then(res => setSildeImgArr(res.data))
     }, [])
+
     // 开始拖拽
-    const handleTouchStart = e => {
+    const handleTouchStart = (e) => {
         setStartX(e.touches[0].clientX)
         setStartY(e.touches[0].clientY)
     }
@@ -45,6 +50,10 @@ const ForFriend = props => {
         }
         else if (endX - startX > clientWidth / 2) {
             e.target.style.transform = `translateX(200%)`
+            if (sildeImgArr.length % 2) {
+                setSuccessImg(e.target.src)
+                successRef.current.style.display = "block"
+            }
             deleteImg()
         }
         else if (endX - startX < -clientWidth / 2) {
@@ -60,10 +69,10 @@ const ForFriend = props => {
     }
 
     // 延时删除数组中最后一个图片
-    const deleteImg = () => {
+    const deleteImg = (time = 1000) => {
         setTimeout(() => {
             setSildeImgArr(sildeImgArr.filter((i, index) => index !== sildeImgArr.length - 1))
-        }, 1000);
+        }, time);
         if (sildeImgArr.length < 1) {
             MessageBox({
                 text: '附近的人暂时都被您划完啦'
@@ -75,6 +84,10 @@ const ForFriend = props => {
     const loveClick = e => {
         // 获取当前元素的父元素的父元素的最后一个子元素
         e.target.parentNode.parentNode.lastElementChild.style.transform = `translateX(200%)`
+        if (sildeImgArr.length % 2) {
+            setSuccessImg(e.target.parentNode.parentNode.lastElementChild.src)
+            successRef.current.style.display = "block"
+        }
         deleteImg()
     }
 
@@ -93,7 +106,10 @@ const ForFriend = props => {
     return (
         <div id="ForFriend">
             <div className="fri-header">
-                <ReturnTitle text='休闲交友' returnClick={() => props.history.push('/card')} />
+                <ReturnTitle
+                    text='休闲交友'
+                    background="#FC5531"
+                    returnClick={() => props.history.push('/card')} />
             </div>
             <div className="fri-body">
                 <div className="image-content">
@@ -115,6 +131,21 @@ const ForFriend = props => {
                             )
                         })
                     }
+                </div>
+            </div>
+            <div className="success-box" ref={successRef}>
+                <div className="success-title">
+                    congratulate
+                </div>
+                <div className="success-image">
+                    <img src={successImg} alt="img" />
+                </div>
+                <div className="success-info">
+                    你和女明星匹配成功！
+                </div>
+                <div className="success-button">
+                    <div onClick={() => props.history.push('/formessage')}>去聊天</div>
+                    <div onClick={() => successRef.current.style.display = "none"}>继续划</div>
                 </div>
             </div>
             <div className="fri-footer">
