@@ -46,6 +46,8 @@ const FriendCircle = Loadable(() => import('@p/mycenter/FriendCircle'))
 const WriteDynamic = Loadable(() => import('@p/mycenter/WriteDynamic'))
 const TodoMatter = Loadable(() => import('@p/mycenter/TodoMatter'))
 const TodoList = Loadable(() => import('@p/mycenter/TodoList'))
+const MyCourseList = Loadable(() => import('@p/card/study/MyCourseList'))
+const MyCourseDetail = Loadable(() => import('@p/card/study/MyCourseDetail'))
 
 const routes = [{
         path: '/message',
@@ -230,6 +232,14 @@ const routes = [{
     {
         path: '/todolist',
         component: TodoList
+    },
+    {
+        path: '/mycourselist',
+        component: MyCourseList
+    },
+    {
+        path: '/mycoursedetail',
+        component: MyCourseDetail
     },
 ]
 

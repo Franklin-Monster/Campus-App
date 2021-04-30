@@ -25,7 +25,7 @@ const ForMessage = props => {
                     background="#FC5531"
                     returnClick={() => props.history.push('/card')} />
                 <div className="header-title">
-                    <div>消息</div>
+                    <div>匹配列表</div>
                     <div><img src={Sort} alt="sort" /></div>
                 </div>
             </div>

@@ -79,3 +79,18 @@ export const getFriendPicture = () => {
         method: 'get',
     })
 }
+
+// 获取 我的课程 课程列表
+export const getMyCourseList = () => {
+    return cardAxios({
+        url: '/getmycourselist',
+        method: 'get',
+    })
+}
+// 获取 我的课程 课程详情
+export const getMyCourseDetail = () => {
+    return cardAxios({
+        url: '/getmycoursedetail',
+        method: 'get',
+    })
+}

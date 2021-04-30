@@ -14,25 +14,33 @@ const ArrowMenu = props => {
     }
 
     return (
-        <div className="menu-item" onClick={props.onClick || null} style={style}>
-            {
-                props.frontImg && <span className="item-img">
-                    <img src={props.frontImg} alt="img"
-                        style={{
-                            width: props.frontImgWidth,
-                            height: props.frontImgHeight
-                        }} />
-                </span>
-            }
-            <span className="item-text"> {props.text} </span>
-            <span className="item-arrow">
+        <div id="MenuItem" onClick={props.onClick || null} style={style}>
+            <div className="menu-item">
                 {
-                    props.needArrow
-                        ? <img src={Arrow} alt="arrow" /> :
-                        props.endImg && <img src={props.endImg} alt="arrow" />
+                    props.frontImg && <div className="item-img">
+                        <img src={props.frontImg} alt="img"
+                            style={{
+                                width: props.frontImgWidth,
+                                height: props.frontImgHeight
+                            }} />
+                    </div>
                 }
-            </span>
+                <div className="item-text">
+                    <div className="item-main-text">{props.text}</div>
+                    {
+                        props.subText && <div className="item-sub-text">{props.subText}</div>
+                    }
+                </div>
+                <div className="item-arrow">
+                    {
+                        props.needArrow
+                            ? <img src={Arrow} alt="arrow" /> :
+                            props.endImg && <img src={props.endImg} alt="arrow" />
+                    }
+                </div>
+            </div>
         </div>
+
     )
 }
 ArrowMenu.defaultProps = {

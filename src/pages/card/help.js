@@ -88,7 +88,7 @@ export const cardItemArr = [{
     {
         img: Class,
         text: "我的课程",
-        route: '/notfound'
+        route: '/mycourselist'
     },
     {
         img: PublicClass,

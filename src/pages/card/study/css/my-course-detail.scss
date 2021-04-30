@@ -1,0 +1,15 @@
+#MyCourseDetail {
+    .detail-tab {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: .5rem 0;
+        color: #aaa;
+        background-color: #fafafa;
+    }
+
+    .detail-tab-content {
+        margin-top: .2rem;
+    }
+
+}

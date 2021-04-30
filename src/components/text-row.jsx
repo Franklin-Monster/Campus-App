@@ -18,8 +18,11 @@ const TextRow = (props) => {
                     ? <input
                         className="last-text"
                         type={props.type || 'text'}
-                        placeholder={props.placeholder}/>
-                    : <span className="last-text">{props.lastText}</span>
+                        placeholder={props.placeholder} />
+                    : <span className="last-text"
+                        style={{ fontSize: props.lastTextFontSize, color: props.lastTextColor }}>
+                        {props.lastText}
+                    </span>
             }
         </div>
     )

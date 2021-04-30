@@ -1,31 +1,45 @@
-.menu-item {
+#MenuItem {
     width: 90%;
     background-color: #fff;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
     font-size: 1rem;
     margin: .1rem auto;
     border-radius: .25rem;
     padding: .625rem 1.5rem;
 
-    span {
-        display: inline-block;
-    }
-
-    img {
-        width: 1.5rem;
+    .menu-item {
         height: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        span {
+            display: inline-block;
+        }
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .item-img {
+            margin-top: .3rem;
+            margin-right: .8rem;
+        }
+
+        .item-main-text {
+            font-size: .9rem;
+        }
+
+        .item-sub-text {
+            font-size: .75rem;
+            color: #aaa;
+            margin-top: .2rem;
+        }
+
+        .item-arrow {
+            flex: 1;
+            text-align: end;
+            transition: all 1s ease;
+        }
     }
 
-    .item-img {
-        margin-top: .3rem;
-        margin-right: .8rem;
-    }
-
-    .item-arrow {
-        flex: 1;
-        text-align: end;
-        transition: all 1s ease;
-    }
 }
