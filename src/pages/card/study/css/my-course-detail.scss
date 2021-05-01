@@ -6,10 +6,36 @@
         padding: .5rem 0;
         color: #aaa;
         background-color: #fafafa;
+
+        .detail-tab-item {
+            width: 50%;
+            text-align: center;
+        }
     }
 
     .detail-tab-content {
         margin-top: .2rem;
+        display: flex;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .detail-content {
+            width: 100%;
+            transition: all .6s ease;
+            overflow: hidden;
+        }
+
+        .task-content {
+            width: 0;
+            transition: all .6s ease;
+            overflow: hidden;
+        }
     }
 
+    .detail-footer {
+        width: 100%;
+        text-align: center;
+        font-size: .8rem;
+        color: #aaa;
+    }
 }

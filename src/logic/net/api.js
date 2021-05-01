@@ -87,10 +87,19 @@ export const getMyCourseList = () => {
         method: 'get',
     })
 }
+
 // 获取 我的课程 课程详情
 export const getMyCourseDetail = () => {
     return cardAxios({
         url: '/getmycoursedetail',
+        method: 'get',
+    })
+}
+
+// 获取 我的课程 任务列表
+export const getMyCourseTaskList = () => {
+    return cardAxios({
+        url: '/getmycoursetasklist',
         method: 'get',
     })
 }

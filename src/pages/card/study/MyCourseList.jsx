@@ -39,7 +39,7 @@ const MyCourseList = props => {
                                 frontImgWidth="2rem"
                                 frontImgHeight="2rem"
                                 margin=".5rem auto"
-                                onClick={() => props.history.push(`/mycoursedetail?&course=${item.name}&teacher=${item.teacher}`)} />
+                                onClick={() => props.history.push(`/mycoursedetail?&course=${item.name}`)} />
                         )
                     })
                 }

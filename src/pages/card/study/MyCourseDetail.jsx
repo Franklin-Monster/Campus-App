@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState, useMemo, useRef } from 'react'
 import './css/my-course-detail'
-import { getMyCourseDetail } from '@api'
+import { getMyCourseDetail, getMyCourseTaskList } from '@api'
 
 // component
 import TextRow from '@c/text-row'
@@ -8,10 +8,16 @@ import ArrowMenu from '@c/arrow-menu'
 import ReturnTitle from '@c/return-title'
 
 // image
+import Sign from './img/sign'
+import Exam from './img/exam'
+import Exercise from './img/exercise'
+
 const MyCourseDetail = props => {
     const [courseName, setCourseName] = useState('')
-    const [courseTeacher, setCourseTeacher] = useState('')
     const [courseDetail, setCourseDetail] = useState({})
+    const [courseTask, setCourseTask] = useState([])
+    const detailRef = useRef()
+    const taskRef = useRef()
 
     // 格式化地址栏参数
     useMemo(() => {
@@ -24,12 +30,34 @@ const MyCourseDetail = props => {
             return null
         })
         setCourseName(tempObj.course)
-        setCourseTeacher(tempObj.teacher)
     }, [props])
 
+    // 获取详情及任务列表
     useEffect(() => {
         getMyCourseDetail().then(res => setCourseDetail(res.data[0]))
+        getMyCourseTaskList().then(res => setCourseTask(res.data))
     }, [props])
+
+    // 切换tab
+    const detailTab = () => {
+        taskRef.current.style.width = '0'
+        detailRef.current.style.width = "100%"
+    }
+    const taskTab = () => {
+        detailRef.current.style.width = '0'
+        taskRef.current.style.width = "100%"
+    }
+
+    // 根据任务类型渲染任务图标
+    const switchTask = type => {
+        switch (type) {
+            case '签到': return Sign
+            case '练习': return Exercise
+            case '考试': return Exam
+            default: return null
+        }
+    }
+
     return (
         <div id="MyCourseDetail">
             <div className="detail-header">
@@ -37,16 +65,15 @@ const MyCourseDetail = props => {
             </div>
             <div className="detail-body">
                 <div className="detail-tab">
-                    <div className="detail-tab-item">
+                    <div className="detail-tab-item" onClick={detailTab}>
                         详情
                     </div>
-                    <div className="detail-tab-item">
+                    <div className="detail-tab-item" onClick={taskTab}>
                         任务
                     </div>
-
                 </div>
                 <div className="detail-tab-content">
-                    <div className="detail-content">
+                    <div className="detail-content" ref={detailRef}>
                         <TextRow frontText="课程名称"
                             lastText={courseDetail.name}
                             lastTextColor="#aaa"
@@ -84,14 +111,20 @@ const MyCourseDetail = props => {
                         <ArrowMenu text="课程练习" />
                         <ArrowMenu text="课程资料" />
                     </div>
-                    <div className="task-content">
-                        
+                    <div className="task-content" ref={taskRef}>
+                        {
+                            courseTask.map(item => {
+                                return <ArrowMenu
+                                    frontImg={switchTask(item.type)}
+                                    text={item.name}
+                                    subText={item.time}
+                                    margin=".2rem 0" />
+                            })
+                        }
                     </div>
                 </div>
             </div>
-            <div className="detail-footer">
-
-            </div>
+            <div className="detail-footer">这个课程只有这么多内容啦~~</div>
         </div>
     )
 }
