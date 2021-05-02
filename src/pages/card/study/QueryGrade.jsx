@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './css/query-grade'
 import { getQueryGradeResult } from '@api'
-
+import { terms } from '../help'
 // component
 import Button from '@c/button'
 import TextRow from '@c/text-row'
@@ -13,39 +13,11 @@ const QueryGrade = () => {
     const [queryResult, setQueryResult] = useState([])
     const queryRef = useRef()
     const resultRef = useRef()
+
+    // 获取查询结果
     useEffect(() => {
         getQueryGradeResult().then(res => setQueryResult(res.data))
     }, [])
-    const terms = [
-        [
-            {
-                label: '2017',
-                value: '2017',
-            },
-            {
-                label: '2018',
-                value: '2018',
-            },
-            {
-                label: '2019',
-                value: '2019',
-            },
-            {
-                label: '2020',
-                value: '2020',
-            },
-        ],
-        [
-            {
-                label: '第一学期',
-                value: '第一学期',
-            },
-            {
-                label: '第二学期',
-                value: '第二学期',
-            },
-        ],
-    ]
 
     // 查询按钮
     const queryClick = () => {
@@ -107,9 +79,7 @@ const QueryGrade = () => {
                         onClick={returnClick} />
                 </div>
             </div>
-            <div className="query-footer">
-
-            </div>
+            <div className="query-footer"> </div>
         </div>
     )
 }

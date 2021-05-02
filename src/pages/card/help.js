@@ -153,3 +153,34 @@ export const cardItemArr = [{
         route: '/anonymouslist'
     },
 ]
+
+export const terms = [
+    [
+        {
+            label: '2017',
+            value: '2017',
+        },
+        {
+            label: '2018',
+            value: '2018',
+        },
+        {
+            label: '2019',
+            value: '2019',
+        },
+        {
+            label: '2020',
+            value: '2020',
+        },
+    ],
+    [
+        {
+            label: '第一学期',
+            value: '第一学期',
+        },
+        {
+            label: '第二学期',
+            value: '第二学期',
+        },
+    ],
+]
