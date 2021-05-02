@@ -108,7 +108,7 @@ export const cardItemArr = [{
     {
         img: SearchGrade,
         text: "成绩查询",
-        route: '/notfound'
+        route: '/querygrade'
     },
     {
         img: SelectClass,

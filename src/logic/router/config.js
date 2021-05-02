@@ -48,6 +48,7 @@ const TodoMatter = Loadable(() => import('@p/mycenter/TodoMatter'))
 const TodoList = Loadable(() => import('@p/mycenter/TodoList'))
 const MyCourseList = Loadable(() => import('@p/card/study/MyCourseList'))
 const MyCourseDetail = Loadable(() => import('@p/card/study/MyCourseDetail'))
+const QueryGrade = Loadable(() => import('@p/card/study/QueryGrade'))
 
 const routes = [{
         path: '/message',
@@ -240,6 +241,10 @@ const routes = [{
     {
         path: '/mycoursedetail',
         component: MyCourseDetail
+    },
+    {
+        path: '/querygrade',
+        component: QueryGrade
     },
 ]
 

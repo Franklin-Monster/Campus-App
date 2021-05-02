@@ -103,3 +103,11 @@ export const getMyCourseTaskList = () => {
         method: 'get',
     })
 }
+
+// 获取 成绩查询 查询结果
+export const getQueryGradeResult = () => {
+    return cardAxios({
+        url: '/getquerygraderesult',
+        method: 'get',
+    })
+}
