@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './css/query-grade'
 import { getQueryGradeResult } from '@api'
 import { terms } from '../help'
+
 // component
 import Button from '@c/button'
 import TextRow from '@c/text-row'

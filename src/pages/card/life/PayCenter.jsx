@@ -12,7 +12,7 @@ import Swiper1 from './img/swiper1.jpeg'
 import Swiper2 from './img/swiper2.jpeg'
 import Swiper3 from './img/swiper3.jpeg'
 
-const PayCenter = (props) => {
+const PayCenter = props => {
     return (
         <div id="PayCenter">
             <div className="paycenter-header">

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
 import { testFriendData } from '@/static/js/testData'
 import './css/list'
 import { getTeacherList, getStudentList } from '@api'

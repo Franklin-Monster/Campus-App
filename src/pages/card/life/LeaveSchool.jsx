@@ -13,26 +13,31 @@ import Record from './img/record'
 import Notice from './img/notice'
 import Franklin from './img/Franklin'
 
-const LeaveSchool = (props) => {
+const LeaveSchool = props => {
     const [isCalendarShow, setIsCalendarShow] = useState()
     const [leaveStartTime, setLeaveStartTime] = useState()
     const [leaveEndTime, setLeaveEndTime] = useState()
-    const now = new Date();
-    const originbodyScrollY = document.getElementsByTagName('body')[0].style.overflowY;
+    const now = new Date()
+    const originbodyScrollY = document.getElementsByTagName('body')[0].style.overflowY
     let bodyStyle = document.getElementsByTagName('body')[0].style
 
+    // 选择日期
     const selectDate = () => {
-        bodyStyle.overflowY = 'hidden';
+        bodyStyle.overflowY = 'hidden'
         setIsCalendarShow(true)
     }
+
+    // 确认选择日期
     const onCalendarConfirm = (startTime, endTime) => {
-        bodyStyle.overflowY = originbodyScrollY;
+        bodyStyle.overflowY = originbodyScrollY
         setIsCalendarShow(false)
         setLeaveStartTime(startTime)
         setLeaveEndTime(endTime)
     }
+
+    // 取消选择日期
     const onCalendarCancel = () => {
-        bodyStyle.overflowY = originbodyScrollY;
+        bodyStyle.overflowY = originbodyScrollY
         setIsCalendarShow(false)
         setLeaveStartTime(null)
         setLeaveEndTime(null)

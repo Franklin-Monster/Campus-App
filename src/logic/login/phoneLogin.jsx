@@ -11,7 +11,7 @@ import Message from '@c/message'
 import ReturnArrow from '../../assets/images/return'
 import Close from '../../assets/images/close'
 
-const PhoneLogin = (props) => {
+const PhoneLogin = props => {
     const [userPhone, setUserPhone] = useState(null)
     const [code, setCode] = useState(null)
     let [codeSecond, setCodeSecond] = useState(60)
@@ -20,7 +20,7 @@ const PhoneLogin = (props) => {
     const getCodeRef = useRef()
 
     // 监听手机号   
-    const onPhoneChange = (e) => {
+    const onPhoneChange = e => {
         let v = e.target.value
         if (v.length >= 11) {
             e.target.value = v.slice(0, 11)
@@ -28,12 +28,13 @@ const PhoneLogin = (props) => {
         } else setUserPhone(null)
     }
     // 监听验证码
-    const onCodeChange = (e) => {
+    const onCodeChange = e => {
         let v = e.target.value
         if (v.length === 6) {
             setCode(v)
         } else setCode(null)
     }
+
     // 获取验证码
     let sendCodeTimer = null
     const getCode = () => {
@@ -58,6 +59,7 @@ const PhoneLogin = (props) => {
             }
         }
     }
+
     // 下一步
     const nextStep = () => {
         if (userPhone && code) {
@@ -66,6 +68,7 @@ const PhoneLogin = (props) => {
             props.history.push('/')
         }
     }
+
     return (
         <div id="PhoneLogin">
             <div className="phone-header">
@@ -124,4 +127,5 @@ const PhoneLogin = (props) => {
         </div>
     )
 }
+
 export default withRouter(PhoneLogin)

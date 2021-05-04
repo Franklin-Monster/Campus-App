@@ -1,4 +1,5 @@
 import React from 'react'
+
 const RouterLoading = ({ isLoading, error }) => {
     if (isLoading) {
         return <div className="spinner">

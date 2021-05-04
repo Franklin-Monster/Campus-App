@@ -11,7 +11,7 @@ import Mind from './img/mind'
 import Bathe from './img/bathe'
 import HairCut from './img/haircut'
 
-const ServiceOrder = (props) => {
+const ServiceOrder = props => {
     return (
         <div id="ServiceOrder">
             <div className="order-header">

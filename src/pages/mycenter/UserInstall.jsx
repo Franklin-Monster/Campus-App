@@ -7,7 +7,7 @@ import Button from '@c/button'
 import ArrowMenu from '@c/arrow-menu'
 import ReturnTitle from '@c/return-title'
 
-const UserInstall = (props) => {
+const UserInstall = props => {
     const quitLogin = () => {
         cookie.remove('isLogin')
         props.history.push('/')
@@ -24,7 +24,7 @@ const UserInstall = (props) => {
                 <ArrowMenu text="账号绑定" margin=".5rem 0" />
                 <ArrowMenu text="帮助与反馈" />
                 <ArrowMenu text="清除缓存" />
-                <ArrowMenu text="关于校园帮" margin=".5rem 0" />
+                <ArrowMenu text="关于微校园" margin=".5rem 0" />
             </div>
             <div className="install-footer">
                 <Button

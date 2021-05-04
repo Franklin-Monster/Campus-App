@@ -11,6 +11,8 @@ import Logo from '../../assets/images/logo'
 
 const Login = props => {
     const [isAgree, setIsAgree] = useState(false)
+
+    // 手机号登录
     const phoneLogin = () => {
         if (isAgree) {
             props.history.push('/phonelogin')
@@ -21,6 +23,8 @@ const Login = props => {
             })
         }
     }
+
+    // 微信登录
     const wxLogin = () => {
         if (isAgree) {
             props.history.push('/wxlogin')
@@ -32,9 +36,12 @@ const Login = props => {
         }
 
     }
-    const onAgreeChange = (e) => {
+
+    // 同意隐私协议
+    const onAgreeChange = e => {
         setIsAgree(e.target.checked)
     }
+
     return (
         <div id="Login">
             <div className="login-header">
@@ -45,11 +52,16 @@ const Login = props => {
             <div className="login-body">
             </div>
             <div className="login-footer">
-                <Button text="微信登录" color='#4EC9B0' margin='1rem auto' onClick={wxLogin}></Button>
-                <Button text="手机号登录" color="#67CDFE" margin='.5rem auto' onClick={phoneLogin}></Button>
+                <Button text="微信登录" color='#4EC9B0' margin='1rem auto' onClick={wxLogin} />
+                <Button text="手机号登录" color="#67CDFE" margin='.5rem auto' onClick={phoneLogin} />
                 <div className="login-agree">
-                    <input type="checkbox" className="check-box" name="agree" value="同意" onChange={onAgreeChange} />
-                    同意校园帮 <strong>用户协议</strong> 和 <strong>隐私政策</strong>
+                    <input
+                        type="checkbox"
+                        className="check-box"
+                        name="agree"
+                        value="同意"
+                        onChange={onAgreeChange} />
+                    同意微校园 <strong>用户协议</strong> 和 <strong>隐私政策</strong>
                 </div>
             </div>
         </div>

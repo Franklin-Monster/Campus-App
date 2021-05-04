@@ -1,8 +1,13 @@
 import React from 'react'
-import ReturnTitle from '@c/return-title'
-import Mine from './img/mine'
 import './css/pay-phone'
-const PayPhone = (props) => {
+
+// component
+import ReturnTitle from '@c/return-title'
+
+// image
+import Mine from './img/mine'
+
+const PayPhone = props => {
     return (
         <div id="PayPhone">
             <div className="payphone-header">
@@ -10,7 +15,8 @@ const PayPhone = (props) => {
             </div>
             <div className="payphone-body">
                 <div className="input-number">
-                    <input type="number" placeholder="请输入手机号码" /><img src={Mine} alt="mine" />
+                    <input type="number" placeholder="请输入手机号码" />
+                    <img src={Mine} alt="mine" />
                 </div>
                 <div className="select-title">
                     充话费

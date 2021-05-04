@@ -1,9 +1,9 @@
 import React from 'react'
 import './css/button'
 import Message from './message'
-import { Modal } from 'antd-mobile';
+import { Modal } from 'antd-mobile'
 
-const Button = (props) => {
+const Button = props => {
     const style = {
         width: props.width,
         height: props.height,
@@ -13,6 +13,8 @@ const Button = (props) => {
         margin: props.margin + ' auto' || '0 auto',
         padding: props.padding
     }
+
+    // 点击按钮
     const onClick = () => {
         if (props.needConfirm) {
             Modal.alert(props.confirmTitle || '', props.confirmText || '您确定进行该操作吗？', [
@@ -39,6 +41,7 @@ const Button = (props) => {
         }
 
     }
+
     return (
         <div id="Button" style={style} onClick={onClick}> {props.text} </div>
     )

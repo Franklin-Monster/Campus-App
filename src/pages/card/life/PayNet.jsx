@@ -9,13 +9,15 @@ import ReturnTitle from '@c/return-title'
 import PullDownMenu from '@c/pull-down-menu'
 
 
-const PayNet = (props) => {
+const PayNet = props => {
+    // 确认
     const submit = () => {
         Message({
             text: '缴费成功',
             type: 'success'
         })
     }
+    
     return (
         <div id="PayNet">
             <div className="paynet-header">

@@ -5,7 +5,6 @@ import { News } from './help'
 // component
 import ReturnTitle from '@c/return-title'
 
-
 const NewsArticle = () => {
     return (
         <div id="NewsArticle">

@@ -8,6 +8,7 @@ import ReturnTitle from '@c/return-title'
 import { List, Switch } from 'antd-mobile'
 
 const MessageAction = props => {
+    // 清空聊天记录
     const clearChat = () => {
         Modal.alert('注意', '您确定要清空聊天记录吗？', [
             { text: '取消', onPress: () => console.log('cancel'), style: { color: 'blue' } },

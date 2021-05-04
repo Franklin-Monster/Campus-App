@@ -1,9 +1,12 @@
 import React from 'react'
 import { returnBack } from '../static/js/fun'
 import './css/return-title'
+
+// image
 import ReturnArrowWhite from './img/return-white'
 import ReturnArrowBlack from './img/return-black'
-const ReturnTitle = (props) => {
+
+const ReturnTitle = props => {
     const style = {
         background: props.background,
         color: props.color

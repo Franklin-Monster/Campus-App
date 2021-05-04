@@ -9,7 +9,6 @@ import ArrowMenu from '@c/arrow-menu'
 import ReturnTitle from '@c/return-title'
 
 const FriendAction = () => {
-
     // 更改备注
     const changeRemark = () => {
         Modal.prompt('备注', '',

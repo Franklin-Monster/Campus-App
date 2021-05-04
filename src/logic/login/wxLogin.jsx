@@ -1,11 +1,11 @@
 import React from 'react'
 import '../../static/css/wxLogin'
 
-const WxLogin = (props) => {
+const WxLogin = props => {
   
     return (
         <div id="WxLogin">
-            
+            微信登录
         </div>
     )
 }

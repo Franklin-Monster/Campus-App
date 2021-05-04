@@ -1,7 +1,7 @@
 import React from 'react'
 import './css/auto-swiper'
 
-const AutoSwiper = (props) => {
+const AutoSwiper = props => {
     const style = {
         width: props.width,
         height: props.height

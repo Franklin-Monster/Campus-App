@@ -1,7 +1,7 @@
 import React from 'react'
 import './css/text-row'
 
-const TextRow = (props) => {
+const TextRow = props => {
     const style = {
         width: props.width,
         height: props.height,

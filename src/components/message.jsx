@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import './css/message.scss'
+import './css/message'
 import ReactDOM from "react-dom";
 
 // image
 import Success from './img/success'
 import Attention from './img/warn'
 import Fail from './img/fail'
+
 const Message = props => {
     const [animate, setAnimate] = useState('message-in 1s')
     const style = {

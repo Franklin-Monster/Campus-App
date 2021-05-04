@@ -5,11 +5,9 @@ import './css/apply-process'
 import { NoticeBar } from 'antd-mobile'
 import ReturnTitle from '@c/return-title'
 
-const ApplyProcess = (props) => {
+const ApplyProcess = props => {
 
-    const getApplyDetail = () => {
-
-    }
+    const getApplyDetail = () => { }
 
     return (
         <div id="ApplyProcess">

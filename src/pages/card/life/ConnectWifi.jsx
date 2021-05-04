@@ -15,11 +15,12 @@ import Button from '@c/button'
 // image
 import WiFi from './img/wifi'
 
-const ConnectWifi = (props) => {
+const ConnectWifi = () => {
     const [isConnect, setIsConnect] = useState(false)
-    const loginClick = () =>  {
+    const loginClick = () => {
         setIsConnect(true)
     }
+    
     return (
         <div id="ConnectWifi">
             <div className="net-header">
@@ -49,22 +50,22 @@ const ConnectWifi = (props) => {
                             </div>
                         </div>
                     ) : (
-                            <div className="wifi-not-connect">
-                                <div className="input-item">
-                                    <span>账号</span>
-                                    <input type="number" placeholder="请输入您的校园网账号" />
-                                </div>
-                                <div className="input-item">
-                                    <span>密码</span>
-                                    <input type="password" placeholder="请输入您的网络密码" />
-                                </div>
-                                <div className="select-item">
-                                    <span>记住密码<input type="checkbox" /></span>
-                                    <span>自动登录<input type="checkbox" /></span>
-                                    <Button text="登录" margin="1rem" onClick={loginClick} />
-                                </div>
+                        <div className="wifi-not-connect">
+                            <div className="input-item">
+                                <span>账号</span>
+                                <input type="number" placeholder="请输入您的校园网账号" />
                             </div>
-                        )
+                            <div className="input-item">
+                                <span>密码</span>
+                                <input type="password" placeholder="请输入您的网络密码" />
+                            </div>
+                            <div className="select-item">
+                                <span>记住密码<input type="checkbox" /></span>
+                                <span>自动登录<input type="checkbox" /></span>
+                                <Button text="登录" margin="1rem" onClick={loginClick} />
+                            </div>
+                        </div>
+                    )
                 }
             </div>
             <div className="net-footer">

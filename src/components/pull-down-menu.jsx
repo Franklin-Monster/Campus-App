@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react'
 import RightArrow from './img/right-arrow'
 import './css/pull-down-menu'
-const PullDownMenu = (props) => {
+
+const PullDownMenu = props => {
     const selectWayRef = useRef()
     const selectImgRef = useRef()
     const [selectText, setSelectText] = useState('请选择')
@@ -14,6 +15,8 @@ const PullDownMenu = (props) => {
     const pullStyle = {
         color: props.pullColor
     }
+
+    // 点击下拉框
     const selectPayWayClick = () => {
         const imgStyle = selectImgRef.current.style
         const textStyle = selectWayRef.current.style
@@ -24,10 +27,13 @@ const PullDownMenu = (props) => {
             ? textStyle.height = '4rem'
             : textStyle.height = pullHeight
     }
-    const selectItemClick = (e) => {
+
+    // 选择某一项
+    const selectItemClick = e => {
         setSelectText(e.target.innerText)
         selectPayWayClick()
     }
+
     return (
         <div id="PullDownMenu">
             <div className="menu-box" ref={selectWayRef}>

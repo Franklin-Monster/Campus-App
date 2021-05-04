@@ -1,6 +1,7 @@
 import React from 'react'
-import './css/card-item.scss'
-const CardItem = (props) => {
+import './css/card-item'
+
+const CardItem = props => {
     const style = {
         color: props.color,
         background: props.background,

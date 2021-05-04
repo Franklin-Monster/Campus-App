@@ -155,8 +155,7 @@ export const cardItemArr = [{
 ]
 
 export const terms = [
-    [
-        {
+    [{
             label: '2017',
             value: '2017',
         },
@@ -173,14 +172,13 @@ export const terms = [
             value: '2020',
         },
     ],
-    [
-        {
-            label: '第一学期',
-            value: '第一学期',
+    [{
+            label: '第一学年',
+            value: '第一学年',
         },
         {
-            label: '第二学期',
-            value: '第二学期',
+            label: '第二学年',
+            value: '第二学年',
         },
     ],
 ]
